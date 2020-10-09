@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    ul {
+        list-style-type: none;
+        width: 33%;
+        li {
+            font-weight: $small-font-weight;            
+            cursor: pointer;
+            margin: $small-spacing;
+        }
+        .information:hover {
+            text-decoration: underline;
+        }        
+        .list-heading {
+            font-weight: $big-font-weight;
+            color: $blue;
+            cursor: auto;
+        }
+        
+        #list-blue {
+            color: $blue;
+            cursor: auto;
+        }
+        
+        #list-button {
+            text-align: center;
+            background: $light-grey1;
+            padding: $small-spacing;
+            border-bottom: solid $light-grey2 $small-border-size;
+            font-size: 12px;
+        }
+        #list-button:active {
+            border-top: solid $light-grey2 $small-border-size;;
+            border-bottom: none;
+        }        
+    }
+}

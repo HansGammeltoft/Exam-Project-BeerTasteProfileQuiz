@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* --- Fonttype --- */
+$font-stack:    “open sans”, HelveticaNeue, “Helvetica Neue”, Helvetica-
+Neue, Helvetica, Arial, sans-serif;
+
+/* --- Font size --- */
+$x-small-font-size: 13px;
+$small-font-size: 15px;
+$medium-font-size: 20px;
+$big-font-size: 28px;
+
+/* --- Font weight --- */
+$small-font-weight: 300;
+$medium-font-weight: 400;
+$big-font-weight: 600;
+
+/* --- Font weight --- */
+$small-border-size: 1px;
+$medium-border-size: 2px;
+$big-border-size: 3px;
+
+/* --- Colors --- */
+$white: #fefefe;
+$blue: #6786a1;
+$light-grey1: #fafafa;
+$light-grey2: #e8e8e8;
+$light-grey3: #efefef;
+$grey: #e1e1e1;
+$dark-grey1: #8d8d8d;
+$dark-grey2: #666666;
+$black: #222222;
+
+/* --- Borders --- */
+$small-border-radius: 2px; 
+$medium-border-radius: 5px; 
+$small-border-radius: 7px; 
+
+/* --- Spacing --- */
+$small-spacing: 10px;
+$medium-spacing: 20px;
+$big-spacing: 35px;
+
+
+
+body {
+    margin: 0px 50px 50px 50px;
+    font: 100% $font-stack;
+    color: $black;
+    background-color: $white;
+    @import '_header';
+    @import '_footer';
+}
