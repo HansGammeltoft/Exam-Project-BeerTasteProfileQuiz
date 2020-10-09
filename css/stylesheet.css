@@ -11,6 +11,7 @@
 /* --- Colors --- */
 /* --- Borders --- */
 /* --- Spacing --- */
+/* --- Styling to main body in index --- */
 body {
   margin: 0px 50px 50px 50px;
   font: 100% “open sans”, HelveticaNeue, “Helvetica Neue”, Helvetica- Neue, Helvetica, Arial, sans-serif;
@@ -20,11 +21,15 @@ body {
 body nav {
   font-size: 13px;
   color: #8d8d8d;
+  /* --- logo, logotext, searchbar, links and cart --- */
+  /* --- beerstyles --- */
 }
 body nav #upper-nav {
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #e1e1e1;
+  /* div for logo, logotext and searchbar */
+  /* div for menulinks and cart */
 }
 body nav #upper-nav #img-text {
   display: flex;
@@ -53,6 +58,9 @@ body nav #upper-nav #img-text input {
 }
 body nav #upper-nav #list-cart {
   display: flex;
+  /* nav-menu1 is on display when window is full, and hidden when it isnt */
+  /* nav-menu2 is on displsy when nav-menu1 is hidden */
+  /* adds a border line in the bottom when the screen gets smaller */
 }
 body nav #upper-nav #list-cart #nav-menu1 {
   margin-top: 35px;
@@ -119,6 +127,7 @@ body nav #lower-nav ul {
   flex-wrap: wrap;
   border-bottom: solid 1px #e1e1e1;
   margin-bottom: 20px;
+  /* removes the last border in the last li */
 }
 body nav #lower-nav ul li {
   display: inline;

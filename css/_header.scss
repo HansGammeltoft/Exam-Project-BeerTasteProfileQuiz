@@ -2,11 +2,13 @@ nav {
     font-size: $x-small-font-size;
     color: $dark-grey1;     
     
+/* --- logo, logotext, searchbar, links and cart --- */    
 #upper-nav{
     display: flex;
     justify-content: space-between ;
     border-bottom: solid $small-border-size $grey;  
     
+    /* div for logo, logotext and searchbar */
     #img-text {
         display: flex;
         flex-wrap: wrap;
@@ -34,9 +36,11 @@ nav {
         }        
     }
     
+    /* div for menulinks and cart */
     #list-cart {
         display: flex;
         
+        /* nav-menu1 is on display when window is full, and hidden when it isnt */
         #nav-menu1 {
             margin-top: $big-spacing; 
 
@@ -52,6 +56,8 @@ nav {
                 color: $dark-grey2; 
             }            
         }
+        
+        /* nav-menu2 is on displsy when nav-menu1 is hidden */
         #nav-menu2 {
             display: none;
             margin-top: $big-spacing; 
@@ -94,6 +100,7 @@ nav {
                 color: $dark-grey2; 
             }               
         }
+        /* adds a border line in the bottom when the screen gets smaller */
         @media only screen and (max-width: 973px) {
         #cart {
             border-bottom: solid $small-border-size $grey;
@@ -101,7 +108,8 @@ nav {
         }         
     }    
 }
-    
+   
+/* --- beerstyles --- */     
 #lower-nav{
  
     ul {
@@ -119,6 +127,7 @@ nav {
             border-right: solid $small-border-size $grey;
             white-space: nowrap;
         }
+        /* removes the last border in the last li */
         li:nth-child(11) {
             border-right: none;
         }

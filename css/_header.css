@@ -6,9 +6,9 @@ Error: Undefined variable: "$x-small-font-size".
 2:     font-size: $x-small-font-size;
 3:     color: $dark-grey1;     
 4:     
-5: #upper-nav{
-6:     display: flex;
-7:     justify-content: space-between ;
+5: /* --- logo, logotext, searchbar, links and cart --- *\/    
+6: #upper-nav{
+7:     display: flex;
 
 Backtrace:
 C:\xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\_header.scss:2
@@ -58,4 +58,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$x-small-font-size\".\A         on line 2 of C:\xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\_header.scss\A \A 1: nav {\A 2:     font-size: $x-small-font-size;\A 3:     color: $dark-grey1;     \A 4:     \A 5: #upper-nav{\A 6:     display: flex;\A 7:     justify-content: space-between ;"; }
+  content: "Error: Undefined variable: \"$x-small-font-size\".\A         on line 2 of C:\xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\_header.scss\A \A 1: nav {\A 2:     font-size: $x-small-font-size;\A 3:     color: $dark-grey1;     \A 4:     \A 5: /* --- logo, logotext, searchbar, links and cart --- */    \A 6: #upper-nav{\A 7:     display: flex;"; }
