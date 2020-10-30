@@ -7,10 +7,12 @@ $font-stack:    “open sans”, HelveticaNeue, “Helvetica Neue”, Helvetica-
 Neue, Helvetica, Arial, sans-serif;
 
 /* --- Font size --- */
+$xx-small-font-size: 11px;
 $x-small-font-size: 13px;
 $small-font-size: 15px;
 $medium-font-size: 20px;
 $big-font-size: 28px;
+$x-big-font-size: 34px;
 
 /* --- Font weight --- */
 $small-font-weight: 300;
@@ -34,21 +36,23 @@ $dark-grey2: #666666;
 $black: #222222;
 
 /* --- Borders --- */
+$x-small-border-radius: 1px;
 $small-border-radius: 2px; 
-$medium-border-radius: 5px; 
-$small-border-radius: 7px; 
+$medium-border-radius: 3px; 
+$big-border-radius: 5px; 
 
 /* --- Spacing --- */
 $small-spacing: 10px;
-$medium-spacing: 20px;
+$medium-spacing: 25px;
 $big-spacing: 35px;
+$x-big-spacing: 50px;
 
 /* --- Styling to main body in index --- */
 body {
-    margin: 0px 50px 50px 50px;
     font: 100% $font-stack;
     color: $black;
     background-color: $white;
     @import '_header';
+    @import 'index_main'; 
     @import '_footer';
 }

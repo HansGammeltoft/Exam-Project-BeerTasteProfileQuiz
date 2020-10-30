@@ -13,7 +13,6 @@
 /* --- Spacing --- */
 /* --- Styling to main body in index --- */
 body {
-  margin: 0px 50px 50px 50px;
   font: 100% “open sans”, HelveticaNeue, “Helvetica Neue”, Helvetica- Neue, Helvetica, Arial, sans-serif;
   color: #222222;
   background-color: #fefefe;
@@ -21,10 +20,15 @@ body {
 body nav {
   font-size: 13px;
   color: #8d8d8d;
+  position: fixed;
+  z-index: 1;
+  background: #fefefe;
+  width: 100%;
   /* --- logo, logotext, searchbar, links and cart --- */
   /* --- beerstyles --- */
 }
 body nav #upper-nav {
+  padding: 0px 50px 0px 50px;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #e1e1e1;
@@ -43,7 +47,7 @@ body nav #upper-nav #img-text img {
 }
 body nav #upper-nav #img-text .logo-text {
   margin-top: 35px;
-  padding-left: 20px;
+  padding-left: 25px;
   width: 210px;
 }
 body nav #upper-nav #img-text input {
@@ -69,7 +73,7 @@ body nav #upper-nav #list-cart #nav-menu1 li {
   display: inline;
   padding: 0;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 25px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -84,7 +88,7 @@ body nav #upper-nav #list-cart #nav-menu2 li {
   display: inline;
   padding: 0;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 25px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -122,16 +126,16 @@ body nav #upper-nav #list-cart #cart .fa-shopping-cart:hover {
   }
 }
 body nav #lower-nav ul {
+  padding: 0px 50px 0px 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   border-bottom: solid 1px #e1e1e1;
-  margin-bottom: 20px;
   /* removes the last border in the last li */
 }
 body nav #lower-nav ul li {
   display: inline;
-  margin: 20px 0 20px 10px;
+  margin: 25px 0 25px 10px;
   padding-right: 10px;
   font-weight: 600;
   cursor: pointer;
@@ -144,7 +148,253 @@ body nav #lower-nav ul li:nth-child(11) {
 body nav #lower-nav ul li:hover {
   color: #666666;
 }
+body nav:nth-child(2) {
+  font-size: 13px;
+  color: #8d8d8d;
+  position: static;
+  background: #fefefe;
+  width: 100%;
+}
+body main #content {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+body main #content .transition-layer {
+  filter: brightness(85%);
+  transition: all 0.5s ease;
+}
+body main #content .transition-layer:hover {
+  filter: brightness(110%);
+}
+body main #content .wide-img-section img {
+  border-radius: 5px;
+}
+body main #content .img-section {
+  position: relative;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+body main #content .img-section img {
+  height: 100%;
+  width: 100%;
+  min-width: 240px;
+  max-width: 533px;
+}
+body main #content .img-section .centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  font-weight: 400;
+}
+body main #content #img-section2 {
+  margin: 0px 80px 0px 80px;
+}
+body main #content #img-section3 {
+  display: flex;
+}
+body main #content #img-section3 .innner-img-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+body main #content #img-section3 .innner-img-section img {
+  height: 100%;
+  width: 100%;
+  min-width: 118.5px;
+  max-width: 265px;
+  border-radius: 2px;
+}
+body main #content .innner-img-section:nth-child(1) {
+  margin-right: 5px;
+}
+body main #instagram-newproducts {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+}
+body main #instagram-newproducts #instagram-section {
+  width: 50%;
+  margin-right: 25px;
+}
+body main #instagram-newproducts #instagram-section h3 {
+  text-align: center;
+  padding: 0 0 25px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+body main #instagram-newproducts #instagram-section #instagram-oelkassen {
+  display: flex;
+  cursor: pointer;
+  padding: 0 0 25px 0;
+}
+body main #instagram-newproducts #instagram-section #instagram-oelkassen img {
+  width: 50px;
+}
+body main #instagram-newproducts #instagram-section #instagram-oelkassen p {
+  padding: 15px;
+  font-weight: 600;
+}
+body main #instagram-newproducts #instagram-section #instagram-content {
+  display: flex;
+  cursor: pointer;
+}
+body main #instagram-newproducts #instagram-section #instagram-content img {
+  height: 100%;
+  width: 100%;
+  min-width: 98px;
+  max-width: 272px;
+  transition: all 0.5s ease;
+}
+body main #instagram-newproducts #instagram-section #instagram-content img:hover {
+  filter: brightness(105%);
+}
+body main #instagram-newproducts #instagram-section #instagram-content img:nth-child(2) {
+  padding: 0px 5px 0px 5px;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section {
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-grey-button {
+  background-color: #333333;
+  padding: 7px 13px 7px 13px;
+  border-radius: 3px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-grey-button:hover {
+  background-color: #666666;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button {
+  display: flex;
+  background-color: #408bd1;
+  padding: 7px 13px 7px 13px;
+  border-radius: 3px;
+  margin: 10px 0px 0 0;
+  cursor: pointer;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button p {
+  padding-left: 10px;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button:hover {
+  background-color: #359dff;
+}
+body main #instagram-newproducts #newproducts-section {
+  width: 50%;
+  margin-left: 25px;
+}
+body main #instagram-newproducts #newproducts-section h3 {
+  text-align: center;
+  padding: 0 0 25px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections {
+  display: flex;
+  justify-content: space-between;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper {
+  width: 100%;
+  min-width: 79px;
+  max-width: 205px;
+  margin-left: 5px;
+  border: solid #e1e1e1 1px;
+  cursor: pointer;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper img {
+  width: 100%;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-price-description p {
+  padding: 10px;
+  font-size: 15px;
+  color: #222222;
+  font-weight: 400;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-price-description .newproduct-price {
+  color: #6786a1;
+  font-weight: 600;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons {
+  display: flex;
+  padding: 10px;
+  font-size: 11px;
+  border-top: solid #e1e1e1 1px;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+  background-color: #fafafa;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons .buttons {
+  display: flex;
+  width: 50%;
+  cursor: pointer;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons .buttons:nth-child(2) {
+  padding-left: 10px;
+  border-left: solid #e1e1e1 1px;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper:hover .newproduct-buttons {
+  opacity: 1;
+}
+body main #pickup {
+  padding: 50px 50px 0px 50px;
+}
+body main #pickup #pickup-header {
+  display: flex;
+  justify-content: space-between;
+}
+body main #pickup #pickup-header h4 {
+  width: 390px;
+  padding: 0 0 25px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+body main #pickup #pickup-header div {
+  background-color: #e1e1e1;
+  height: 1px;
+  width: 100%;
+  margin: 13px 0 0 0;
+}
+body main #pickup #pickup-text {
+  padding: 0 0 50px 0;
+}
+body main #pickup #pickup-text p {
+  padding: 0 0 10px 0;
+  color: #666666;
+  font-size: 15px;
+}
+@media only screen and (max-width: 1007px) {
+  body main #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main #content .img-section {
+    padding-bottom: 25px;
+  }
+  body main #content #img-section2 {
+    margin: 0px 0px 0px 0px;
+  }
+  body main #instagram-newproducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main #instagram-newproducts #instagram-section {
+    margin: 0px 0px 35px 0px;
+    width: 432px;
+  }
+  body main #instagram-newproducts #newproducts-section {
+    margin: 0px 0px 0px 0px;
+    width: 432px;
+  }
+}
 body footer {
+  padding: 50px 50px 0px 50px;
+  border-top: solid 1px #e1e1e1;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -180,6 +430,11 @@ body footer ul #list-button {
 body footer ul #list-button:active {
   border-top: solid #e8e8e8 1px;
   border-bottom: none;
+}
+@media only screen and (max-width: 1085px) {
+  body iframe {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

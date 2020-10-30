@@ -1,0 +1,252 @@
+main {
+    #banner {
+        
+    }
+    #content {
+        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;          
+        display: flex;
+        justify-content: space-between;
+        .transition-layer {
+            filter: brightness(85%);
+            transition: all 0.5s ease;            
+        }
+        .transition-layer:hover {
+            filter: brightness(110%);              
+        }
+        .wide-img-section img  {
+            border-radius: $big-border-radius;
+        }   
+        .img-section {
+            position: relative;
+            text-align: center;
+            color: white;  
+            cursor: pointer;               
+            img {
+                height: 100%;
+                width: 100%;
+                min-width: 240px;
+                max-width: 533px;          
+            }            
+            .centered-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); 
+                font-size: $x-big-font-size;
+                font-weight: $medium-font-weight;
+            }            
+        }       
+        #img-section2 { 
+            margin: 0px 80px 0px 80px;
+        }    
+        #img-section3 {  
+            display: flex;
+            .innner-img-section {
+                position: relative;
+                text-align: center;
+                color: white;  
+                img {
+                    height: 100%;
+                    width: 100%;
+                    min-width: 118.5px;
+                    max-width: 265px;
+                    border-radius: $small-border-radius;
+                }  
+            }
+        }
+        .innner-img-section:nth-child(1) {
+            margin-right: 5px;
+        }          
+    } 
+    #instagram-newproducts {
+        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;  
+        display: flex;
+        #instagram-section {
+            width: 50%; 
+            margin-right: $medium-spacing;
+            h3 {
+                text-align: center;
+                padding: 0 0 $medium-spacing 0;
+                font-weight: $small-font-weight;
+                font-size: $big-font-size;
+            }
+            #instagram-oelkassen {
+                display: flex;
+                cursor: pointer;
+                padding: 0 0 $medium-spacing 0;
+                img {
+                    width: 50px;
+                }
+                p {
+                    padding: 15px;
+                    font-weight: $big-font-weight;                    
+                }
+            }
+            #instagram-content {
+                display: flex;
+                cursor: pointer;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    min-width: 98px;
+                    max-width: 272px;  
+                    transition: all 0.5s ease;
+                }     
+                img:hover {
+                    filter: brightness(105%);
+                }
+                img:nth-child(2) {
+                    padding: 0px 5px 0px 5px;
+                }    
+            }
+            #instagram-button-section {
+                display: flex;
+                color: white;
+                justify-content: center;
+                #instagram-grey-button {
+                    background-color: #333333;
+                    padding: 7px 13px 7px 13px;
+                    border-radius: $medium-border-radius;
+                    margin: 10px 10px 0 0; 
+                    cursor: pointer;
+                }
+                #instagram-grey-button:hover {
+                    background-color: #666666;
+                }                
+                #instagram-blue-button {
+                    display: flex;
+                    background-color: #408bd1;   
+                    padding: 7px 13px 7px 13px; 
+                    border-radius: $medium-border-radius;     
+                    margin: 10px 0px 0 0; 
+                    cursor: pointer;
+                    p {
+                        padding-left: 10px;
+                    }
+                }
+                #instagram-blue-button:hover {
+                    background-color: #359dff;
+                }                 
+            }
+            
+        }
+        #newproducts-section {
+            width: 50%; 
+            margin-left: $medium-spacing;            
+            h3 {
+                text-align: center;
+                padding: 0 0 $medium-spacing 0;
+                font-weight: $small-font-weight;
+                font-size: $big-font-size;
+            }
+            #newproducts-sections {
+                display: flex;
+                justify-content: space-between;
+                .newproducts-wrapper {
+                    width: 100%;
+                    min-width: 79px;
+                    max-width: 205px;
+                    margin-left: 5px; 
+                    border: solid $grey $small-border-size;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
+                    .newproduct-price-description {
+                        p {
+                            padding: $small-spacing;
+                            font-size: $small-font-size;
+                            color: $black;
+                            font-weight: $medium-font-weight;                            
+                        }     
+                        .newproduct-price {
+                            color: $blue;
+                            font-weight: $big-font-weight;
+                        }
+                    }
+                    .newproduct-buttons {
+                        display: flex;
+                        padding: $small-spacing;
+                        font-size: $xx-small-font-size;
+                        border-top: solid $grey $small-border-size;
+                        opacity: 0.3;
+                        transition: all 0.5s ease;
+                        background-color: $light-grey1;
+                        .buttons {
+                            display: flex;
+                            width: 50%;
+                            cursor: pointer;
+                        }
+                        .buttons:nth-child(2) {
+                            padding-left: 10px;
+                            border-left: solid $grey $small-border-size;
+                        }                        
+                    }
+                }
+                .newproducts-wrapper:hover {
+                    .newproduct-buttons {
+                        opacity: 1;                     
+                    }
+                }                  
+            }
+              
+            
+        }
+    }
+    #pickup {
+        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;         
+        #pickup-header {
+            display: flex;
+            justify-content: space-between;
+            h4 {
+                width: 390px;
+                padding: 0 0 $medium-spacing 0;  
+                font-size: 20px;
+                font-weight: $big-font-weight;                
+            }
+            div {
+                background-color: $grey;
+                height: 1px;
+                width: 100%;
+                margin: 13px 0 0 0;  
+            }
+        }  
+        #pickup-text {
+            padding: 0 0 $x-big-spacing 0;            
+            p {
+                padding: 0 0 $small-spacing 0; 
+                color: $dark-grey2;
+                font-size: $small-font-size;
+            }
+        }
+    }
+    @media only screen and (max-width: 1007px) {
+    #content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .img-section {
+            padding-bottom: $medium-spacing;
+        }
+        #img-section2 { 
+            margin: 0px 0px 0px 0px;
+        }  
+    }
+    #instagram-newproducts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        #instagram-section {
+            margin: 0px 0px $big-spacing 0px;
+            width: 432px;
+        }
+        #newproducts-section {
+            margin: 0px 0px 0px 0px;
+            width: 432px;
+        }
+    }
+        
+}    
+}
+ 

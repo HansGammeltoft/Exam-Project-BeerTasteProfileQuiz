@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="" content="">
     <title>Ølkassen.dk</title>
-    <! –– awesome fonts ––> 
+    <!–– awesome fonts ––> 
     <script src="https://kit.fontawesome.com/9068d98231.js" crossorigin="anonymous"></script>    
     <link href="./css/stylesheet.css" rel="stylesheet">
 </head>
     <body>
         <header>
-            <! –– pulling all data from header.php ––> 
+            <!–– pulling all data from header.php ––> 
+            <?php include('includes/header.php'); ?>            
+            <!–– pulling invisible header to make padding in the top from header.php ––> 
             <?php include('includes/header.php'); ?>
         </header>
         <main>
+            <!–– pulling all data from index_main.php ––> 
+            <?php include('includes/index_main.php'); ?>            
         </main>
         <footer>
-            <! –– pulling all data from footer.php ––> 
+            <!–– pulling all data from footer.php ––> 
             <?php include('includes/footer.php'); ?>
         </footer>    
     </body>

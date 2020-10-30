@@ -1,9 +1,14 @@
 nav {
     font-size: $x-small-font-size;
     color: $dark-grey1;     
+    position: fixed;
+    z-index: 1;
+    background: $white;
+    width: 100%;
     
 /* --- logo, logotext, searchbar, links and cart --- */    
 #upper-nav{
+    padding: 0px $x-big-spacing 0px $x-big-spacing;     
     display: flex;
     justify-content: space-between ;
     border-bottom: solid $small-border-size $grey;  
@@ -111,13 +116,12 @@ nav {
    
 /* --- beerstyles --- */     
 #lower-nav{
- 
     ul {
+        padding: 0px $x-big-spacing 0px $x-big-spacing;        
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         border-bottom: solid $small-border-size $grey;
-        margin-bottom: $medium-spacing;
         li{
             display: inline;   
             margin: $medium-spacing 0 $medium-spacing $small-spacing;
@@ -137,3 +141,11 @@ nav {
     }
 }
 }
+nav:nth-child(2) {
+    font-size: $x-small-font-size;
+    color: $dark-grey1;     
+    position: static;
+    background: $white;
+    width: 100%;
+}
+

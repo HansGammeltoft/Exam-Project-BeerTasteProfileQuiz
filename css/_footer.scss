@@ -1,5 +1,7 @@
 footer {
-    display: flex;
+    padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing; 
+    border-top: solid $small-border-size $grey;     
+    display: flex;    
     justify-content: space-between;
     flex-wrap: wrap;
     ul {
@@ -17,7 +19,7 @@ footer {
             font-weight: $big-font-weight;
             color: $blue;
             cursor: auto;
-        }
+        }      
         
         #list-blue {
             color: $blue;
@@ -37,3 +39,9 @@ footer {
         }        
     }
 }
+
+    @media only screen and (max-width: 1085px) {    
+        iframe {
+            display: none;
+        }                  
+    }  
