@@ -98,7 +98,6 @@ body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li:hover {
 }
 body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
   display: none;
-  margin-top: 35px;
 }
 body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li {
   display: inline;
@@ -108,8 +107,22 @@ body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li {
   cursor: pointer;
   font-weight: 600;
 }
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li img {
+  margin-top: 35px;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .fa-shopping-cart {
+  margin-top: 35px;
+  cursor: pointer;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .fa-shopping-cart:hover {
+  color: #666666;
+}
 body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li:hover {
   color: #666666;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .nav-menu-text {
+  font-size: 28px;
+  margin-top: 25px;
 }
 @media only screen and (max-width: 1350px) {
   body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
@@ -136,9 +149,9 @@ body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart {
 body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart:hover {
   color: #666666;
 }
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1350px) {
   body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
-    border: none;
+    display: none;
   }
 }
 body nav #upper-nav #phone-input {

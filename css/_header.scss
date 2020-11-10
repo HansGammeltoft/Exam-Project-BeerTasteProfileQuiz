@@ -77,8 +77,7 @@ nav {
 
             /* nav-menu2 is on displsy when nav-menu1 is hidden */
             #nav-menu2 {
-                display: none;
-                margin-top: $big-spacing; 
+                display: none; 
 
                 li {            
                     display: inline;
@@ -87,10 +86,24 @@ nav {
                     margin-right: $medium-spacing;
                     cursor: pointer; 
                     font-weight: $big-font-weight;
+                    img {
+                        margin-top: $big-spacing;     
+                    }
+                }
+                .fa-shopping-cart {
+                    margin-top: $big-spacing;
+                    cursor: pointer;                    
+                }
+                .fa-shopping-cart:hover {
+                    color: $dark-grey2;   
                 }
                 li:hover {
                     color: $dark-grey2; 
-                }            
+                }   
+                .nav-menu-text {
+                    font-size: $big-font-size;
+                    margin-top: $medium-spacing;                     
+                }
             } 
             @media only screen and (max-width: 1350px) {
                 #nav-menu1 {
@@ -119,9 +132,9 @@ nav {
                 }               
             }
             /* adds a border line in the bottom when the screen gets smaller */
-            @media only screen and (max-width: 1010px) {
+            @media only screen and (max-width: 1350px) {
             #cart {
-                border: none;
+                display: none;
                 }   
             }         
         }    

@@ -19,8 +19,9 @@
                     <li><img src="./images/en.png" alt="Et billede af Union Jack"></li>      
                 </ul>
                 <ul id="nav-menu2">
-                    <li class="nav-menu-text"><i class="fas fa-bars"></i></li>
-                    <li><img src="./images/en.png" alt="Et billede af Union Jack"></li>      
+                    <li><img src="./images/en.png" alt="Et billede af Union Jack"></li>                      
+                    <li class="nav-menu-text"><i class="fas fa-bars"></i></li> 
+                    <i class="fas fa-shopping-cart"></i>                    
                 </ul>            
                 <div id="cart">
                     <i class="fas fa-shopping-cart"></i>
