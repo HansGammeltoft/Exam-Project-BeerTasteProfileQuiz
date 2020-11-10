@@ -29,28 +29,39 @@ body nav {
 }
 body nav #upper-nav {
   padding: 0px 50px 0px 50px;
+  border-bottom: solid 1px #e1e1e1;
+}
+body nav #upper-nav #upper-nav-wrapper {
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 1px #e1e1e1;
   /* div for logo, logotext and searchbar */
   /* div for menulinks and cart */
 }
-body nav #upper-nav #img-text {
+body nav #upper-nav #upper-nav-wrapper #img-text {
   display: flex;
   flex-wrap: wrap;
 }
-body nav #upper-nav #img-text img {
-  max-height: 90px;
-  max-width: 120px;
-  min-height: 60px;
-  min-widht: 45px;
+body nav #upper-nav #upper-nav-wrapper #img-text img {
+  height: 90px;
+  width: 120px;
 }
-body nav #upper-nav #img-text .logo-text {
+@media only screen and (max-width: 616px) {
+  body nav #upper-nav #upper-nav-wrapper #img-text img {
+    height: auto;
+    width: 30%;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #img-text .logo-text {
   margin-top: 35px;
   padding-left: 25px;
   width: 210px;
 }
-body nav #upper-nav #img-text input {
+@media only screen and (max-width: 640px) {
+  body nav #upper-nav #upper-nav-wrapper #img-text .logo-text {
+    display: none;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #img-text input {
   margin-top: 35px;
   height: 30px;
   min-width: 100px;
@@ -60,16 +71,21 @@ body nav #upper-nav #img-text input {
   border: solid #e8e8e8 1px;
   padding-left: 10px;
 }
-body nav #upper-nav #list-cart {
+@media only screen and (max-width: 1010px) {
+  body nav #upper-nav #upper-nav-wrapper #img-text input {
+    display: none;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart {
   display: flex;
   /* nav-menu1 is on display when window is full, and hidden when it isnt */
   /* nav-menu2 is on displsy when nav-menu1 is hidden */
   /* adds a border line in the bottom when the screen gets smaller */
 }
-body nav #upper-nav #list-cart #nav-menu1 {
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
   margin-top: 35px;
 }
-body nav #upper-nav #list-cart #nav-menu1 li {
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li {
   display: inline;
   padding: 0;
   margin: 0;
@@ -77,14 +93,14 @@ body nav #upper-nav #list-cart #nav-menu1 li {
   cursor: pointer;
   font-weight: 600;
 }
-body nav #upper-nav #list-cart #nav-menu1 li:hover {
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li:hover {
   color: #666666;
 }
-body nav #upper-nav #list-cart #nav-menu2 {
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
   display: none;
   margin-top: 35px;
 }
-body nav #upper-nav #list-cart #nav-menu2 li {
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li {
   display: inline;
   padding: 0;
   margin: 0;
@@ -92,37 +108,52 @@ body nav #upper-nav #list-cart #nav-menu2 li {
   cursor: pointer;
   font-weight: 600;
 }
-body nav #upper-nav #list-cart #nav-menu2 li:hover {
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li:hover {
   color: #666666;
 }
-@media only screen and (max-width: 1259px) {
-  body nav #upper-nav #list-cart #nav-menu1 {
+@media only screen and (max-width: 1350px) {
+  body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
     display: none;
   }
-  body nav #upper-nav #list-cart #nav-menu2 {
+  body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
     display: block;
     display: flex;
     flex-wrap: nowrap;
   }
 }
-body nav #upper-nav #list-cart #cart {
+body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
   border-left: solid 1px #e1e1e1;
   border-right: solid 1px #e1e1e1;
   border-top: solid 1px #e1e1e1;
   text-align: center;
   cursor: pointer;
-  height: 90px;
+  height: auto;
 }
-body nav #upper-nav #list-cart #cart .fa-shopping-cart {
+body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart {
   margin-top: 35px;
   width: 90px;
 }
-body nav #upper-nav #list-cart #cart .fa-shopping-cart:hover {
+body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart:hover {
   color: #666666;
 }
-@media only screen and (max-width: 973px) {
-  body nav #upper-nav #list-cart #cart {
-    border-bottom: solid 1px #e1e1e1;
+@media only screen and (max-width: 1010px) {
+  body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
+    border: none;
+  }
+}
+body nav #upper-nav #phone-input {
+  display: none;
+}
+@media only screen and (max-width: 1010px) {
+  body nav #upper-nav #phone-input {
+    display: block;
+    margin: 25px 0 25px 0;
+    height: 30px;
+    width: 100%;
+    color: #8d8d8d;
+    background-color: #fafafa;
+    border: solid #e8e8e8 1px;
+    padding-left: 10px;
   }
 }
 body nav #lower-nav ul {
@@ -147,6 +178,11 @@ body nav #lower-nav ul li:nth-child(11) {
 }
 body nav #lower-nav ul li:hover {
   color: #666666;
+}
+@media only screen and (max-width: 751px) {
+  body nav #lower-nav {
+    display: none;
+  }
 }
 body nav:nth-child(2) {
   font-size: 13px;
