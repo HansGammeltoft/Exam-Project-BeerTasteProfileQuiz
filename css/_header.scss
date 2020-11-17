@@ -1,8 +1,6 @@
 nav {
     font-size: $x-small-font-size;
     color: $dark-grey1;     
-    position: fixed;
-    z-index: 1;
     background: $white;
     width: 100%;
     
@@ -187,12 +185,5 @@ nav {
         display: none;
     }   
 }     
-}
-nav:nth-child(2) {
-    font-size: $x-small-font-size;
-    color: $dark-grey1;     
-    position: static;
-    background: $white;
-    width: 100%;
 }
 

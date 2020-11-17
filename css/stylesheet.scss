@@ -19,14 +19,14 @@ $small-font-weight: 300;
 $medium-font-weight: 400;
 $big-font-weight: 600;
 
-/* --- Font weight --- */
+/* --- Font size --- */
 $small-border-size: 1px;
 $medium-border-size: 2px;
 $big-border-size: 3px;
 
 /* --- Colors --- */
 $white: #fefefe;
-$blue: #6786a1;
+$blue: #6786A1;
 $light-grey1: #fafafa;
 $light-grey2: #e8e8e8;
 $light-grey3: #efefef;
@@ -35,13 +35,14 @@ $dark-grey1: #8d8d8d;
 $dark-grey2: #666666;
 $black: #222222;
 
-/* --- Borders --- */
+/* --- Border radius --- */
 $x-small-border-radius: 1px;
 $small-border-radius: 2px; 
 $medium-border-radius: 3px; 
 $big-border-radius: 5px; 
 
 /* --- Spacing --- */
+$x-small-spacing: 5px;
 $small-spacing: 10px;
 $medium-spacing: 25px;
 $big-spacing: 35px;
@@ -54,5 +55,7 @@ body {
     background-color: $white;
     @import '_header';
     @import 'index_main'; 
+    @import 'test';   
+    @import 'productpage';    
     @import '_footer';
 }

@@ -1,0 +1,174 @@
+.productpage-wrapper {
+    margin: $x-big-spacing;
+    #bottles-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .bottle-arrow {
+            max-width: 70px;             
+            min-width: 20px;
+            width: 100%;
+            margin: 0 $small-spacing;
+            img {
+                max-width: 100px;             
+                min-width: 20px;
+                width: 100%;   
+                cursor: pointer;
+            }            
+            .arrow-up-wrapper {
+                display: flex;
+                justify-content: center;
+                max-width: 100px;             
+                min-width: 20px;            
+                width: 100%;    
+                .arrow-up {
+                    width: 0; 
+                    height: 0; 
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid $blue;
+                }
+            }
+        }
+    }
+    .description-wrapper {
+        font-size: $small-font-size;
+        display: flex;
+        justify-content: space-between;
+        border: $medium-border-size solid $blue;  
+        border-radius: $big-border-radius;
+        .description-left {
+            width: 60%;
+            padding: $big-spacing;
+            .description {
+                .beer-name {
+                    color: $black;
+                    font-size: 16px;
+                }
+                .beer-description {
+                    padding: $small-spacing 0;
+                    color: $dark-grey2;
+                }    
+            }
+            .description-price-button {
+                padding-top: $medium-spacing;
+                display: flex;
+                justify-content: space-between;
+                .description-price {
+                    color: $blue;
+                }
+                    .price {
+                        font-weight: $big-font-weight;
+                    }
+                .description-button {
+                    button {
+                        font-size: $small-font-size;
+                        font-weight: $big-font-weight;
+                        cursor: pointer;        
+                        height: 100%;
+                        padding: $small-spacing;
+                        border: $small-border-size solid $blue;
+                        border-radius: $small-border-radius;
+                        background-color: $blue;
+                        color: $white;                         
+                    }
+                    button:hover {
+                        background-color: $white;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .description-right {
+            width: 40%;
+            padding: $big-spacing;  
+            .description-list {
+                ul {
+                    list-style-type: none;
+                    li {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-bottom: $small-spacing;
+                        .description-list-bold {
+                            font-weight: $medium-font-weight;
+                            margin-right: $small-spacing;
+                            color: $blue;
+                        }
+                        .description-list-normal {
+                            color: $dark-grey2;         
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    @media only screen and (max-width: 550px) {  
+        #bottles-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .bottle-arrow {
+                padding: $big-spacing;   
+            }
+        }        
+        .description-wrapper {
+            display: none;
+        }        
+    }
+    .add-all {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: $small-spacing;
+            .add-all-text {
+                padding-top: $small-spacing; 
+                font-weight: $big-font-weight;
+            }
+            .input-button {
+                .input-calc {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    border: $small-border-size solid $grey;
+                    button {
+                        padding: 0;
+                        margin: 0;
+                        font-size: $small-font-size;
+                        cursor: pointer;        
+                        height: 100%;
+                        width: 35px;                    
+                        padding: $small-spacing;
+                        border: none;
+                        border-radius: $small-border-radius;
+                        background-color: $grey;
+                        color: $black; 
+                    }
+                    input {
+                        padding: 0;
+                        margin: 0;
+                        width: 30px;
+                        border: none;
+                        text-align: center;
+                    }
+                }
+            }    
+            .add-all-button {
+                font-size: $small-font-size;
+                font-weight: $big-font-weight;
+                height: 100%;
+                padding: $small-spacing;
+                border: $small-border-size solid $blue;
+                border-radius: $small-border-radius;
+                background-color: $white;
+                color: $blue; 
+            }
+            .add-all-button:hover {
+                background-color: $blue;
+                color: $white; 
+            }
+    }
+    @media only screen and (max-width: 550px) {
+        .add-all {
+        justify-content: center;  
+        text-align: center;
+        }    
+    }    
+}
