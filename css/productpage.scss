@@ -2,9 +2,9 @@
     margin: $x-big-spacing;
     #bottles-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         .bottle-arrow {
-            max-width: 70px;             
+            max-width: 75px;             
             min-width: 20px;
             width: 100%;
             margin: 0 $small-spacing;
@@ -50,16 +50,17 @@
                 }    
             }
             .description-price-button {
-                padding-top: $medium-spacing;
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
                 .description-price {
+                    padding: $medium-spacing $medium-spacing 0 0;
                     color: $blue;
                 }
                     .price {
                         font-weight: $big-font-weight;
                     }
                 .description-button {
+                    padding-top: $medium-spacing;
                     button {
                         font-size: $small-font-size;
                         font-weight: $big-font-weight;
@@ -68,8 +69,8 @@
                         padding: $small-spacing;
                         border: $small-border-size solid $blue;
                         border-radius: $small-border-radius;
-                        background-color: $blue;
-                        color: $white;                         
+                        background-color: $white;
+                        color: $blue;                         
                     }
                     button:hover {
                         background-color: $white;
@@ -116,7 +117,6 @@
     }
     .add-all {
         display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
         margin-top: $small-spacing;
             .add-all-text {
@@ -157,8 +157,8 @@
                 padding: $small-spacing;
                 border: $small-border-size solid $blue;
                 border-radius: $small-border-radius;
-                background-color: $white;
-                color: $blue; 
+                background-color: $blue;
+                color: $white; 
             }
             .add-all-button:hover {
                 background-color: $blue;

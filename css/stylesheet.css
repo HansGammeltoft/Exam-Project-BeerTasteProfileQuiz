@@ -616,10 +616,10 @@ body .productpage-wrapper {
 }
 body .productpage-wrapper #bottles-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 body .productpage-wrapper #bottles-wrapper .bottle-arrow {
-  max-width: 70px;
+  max-width: 75px;
   min-width: 20px;
   width: 100%;
   margin: 0 10px;
@@ -664,15 +664,18 @@ body .productpage-wrapper .description-wrapper .description-left .description .b
   color: #666666;
 }
 body .productpage-wrapper .description-wrapper .description-left .description-price-button {
-  padding-top: 25px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 body .productpage-wrapper .description-wrapper .description-left .description-price-button .description-price {
+  padding: 25px 25px 0 0;
   color: #6786A1;
 }
 body .productpage-wrapper .description-wrapper .description-left .description-price-button .price {
   font-weight: 600;
+}
+body .productpage-wrapper .description-wrapper .description-left .description-price-button .description-button {
+  padding-top: 25px;
 }
 body .productpage-wrapper .description-wrapper .description-left .description-price-button .description-button button {
   font-size: 15px;
@@ -682,8 +685,8 @@ body .productpage-wrapper .description-wrapper .description-left .description-pr
   padding: 10px;
   border: 1px solid #6786A1;
   border-radius: 2px;
-  background-color: #6786A1;
-  color: #fefefe;
+  background-color: #fefefe;
+  color: #6786A1;
 }
 body .productpage-wrapper .description-wrapper .description-left .description-price-button .description-button button:hover {
   background-color: #fefefe;
@@ -724,7 +727,6 @@ body .productpage-wrapper .description-wrapper .description-right .description-l
 }
 body .productpage-wrapper .add-all {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 10px;
 }
@@ -764,8 +766,8 @@ body .productpage-wrapper .add-all .add-all-button {
   padding: 10px;
   border: 1px solid #6786A1;
   border-radius: 2px;
-  background-color: #fefefe;
-  color: #6786A1;
+  background-color: #6786A1;
+  color: #fefefe;
 }
 body .productpage-wrapper .add-all .add-all-button:hover {
   background-color: #6786A1;
