@@ -1,6 +1,6 @@
 <?php include 'php-db-projekt7.php'; ?>
 
-<form action="spg1.php" method="post">
+<form action="spg2.php" method="post">
   <input type="radio" name="svar" value="1A"><label for="1A">Svar1</label><br>
   <input type="radio" name="svar" value="1B"><label for="1B">Svar2</label><br>
   <input type="radio" name="svar" value="1C"><label for="1C">Svar3</label><br>
