@@ -23,7 +23,7 @@
     <ul>
     <?php
     //SELECT DISCTINCT will only select unique values from the column
-      $sql="SELECT DISTINCT answer FROM table_answers LIMIT 5";
+      $sql="SELECT answer FROM table_answers LIMIT 5";
       $result=$conn->query($sql);
       while($row=$result->fetch_assoc()){
     ?>
@@ -38,7 +38,7 @@
       <hr>
       <?php
       //SELECT DISCTINCT will only select unique values from the column
-        $sql="SELECT DISTINCT answer FROM table_answers LIMIT 5 OFFSET 5";
+        $sql="SELECT answer FROM table_answers LIMIT 5 OFFSET 5";
         $result=$conn->query($sql);
         while($row=$result->fetch_assoc()){
       ?>
@@ -53,7 +53,7 @@
       <hr>
       <?php
       //SELECT DISCTINCT will only select unique values from the column
-        $sql="SELECT DISTINCT answer FROM table_answers LIMIT 4 OFFSET 10";
+        $sql="SELECT answer FROM table_answers LIMIT 4 OFFSET 10";
         $result=$conn->query($sql);
         while($row=$result->fetch_assoc()){
       ?>
@@ -68,7 +68,7 @@
       <hr>
       <?php
       //SELECT DISCTINCT will only select unique values from the column
-        $sql="SELECT DISTINCT answer FROM table_answers LIMIT 4 OFFSET 14";
+        $sql="SELECT answer FROM table_answers LIMIT 4 OFFSET 14";
         $result=$conn->query($sql);
         while($row=$result->fetch_assoc()){
       ?>
@@ -84,7 +84,11 @@
     </ul>
     <div class="row" id="result">
       <?php
-        $sql="SELECT * FROM table_beers";
+        $sql="SELECT name, answer FROM table_beers
+                INNER JOIN table_beer_taste ON table_beers.productID = table_beer_taste.productID
+                INNER JOIN table_taste ON table_beer_taste.tasteID = table_taste.tasteID
+                INNER JOIN table_answer_taste ON table_taste.tasteID = table_answer_taste.tasteID
+                INNER JOIN table_answers ON table_answer_taste.answerID = table_answers.answerID";
         $result=$conn->query($sql);
         while($row=$result->fetch_assoc()){
       ?>
@@ -93,19 +97,13 @@
           <img>
         </div>
         <div>
-          <h6><?= $row['name']; ?></h6>
+          <p><?= $row['name']; ?></p>
         </div>
           <p>
-            Product ID : <?= $row['productID']; ?>
+            Answer : <?= $row['answer']; ?>
           </p>
       </div>
     </div>
     <?php } ?>
-    <?php
-      $sql="SELECT taste FROM table_beer_taste
-	     JOIN table_beers ON table_beers.productID = table_beer_taste.productID
-	     JOIN table_taste ON table_taste.tasteID = table_beer_taste.tasteID
-	     WHERE table_beer_taste.productID = 1"; 
-  ?>
   </body>
 </html>
