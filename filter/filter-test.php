@@ -84,11 +84,11 @@
     </ul>
     <div class="row" id="result">
       <?php
-        $sql="SELECT name, answer FROM table_beers
-                INNER JOIN table_beer_taste ON table_beers.productID = table_beer_taste.productID
-                INNER JOIN table_taste ON table_beer_taste.tasteID = table_taste.tasteID
-                INNER JOIN table_answer_taste ON table_taste.tasteID = table_answer_taste.tasteID
-                INNER JOIN table_answers ON table_answer_taste.answerID = table_answers.answerID";
+      $sql="SELECT name, taste, answer FROM table_beers
+              INNER JOIN table_beer_taste ON table_beers.productID = table_beer_taste.productID
+              INNER JOIN table_taste ON table_beer_taste.tasteID = table_taste.tasteID
+              INNER JOIN table_answer_taste ON table_taste.tasteID = table_answer_taste.tasteID
+              INNER JOIN table_answers ON table_answer_taste.answerID = table_answers.answerID";
         $result=$conn->query($sql);
         while($row=$result->fetch_assoc()){
       ?>
@@ -97,11 +97,15 @@
           <img>
         </div>
         <div>
-          <p><?= $row['name']; ?></p>
+          <p></p>
         </div>
-          <p>
+        <ul>
+          <li>
+            name : <?= $row['name']; ?>
+            taste : <?= $row['taste']; ?>
             Answer : <?= $row['answer']; ?>
-          </p>
+          </li>
+        </ul>
       </div>
     </div>
     <?php } ?>
