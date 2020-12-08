@@ -33,7 +33,7 @@
             <label class="product_check answers">
               <input type="radio" name="radio1" value="<?= $row['answer']; ?>" id="answer1">
               <div class="answer-border">
-                  <img src="./images/5.png" alt="Et billede af Union Jack">
+                  <img src="./images/5.png" alt="Et pink billede">
                   <p><?= $row['answer'] ?></p>
               </div>
             </label>
@@ -56,7 +56,7 @@
             <label class="product_check answers">
               <input type="radio" name="radio2" value="<?= $row['answer']; ?>" id="answer2">
               <div class="answer-border">
-                <img src="./images/5.png" alt="Et billede af Union Jack">
+                <img src="./images/5.png" alt="Et pink billede">
                 <p><?= $row['answer'] ?></p>
               </div>
             </label>
@@ -79,7 +79,7 @@
             <label class="product_check answers">
               <input type="radio" name="radio3" value="<?= $row['answer']; ?>" id="answer3">
               <div class="answer-border">
-                <img src="./images/5.png" alt="Et billede af Union Jack">
+                <img src="./images/5.png" alt="Et pink billede">
                 <p><?= $row['answer'] ?></p>
               </div>
             </label>
@@ -102,7 +102,7 @@
             <label class="product_check answers">
               <input type="radio" name="radio4" value="<?= $row['answer']; ?>" id="answer4">
               <div class="answer-border">
-                <img src="./images/5.png" alt="Et billede af Union Jack">
+                <img src="./images/5.png" alt="Et pink billede">
                 <p><?= $row['answer'] ?></p>
               </div>
             </label>

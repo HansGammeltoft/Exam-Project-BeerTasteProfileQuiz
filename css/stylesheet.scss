@@ -37,9 +37,9 @@ $black: #222222;
 
 /* --- Border radius --- */
 $x-small-border-radius: 1px;
-$small-border-radius: 2px; 
-$medium-border-radius: 3px; 
-$big-border-radius: 5px; 
+$small-border-radius: 2px;
+$medium-border-radius: 3px;
+$big-border-radius: 5px;
 
 /* --- Spacing --- */
 $x-small-spacing: 5px;
@@ -54,8 +54,8 @@ body {
     color: $black;
     background-color: $white;
     @import '_header';
-    @import 'index_main'; 
-    @import 'test';   
-    @import 'productpage';    
+    @import 'index_main';
+    @import 'test';
+    @import 'productpage';
     @import '_footer';
 }

@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$x-big-spacing".
-        on line 6 of C:\xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\index_main.scss
+        on line 6 of C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\index_main.scss
 
 1: main {
 2:     #banner {
@@ -15,7 +15,7 @@ Error: Undefined variable: "$x-big-spacing".
 11:             transition: all 0.5s ease;            
 
 Backtrace:
-C:\xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\index_main.scss:6
+C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\index_main.scss:6
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -77,4 +77,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 6 of C:\xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\index_main.scss\A \A 1: main {\A 2:     #banner {\A 3:         \A 4:     }\A 5:     #content {\A 6:         padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;          \A 7:         display: flex;\A 8:         justify-content: space-between;\A 9:         .transition-layer {\A 10:             filter: brightness(85%);\A 11:             transition: all 0.5s ease;            "; }
+  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 6 of C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\index_main.scss\A \A 1: main {\A 2:     #banner {\A 3:         \A 4:     }\A 5:     #content {\A 6:         padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;          \A 7:         display: flex;\A 8:         justify-content: space-between;\A 9:         .transition-layer {\A 10:             filter: brightness(85%);\A 11:             transition: all 0.5s ease;            "; }
