@@ -1,5 +1,5 @@
 <?php
-  require 'config.php';
+  require 'php-db-projekt7.php';
 ?>
 
 <!DOCTYPE html>
