@@ -1,23 +1,29 @@
-<section id="banner"></section>
+<section id="banner">
+  <?php include 'php-db-projekt7.php';
+  $query = "SELECT * FROM table_questions";
+  $total_questions = mysqli_num_rows(mysqli_query($conn,$query));
+  ?>
+  <a href="filter-test.php?n=1" class="start">Start Quiz</a>
+</section>
 <section id="content">
     <div id="img-section1" class="transition-layer wide-img-section img-section">
-        <img src="./images/oelkasse.png" alt="Billede af en ølkasse, med en blanding af forskellige øl typer">   
+        <img src="./images/oelkasse.png" alt="Billede af en ølkasse, med en blanding af forskellige øl typer">
         <h2 class="centered-text">Ølkasser</h2>
     </div>
     <div id="img-section2" class="transition-layer wide-img-section img-section">
-        <img src="./images/sortiment.png" alt="Billede af ølkassens øl sortiment på hyllerne">   
-        <h2 class="centered-text">Sortiment</h2>        
+        <img src="./images/sortiment.png" alt="Billede af ølkassens øl sortiment på hyllerne">
+        <h2 class="centered-text">Sortiment</h2>
     </div>
     <div id="img-section3" class="img-section">
         <div class="transition-layer innner-img-section">
-            <img src="./images/adventskalender.png" alt="Billede af ølkassens adventskalender, på billede ses flasker pakket ind i papir">  
-            <h2 class="centered-text">Advents-kalender</h2> 
+            <img src="./images/adventskalender.png" alt="Billede af ølkassens adventskalender, på billede ses flasker pakket ind i papir">
+            <h2 class="centered-text">Advents-kalender</h2>
         </div>
         <div class="transition-layer innner-img-section">
-            <img src="./images/julekalender.png" alt="Billede af ølkassens julekalender, på billede ses flasker pakket ind i papir">  
-            <h2 class="centered-text">Jule-kalender</h2>   
-        </div>    
-    </div>  
+            <img src="./images/julekalender.png" alt="Billede af ølkassens julekalender, på billede ses flasker pakket ind i papir">
+            <h2 class="centered-text">Jule-kalender</h2>
+        </div>
+    </div>
 </section>
 <section id="instagram-newproducts">
     <div id="instagram-section">
@@ -40,9 +46,9 @@
                 <p>Følg med på Instagram</p>
             </div>
         </div>
-    </div>         
+    </div>
     <div id="newproducts-section">
-        <h3>NYE PRODUKTER</h3>  
+        <h3>NYE PRODUKTER</h3>
         <div id="newproducts-sections">
             <div class="newproducts-wrapper">
                 <div class="newproduct-image">
@@ -55,10 +61,10 @@
                 <div class="newproduct-buttons">
                     <div class="buttons">
                         <p><i class="fas fa-shopping-cart"></i>&nbsp;Tilføj til kurv</p>
-                    </div>    
+                    </div>
                     <div class="buttons">
                         <p><i class="fas fa-clipboard-list"></i>&nbsp;Vis detaljer</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <div class="newproducts-wrapper">
@@ -72,10 +78,10 @@
                 <div class="newproduct-buttons">
                     <div class="buttons">
                         <p><i class="fas fa-shopping-cart"></i>&nbsp;Tilføj til kurv</p>
-                    </div>    
+                    </div>
                     <div class="buttons">
                         <p><i class="fas fa-clipboard-list"></i>&nbsp;Vis detaljer</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <div class="newproducts-wrapper">
@@ -89,10 +95,10 @@
                 <div class="newproduct-buttons">
                     <div class="buttons">
                         <p><i class="fas fa-shopping-cart"></i>&nbsp;Tilføj til kurv</p>
-                    </div>    
+                    </div>
                     <div class="buttons">
                         <p><i class="fas fa-clipboard-list"></i>&nbsp;Vis detaljer</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <div class="newproducts-wrapper">
@@ -106,14 +112,14 @@
                 <div class="newproduct-buttons">
                     <div class="buttons">
                         <p><i class="fas fa-shopping-cart"></i>&nbsp;Tilføj til kurv</p>
-                    </div>    
+                    </div>
                     <div class="buttons">
                         <p><i class="fas fa-clipboard-list"></i>&nbsp;Vis detaljer</p>
-                    </div>  
+                    </div>
                 </div>
-            </div>            
+            </div>
         </div>
-    </div>   
+    </div>
 </section>
 <section id="pickup">
     <div id="pickup-header">
@@ -126,6 +132,6 @@
         <p>København V (2720/Rosenlunds Allé)</p>
         <p>Lejre (4320/Holmegårdsvej)</p>
         <br><br>
-        <p>Da vi først skal fragte øllene fra lagret til disse, kan det tage noget tid før de er klar til afhentning. Aftal afhentning via info@oelkassen.dk efter ordren er afgivet. Afhentning ca. kl 17-21 på hverdage. Weekender efter aftale.</p>       
+        <p>Da vi først skal fragte øllene fra lagret til disse, kan det tage noget tid før de er klar til afhentning. Aftal afhentning via info@oelkassen.dk efter ordren er afgivet. Afhentning ca. kl 17-21 på hverdage. Weekender efter aftale.</p>
     </div>
 </section>
