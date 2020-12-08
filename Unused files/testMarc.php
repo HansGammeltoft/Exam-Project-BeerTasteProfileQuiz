@@ -48,22 +48,22 @@
       <br><br>
    </form>
    <?php
-      
-    //Set up variables 
-    $server = "localhost"; 
-    $user = "root"; 
+
+    //Set up variables
+    $server = "localhost";
+    $user = "root";
     $pw = "";
-    $db = "projekt7"; 
+    $db = "projekt7";
 
     //create connection
-    $conn = new mysqli($server, $user, $pw, $db); 
+    $conn = new mysqli($server, $user, $pw, $db);
 
-    //check connection 
+    //check connection
     if($conn->connect_error){
-        die("Connection failed:" .$conn->connect_error); 
+        die("Connection failed:" .$conn->connect_error);
     }
-    echo "Connected successfully"."<br/>";  
-      
+    echo "Connected successfully"."<br/>";
+
    // if data is posted, set value to 1, else to 0
    $check_0 = isset($_GET['answer1']) ? 1 : 0;
    $check_1 = isset($_GET['answer2']) ? 1 : 0;
@@ -209,14 +209,14 @@
                     INNER JOIN table_beers ON table_beers.productID = table_beer_taste.productID
                     INNER JOIN table_taste ON table_taste.tasteID = table_beer_taste.tasteID
                     WHERE table_beer_taste.productID = 1";
-        $result = $conn->query($black_is_beautiful); 
+        $result = $conn->query($black_is_beautiful);
         if($result->num_rows>0){
         //output data of each row
         while($row = $result->fetch_assoc()){
-        echo $row['taste']."<br/>"; 
+        echo $row['taste']."<br/>";
         }
-        } 
-      
+        }
+
             //$kakao + $vanilje + $espresso + $kaffebær, "<br>";
       echo "Rocky road ice cream ", $rocky_road_ice_cream = $kakao + $vanilje + $mandel + $skumfiduser, "<br>";
       echo "70K BA ", $k_ba = $ristet = $chokolade + $bourbon, "<br>";
