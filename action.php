@@ -36,12 +36,13 @@
         //If $beername is EQUAL to empty, which it is, then SET it as the values in the "name" column in the database, and put it inside a list.
         if ($beername == '') {
           $beername = $row['name'];
-          echo '<ul class="beername_wrapper"><li>' . $row['name'] .' '. $row['taste'];
+          echo '<img style="height:200px;" src="./images/oelkassenlogod.png">';
+                echo $row['name'] .' '. $row['taste'] .' ';
         //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the list, and echo out the next $beername.
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
-          echo '</li><li>';
-          echo $row['name'] .' '. $row['taste'] .' ';
+                echo '<img style="height:200px;" src="./images/oelkassenlogod.png">';
+                echo $row['name'] .' '. $row['taste'] .' ';
         //Else only echo the values in the "answer" column.
         }else {
           echo $row['taste'] .' ';
@@ -51,7 +52,7 @@
   }
  ?>
 
- <!-- <script>
+ <script>
     //limit to 5
     $beername_wrapper = $('.beername_wrapper');
     $beername_wrapper.each(function() {
@@ -60,4 +61,4 @@
            $beername_wrapper.children(':nth-of-type(n+6)').hide();
        }
    });
- </script> -->
+ </script>
