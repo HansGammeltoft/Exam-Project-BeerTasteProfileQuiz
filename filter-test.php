@@ -21,12 +21,19 @@
   <body>
     <section>
       <div class="test-wrapper">
-        <h1 id="question-header">Spørgsmål 1</h1>
+        <?php
+          $sql="SELECT question FROM table_questions
+          WHERE questionID = 1";
+          $result=$conn->query($sql);
+          while($row=$result->fetch_assoc()){
+        ?>
+        <h1 id="question-header"><?php echo $row['question'] ?></h1>
         <div id="button-form-wrapper">
           <button class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
           <div class="question-answers">
             <?php
-              $sql="SELECT answer FROM table_answers LIMIT 5";
+              $sql="SELECT answer FROM table_test
+              WHERE questionID = 1";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
             ?>
@@ -37,19 +44,26 @@
                   <p><?= $row['answer'] ?></p>
               </div>
             </label>
-            <?php } ?>
+          <?php } } ?>
             <button class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
         </div>
       </div>
     </div>
 
-      <div class="test-wrapper">
-        <h1 id="question-header">Spørgsmål 2</h1>
+    <div class="test-wrapper">
+      <?php
+        $sql="SELECT question FROM table_questions
+        WHERE questionID = 2";
+        $result=$conn->query($sql);
+        while($row=$result->fetch_assoc()){
+      ?>
+      <h1 id="question-header"><?php echo $row['question'] ?></h1>
         <div id="button-form-wrapper">
           <button class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
           <div class="question-answers">
             <?php
-              $sql="SELECT answer FROM table_answers LIMIT 5 OFFSET 5";
+              $sql="SELECT answer FROM table_test
+              WHERE questionID = 2";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
             ?>
@@ -60,19 +74,26 @@
                 <p><?= $row['answer'] ?></p>
               </div>
             </label>
-            <?php } ?>
+          <?php } } ?>
             <button class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
           </div>
         </div>
       </div>
 
       <div class="test-wrapper">
-        <h1 id="question-header">Spørgsmål 3</h1>
+        <?php
+          $sql="SELECT question FROM table_questions
+          WHERE questionID = 3";
+          $result=$conn->query($sql);
+          while($row=$result->fetch_assoc()){
+        ?>
+        <h1 id="question-header"><?php echo $row['question'] ?></h1>
         <div id="button-form-wrapper">
           <button class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
           <div class="question-answers">
             <?php
-              $sql="SELECT answer FROM table_answers LIMIT 4 OFFSET 10";
+              $sql="SELECT answer FROM table_test
+              WHERE questionID = 3";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
             ?>
@@ -83,19 +104,26 @@
                 <p><?= $row['answer'] ?></p>
               </div>
             </label>
-            <?php } ?>
+          <?php } } ?>
             <button class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
           </div>
         </div>
       </div>
 
       <div class="test-wrapper">
-        <h1 id="question-header">Spørgsmål 4</h1>
+        <?php
+          $sql="SELECT question FROM table_questions
+          WHERE questionID = 4";
+          $result=$conn->query($sql);
+          while($row=$result->fetch_assoc()){
+        ?>
+        <h1 id="question-header"><?php echo $row['question'] ?></h1>
         <div id="button-form-wrapper">
           <button class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
           <div class="question-answers">
             <?php
-              $sql="SELECT answer FROM table_answers LIMIT 4 OFFSET 14";
+              $sql="SELECT answer FROM table_test
+              WHERE questionID = 4";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
             ?>
@@ -106,7 +134,7 @@
                 <p><?= $row['answer'] ?></p>
               </div>
             </label>
-            <?php } ?>
+          <?php } } ?>
             <button class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
         </div>
       </div>
@@ -114,7 +142,6 @@
     </section>
 
     <div class="row" id="result">
-      </li></ul>
     </div>
     <script type="text/javascript">
         $(document).ready(function(){
