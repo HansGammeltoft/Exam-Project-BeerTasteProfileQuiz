@@ -6,8 +6,17 @@
     <link rel="stylesheet" href="css.css">
   </head>
   <body>
-    <div class="character">
-      <img class="character_spritesheet" src="animation.png" alt="Beer filling up">
+    <div class="loader-wrapper">
+      <div class="loader-logo">
+        <img class="logouflasker" src="logouflasker.png" alt="">
+      </div>
+      <div class="loader-animation">
+        <img class="animation_spritesheet" src="animation.png" alt="Beer filling up">
+      </div>
+      <div class="loader-text">
+        <p>Lige et øjeblik...</p>
+        <p>Vi finder de perfekte øl til dig</p>
+      </div>
     </div>
   </body>
 </html>
