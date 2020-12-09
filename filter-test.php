@@ -140,9 +140,12 @@
           </div>
         </div>
       </section>
-      <div class="row" id="result">
 
-      </div>
+      <section class="productpage-wrapper">
+        <div id="bottles-wrapper">
+          <div class="row" id="result"></div>
+        </div>
+      </section>
 
       <script type="text/javascript">
           $(document).ready(function(){
