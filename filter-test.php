@@ -142,8 +142,8 @@
       </section>
 
       <section class="productpage-wrapper">
-        <div id="bottles-wrapper">
-          <div class="row" id="result"></div>
+        <div class="description-wrapper">
+          <div id="result"></div>
         </div>
       </section>
 
@@ -278,6 +278,16 @@
             return false;
          });
       });
+   </script>
+   <script>
+      //limit to 5
+      $beername_wrapper = $('.beername_wrapper');
+      $beername_wrapper.each(function() {
+         var $bn_wrapper = $(this).children();
+         if ($bn_wrapper.length > 5) {
+             $beername_wrapper.children(':nth-of-type(n+6)').hide();
+         }
+     });
    </script>
   </body>
 </html>
