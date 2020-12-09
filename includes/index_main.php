@@ -6,7 +6,7 @@
     <div class="centered-text">
       <p class="banner-header">Find din smagsprofil</p>
       <p class="banner-text">Svært ved at vælge øl? Tag vores øltest og find din personlige smag</p>
-      <a href="filter-test.php?n=1" class="start">Tag testen</a>
+      <a href="filter-test.php" class="start">Tag testen</a>
     </div>
   </div>
   <div class="tiltedbottles tiltedbottle-right">
