@@ -4,25 +4,25 @@
         display: flex;
         justify-content: space-around;
         .bottle-arrow {
-            max-width: 75px;             
+            max-width: 75px;
             min-width: 20px;
             width: 100%;
             margin: 0 $small-spacing;
             img {
-                max-width: 100px;             
+                max-width: 100px;
                 min-width: 20px;
-                width: 100%;   
+                width: 100%;
                 cursor: pointer;
-            }            
+            }
             .arrow-up-wrapper {
                 display: flex;
                 justify-content: center;
-                max-width: 100px;             
-                min-width: 20px;            
-                width: 100%;    
+                max-width: 100px;
+                min-width: 20px;
+                width: 100%;
                 .arrow-up {
-                    width: 0; 
-                    height: 0; 
+                    width: 0;
+                    height: 0;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
                     border-bottom: 5px solid $blue;
@@ -34,7 +34,7 @@
         font-size: $small-font-size;
         display: flex;
         justify-content: space-between;
-        border: $medium-border-size solid $blue;  
+        border: $medium-border-size solid $blue;
         border-radius: $big-border-radius;
         .description-left {
             width: 60%;
@@ -47,7 +47,7 @@
                 .beer-description {
                     padding: $small-spacing 0;
                     color: $dark-grey2;
-                }    
+                }
             }
             .description-price-button {
                 display: flex;
@@ -64,13 +64,13 @@
                     button {
                         font-size: $small-font-size;
                         font-weight: $big-font-weight;
-                        cursor: pointer;        
+                        cursor: pointer;
                         height: 100%;
                         padding: $small-spacing;
                         border: $small-border-size solid $blue;
                         border-radius: $small-border-radius;
                         background-color: $white;
-                        color: $blue;                         
+                        color: $blue;
                     }
                     button:hover {
                         background-color: $white;
@@ -95,32 +95,32 @@
                             color: $blue;
                         }
                         .description-list-normal {
-                            color: $dark-grey2;         
+                            color: $dark-grey2;
                         }
                     }
                 }
             }
-        }        
+        }
     }
-    @media only screen and (max-width: 550px) {  
+    @media only screen and (max-width: 550px) {
         #bottles-wrapper {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             .bottle-arrow {
-                padding: $big-spacing;   
+                padding: $big-spacing;
             }
-        }        
+        }
         .description-wrapper {
             display: none;
-        }        
+        }
     }
     .add-all {
         display: flex;
         flex-wrap: wrap;
         margin-top: $small-spacing;
             .add-all-text {
-                padding-top: $small-spacing; 
+                padding-top: $small-spacing;
                 font-weight: $big-font-weight;
             }
             .input-button {
@@ -132,14 +132,14 @@
                         padding: 0;
                         margin: 0;
                         font-size: $small-font-size;
-                        cursor: pointer;        
+                        cursor: pointer;
                         height: 100%;
-                        width: 35px;                    
+                        width: 35px;
                         padding: $small-spacing;
                         border: none;
                         border-radius: $small-border-radius;
                         background-color: $grey;
-                        color: $black; 
+                        color: $black;
                     }
                     input {
                         padding: 0;
@@ -149,7 +149,7 @@
                         text-align: center;
                     }
                 }
-            }    
+            }
             .add-all-button {
                 font-size: $small-font-size;
                 font-weight: $big-font-weight;
@@ -158,17 +158,17 @@
                 border: $small-border-size solid $blue;
                 border-radius: $small-border-radius;
                 background-color: $blue;
-                color: $white; 
+                color: $white;
             }
             .add-all-button:hover {
                 background-color: $blue;
-                color: $white; 
+                color: $white;
             }
     }
     @media only screen and (max-width: 550px) {
         .add-all {
-        justify-content: center;  
+        justify-content: center;
         text-align: center;
-        }    
-    }    
+        }
+    }
 }

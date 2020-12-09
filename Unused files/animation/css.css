@@ -1,0 +1,18 @@
+.character {
+  width: 134.5px;
+  height: 522px;
+  overflow: hidden;
+}
+.character_spritesheet {
+  animation: moveSpritesheet 0.7s steps(26) infinite;
+}
+
+@keyframes moveSpritesheet {
+  from {
+    transform: translate3d(0px,0,0);
+  }
+  to {
+    transform: translate3d(-100%,0,0);
+
+  }
+}

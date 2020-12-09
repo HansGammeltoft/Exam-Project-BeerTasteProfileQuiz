@@ -8,7 +8,7 @@ Error: Undefined variable: "$x-big-spacing".
 4:         display: flex;
 5:         justify-content: space-around;
 6:         .bottle-arrow {
-7:             max-width: 75px;             
+7:             max-width: 75px;
 
 Backtrace:
 C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\productpage.scss:2
@@ -58,4 +58,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 2 of C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\productpage.scss\A \A 1: .productpage-wrapper {\A 2:     margin: $x-big-spacing;\A 3:     #bottles-wrapper {\A 4:         display: flex;\A 5:         justify-content: space-around;\A 6:         .bottle-arrow {\A 7:             max-width: 75px;             "; }
+  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 2 of C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\productpage.scss\A \A 1: .productpage-wrapper {\A 2:     margin: $x-big-spacing;\A 3:     #bottles-wrapper {\A 4:         display: flex;\A 5:         justify-content: space-around;\A 6:         .bottle-arrow {\A 7:             max-width: 75px;"; }
