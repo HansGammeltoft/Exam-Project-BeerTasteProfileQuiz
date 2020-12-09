@@ -15,7 +15,7 @@
         </header>
         <main>
             <!–– pulling all data from index_main.php ––>
-            <?php include('includes/productpage.php'); ?>
+            <?php include('filter-test.php'); ?>
         </main>
         <footer>
             <!–– pulling all data from footer.php ––>
