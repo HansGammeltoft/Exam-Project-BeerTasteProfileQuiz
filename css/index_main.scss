@@ -1,68 +1,140 @@
 main {
     #banner {
-        
+        padding: 0 $x-big-spacing 0 $x-big-spacing;
+        display: flex;
+        justify-content: center;
+        background: url("beergrid.png");
+        .tiltedbottles {
+          padding: 0 100px 0 100px;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          img {
+            position: absolute;
+            bottom: 0;
+          }
+        }
+        .text-button-section {
+          height: 254px;
+          width: 100%;
+          position: relative;
+          text-align: center;
+          .centered-text {
+            min-width: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: $big-font-weight;
+            .banner-header {
+              font-size: $x-big-font-size;
+            }
+            .banner-text {
+              font-size: $medium-font-size;
+              padding: $small-spacing 0 $big-spacing 0;
+            }
+            .start {
+              text-decoration: none;
+              font-size: $medium-font-size;
+              font-weight: $big-font-weight;
+              cursor: pointer;
+              padding: $small-spacing;
+              border: $small-border-size solid $blue;
+              border-radius: $small-border-radius;
+              background-color: $blue;
+              color: $white;
+            }
+            .start:hover {
+              background-color: $white;
+              color: $blue;
+            }
+          }
+        }
+    }
+    @media only screen and (max-width: 878px) {
+      #banner {
+        .tiltedbottles {
+          padding: 0;
+          img {
+            width: 150px;
+          }
+        }
+        .text-button-section {
+          height: 200px;
+        }
+      }
+    }
+    @media only screen and (max-width: 616px) {
+      #banner {
+        .tiltedbottles {
+                    padding: 0 $big-spacing 0 $big-spacing;
+          img {
+            width: 70px;
+          }
+        }
+      }
     }
     #content {
-        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;          
+        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;
         display: flex;
         justify-content: space-between;
         .transition-layer {
             filter: brightness(85%);
-            transition: all 0.5s ease;            
+            transition: all 0.5s ease;
         }
         .transition-layer:hover {
-            filter: brightness(110%);              
+            filter: brightness(110%);
         }
         .wide-img-section img  {
             border-radius: $big-border-radius;
-        }   
+        }
         .img-section {
             position: relative;
             text-align: center;
-            color: white;  
-            cursor: pointer;               
+            color: white;
+            cursor: pointer;
             img {
                 height: 100%;
                 width: 100%;
                 min-width: 240px;
-                max-width: 533px;          
-            }            
+                max-width: 533px;
+            }
             .centered-text {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%); 
+                transform: translate(-50%, -50%);
                 font-size: $x-big-font-size;
                 font-weight: $medium-font-weight;
-            }            
-        }       
-        #img-section2 { 
+            }
+        }
+        #img-section2 {
             margin: 0px 80px 0px 80px;
-        }    
-        #img-section3 {  
+        }
+        #img-section3 {
             display: flex;
             .innner-img-section {
                 position: relative;
                 text-align: center;
-                color: white;  
+                color: white;
                 img {
                     height: 100%;
                     width: 100%;
                     min-width: 118.5px;
                     max-width: 265px;
                     border-radius: $small-border-radius;
-                }  
+                }
             }
         }
         .innner-img-section:nth-child(1) {
             margin-right: 5px;
-        }          
-    } 
+        }
+    }
     #instagram-newproducts {
-        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;  
+        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;
         display: flex;
         #instagram-section {
-            width: 50%; 
+            width: 50%;
             margin-right: $medium-spacing;
             h3 {
                 text-align: center;
@@ -79,7 +151,7 @@ main {
                 }
                 p {
                     padding: 15px;
-                    font-weight: $big-font-weight;                    
+                    font-weight: $big-font-weight;
                 }
             }
             #instagram-content {
@@ -89,15 +161,15 @@ main {
                     height: 100%;
                     width: 100%;
                     min-width: 98px;
-                    max-width: 272px;  
+                    max-width: 272px;
                     transition: all 0.5s ease;
-                }     
+                }
                 img:hover {
                     filter: brightness(105%);
                 }
                 img:nth-child(2) {
                     padding: 0px 5px 0px 5px;
-                }    
+                }
             }
             #instagram-button-section {
                 display: flex;
@@ -107,18 +179,18 @@ main {
                     background-color: #333333;
                     padding: 7px 13px 7px 13px;
                     border-radius: $medium-border-radius;
-                    margin: 10px 10px 0 0; 
+                    margin: 10px 10px 0 0;
                     cursor: pointer;
                 }
                 #instagram-grey-button:hover {
                     background-color: #666666;
-                }                
+                }
                 #instagram-blue-button {
                     display: flex;
-                    background-color: #408bd1;   
-                    padding: 7px 13px 7px 13px; 
-                    border-radius: $medium-border-radius;     
-                    margin: 10px 0px 0 0; 
+                    background-color: #408bd1;
+                    padding: 7px 13px 7px 13px;
+                    border-radius: $medium-border-radius;
+                    margin: 10px 0px 0 0;
                     cursor: pointer;
                     p {
                         padding-left: 10px;
@@ -126,13 +198,14 @@ main {
                 }
                 #instagram-blue-button:hover {
                     background-color: #359dff;
-                }                 
+                }
             }
-            
+
         }
         #newproducts-section {
-            width: 50%; 
-            margin-left: $medium-spacing;            
+            padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;
+            width: 50%;
+            margin-left: $medium-spacing;
             h3 {
                 text-align: center;
                 padding: 0 0 $medium-spacing 0;
@@ -146,7 +219,7 @@ main {
                     width: 100%;
                     min-width: 79px;
                     max-width: 205px;
-                    margin-left: 5px; 
+                    margin-left: 5px;
                     border: solid $grey $small-border-size;
                     cursor: pointer;
                     img {
@@ -157,8 +230,8 @@ main {
                             padding: $small-spacing;
                             font-size: $small-font-size;
                             color: $black;
-                            font-weight: $medium-font-weight;                            
-                        }     
+                            font-weight: $medium-font-weight;
+                        }
                         .newproduct-price {
                             color: $blue;
                             font-weight: $big-font-weight;
@@ -180,41 +253,46 @@ main {
                         .buttons:nth-child(2) {
                             padding-left: 10px;
                             border-left: solid $grey $small-border-size;
-                        }                        
+                        }
                     }
                 }
+                @media only screen and (max-width: 548px) {
+                  .newproducts-wrapper:last-child {
+                      display: none;
+                    }
+                  }
                 .newproducts-wrapper:hover {
                     .newproduct-buttons {
-                        opacity: 1;                     
+                        opacity: 1;
                     }
-                }                  
+                }
             }
-              
-            
+
+
         }
     }
     #pickup {
-        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;         
+        padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;
         #pickup-header {
             display: flex;
             justify-content: space-between;
             h4 {
                 width: 390px;
-                padding: 0 0 $medium-spacing 0;  
+                padding: 0 0 $medium-spacing 0;
                 font-size: 20px;
-                font-weight: $big-font-weight;                
+                font-weight: $big-font-weight;
             }
             div {
                 background-color: $grey;
                 height: 1px;
                 width: 100%;
-                margin: 13px 0 0 0;  
+                margin: 13px 0 0 0;
             }
-        }  
+        }
         #pickup-text {
-            padding: 0 0 $x-big-spacing 0;            
+            padding: 0 0 $x-big-spacing 0;
             p {
-                padding: 0 0 $small-spacing 0; 
+                padding: 0 0 $small-spacing 0;
                 color: $dark-grey2;
                 font-size: $small-font-size;
             }
@@ -228,9 +306,9 @@ main {
         .img-section {
             padding-bottom: $medium-spacing;
         }
-        #img-section2 { 
+        #img-section2 {
             margin: 0px 0px 0px 0px;
-        }  
+        }
     }
     #instagram-newproducts {
         display: flex;
@@ -246,7 +324,6 @@ main {
             width: 432px;
         }
     }
-        
-}    
+
 }
- 
+}

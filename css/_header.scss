@@ -1,13 +1,13 @@
 nav {
     font-size: $x-small-font-size;
-    color: $dark-grey1;     
+    color: $dark-grey1;
     background: $white;
     width: 100%;
-    
-/* --- logo, logotext, searchbar, links and cart --- */    
+
+/* --- logo, logotext, searchbar, links and cart --- */
 #upper-nav{
-    padding: 0px $x-big-spacing 0px $x-big-spacing;     
-    border-bottom: solid $small-border-size $grey;  
+    padding: 0px $x-big-spacing 0px $x-big-spacing;
+    border-bottom: solid $small-border-size $grey;
     #upper-nav-wrapper {
         display: flex;
         justify-content: space-between ;
@@ -15,12 +15,12 @@ nav {
         #img-text {
             display: flex;
             flex-wrap: wrap;
-            img {           
+            img {
                 height: 90px;
                 width: 120px;
             }
             @media only screen and (max-width: 616px) {
-                img {           
+                img {
                     height: auto;
                     width: 30%;
                 }
@@ -40,16 +40,16 @@ nav {
                 height: 30px;
                 min-width: 100px;
                 width: 350px;
-                color: $dark-grey1;    
-                background-color: $light-grey1;        
+                color: $dark-grey1;
+                background-color: $light-grey1;
                 border: solid $light-grey2 $small-border-size;
-                padding-left: 10px; 
-            }     
+                padding-left: 10px;
+            }
             @media only screen and (max-width: 1010px) {
                 input {
                    display: none;
-                } 
-            }              
+                }
+            }
         }
 
         /* div for menulinks and cart */
@@ -58,84 +58,98 @@ nav {
 
             /* nav-menu1 is on display when window is full, and hidden when it isnt */
             #nav-menu1 {
-                margin-top: $big-spacing; 
+                margin-top: $big-spacing;
 
-                li {            
+                li {
                     display: inline;
                     padding: 0;
                     margin: 0;
                     margin-right: $medium-spacing;
-                    cursor: pointer; 
+                    cursor: pointer;
                     font-weight: $big-font-weight;
                 }
                 li:hover {
-                    color: $dark-grey2; 
-                }            
+                    color: $dark-grey2;
+                }
+                .start {
+                  text-decoration: none;
+                  font-weight: $big-font-weight;
+                  cursor: pointer;
+                  padding: $small-spacing;
+                  border: $small-border-size solid $blue;
+                  border-radius: $small-border-radius;
+                  background-color: $blue;
+                  color: $white;
+                }
+                .start:hover {
+                  background-color: $white;
+                  color: $blue;
+                }
             }
 
             /* nav-menu2 is on displsy when nav-menu1 is hidden */
             #nav-menu2 {
-                display: none; 
+                display: none;
 
-                li {            
+                li {
                     display: inline;
                     padding: 0;
                     margin: 0;
                     margin-right: $medium-spacing;
-                    cursor: pointer; 
+                    cursor: pointer;
                     font-weight: $big-font-weight;
                     img {
-                        margin-top: $big-spacing;     
+                        margin-top: $big-spacing;
                     }
                 }
                 .fa-shopping-cart {
                     margin-top: $big-spacing;
-                    cursor: pointer;                    
+                    cursor: pointer;
                 }
                 .fa-shopping-cart:hover {
-                    color: $dark-grey2;   
+                    color: $dark-grey2;
                 }
                 li:hover {
-                    color: $dark-grey2; 
-                }   
+                    color: $dark-grey2;
+                }
                 .nav-menu-text {
                     font-size: $big-font-size;
-                    margin-top: $medium-spacing;                     
+                    margin-top: $medium-spacing;
                 }
-            } 
-            @media only screen and (max-width: 1350px) {
+            }
+            @media only screen and (max-width: 1428px) {
                 #nav-menu1 {
                     display: none;
-                }  
+                }
                 #nav-menu2 {
                     display: block;
                     display: flex;
                     flex-wrap: nowrap;
-                }  
-            }        
+                }
+            }
             #cart {
-                border-left: solid $small-border-size $grey;  
-                border-right: solid $small-border-size $grey;   
-                border-top: solid $small-border-size $grey;  
+                border-left: solid $small-border-size $grey;
+                border-right: solid $small-border-size $grey;
+                border-top: solid $small-border-size $grey;
                 text-align: center;
                 cursor: pointer;
-                height: auto;       
+                height: auto;
 
                 .fa-shopping-cart {
-                    margin-top: $big-spacing; 
+                    margin-top: $big-spacing;
                     width: 90px;
                 }
                 .fa-shopping-cart:hover {
-                    color: $dark-grey2; 
-                }               
+                    color: $dark-grey2;
+                }
             }
             /* adds a border line in the bottom when the screen gets smaller */
-            @media only screen and (max-width: 1350px) {
+            @media only screen and (max-width: 1428px) {
             #cart {
                 display: none;
-                }   
-            }         
-        }    
+                }
+            }
+        }
     }
     #phone-input {
         display: none;
@@ -146,24 +160,24 @@ nav {
             margin:  $medium-spacing 0 $medium-spacing 0;
             height: 30px;
             width: 100%;
-            color: $dark-grey1;    
-            background-color: $light-grey1;        
+            color: $dark-grey1;
+            background-color: $light-grey1;
             border: solid $light-grey2 $small-border-size;
-            padding-left: 10px;             
-        } 
-    }  
+            padding-left: 10px;
+        }
+    }
 }
-   
-/* --- beerstyles --- */     
+
+/* --- beerstyles --- */
 #lower-nav{
     ul {
-        padding: 0px $x-big-spacing 0px $x-big-spacing;        
+        padding: 0px $x-big-spacing 0px $x-big-spacing;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         border-bottom: solid $small-border-size $grey;
         li{
-            display: inline;   
+            display: inline;
             margin: $medium-spacing 0 $medium-spacing $small-spacing;
             padding-right: $small-spacing;
             font-weight: $big-font-weight;
@@ -176,14 +190,13 @@ nav {
             border-right: none;
         }
         li:hover {
-            color: $dark-grey2; 
+            color: $dark-grey2;
         }
     }
 }
 @media only screen and (max-width: 751px) {
     #lower-nav {
         display: none;
-    }   
-}     
+    }
 }
-
+}

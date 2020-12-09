@@ -1,9 +1,17 @@
 <section id="banner">
-  <?php include 'php-db-projekt7.php';
-  $query = "SELECT * FROM table_questions";
-  $total_questions = mysqli_num_rows(mysqli_query($conn,$query));
-  ?>
-  <a href="filter-test.php?n=1" class="start">Start Quiz</a>
+  <div class="tiltedbottles tiltedbottle-left">
+    <img src="./images/tiltedbottleleft.png" alt="Ølkassen logo øl, der tilter til den ene side">
+  </div>
+  <div class="text-button-section">
+    <div class="centered-text">
+      <p class="banner-header">Find din smagsprofil</p>
+      <p class="banner-text">Svært ved at vælge øl? Tag vores øltest og find din personlige smag</p>
+      <a href="filter-test.php?n=1" class="start">Tag testen</a>
+    </div>
+  </div>
+  <div class="tiltedbottles tiltedbottle-right">
+    <img src="./images/tiltedbottleright.png" alt="Ølkassen logo øl, der tilter til den ene side">
+  </div>
 </section>
 <section id="content">
     <div id="img-section1" class="transition-layer wide-img-section img-section">

@@ -15,7 +15,7 @@
         </header>
         <main>
             <!–– pulling all data from index_main.php ––>
-            <?php include('includes/question-type-6-answers.php'); ?>
+            <?php include('includes/productpage.php'); ?>
         </main>
         <footer>
             <!–– pulling all data from footer.php ––>

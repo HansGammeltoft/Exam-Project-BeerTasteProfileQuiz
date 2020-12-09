@@ -1,48 +1,61 @@
 footer {
-    padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing; 
-    border-top: solid $small-border-size $grey;     
-    display: flex;    
-    justify-content: space-between;
-    flex-wrap: wrap;
-    ul {
-        list-style-type: none;
-        width: 33%;
-        li {
-            font-weight: $small-font-weight;            
-            cursor: pointer;
-            margin: $small-spacing;
-        }
-        .information:hover {
-            text-decoration: underline;
-        }        
-        .list-heading {
-            font-weight: $big-font-weight;
-            color: $blue;
-            cursor: auto;
-        }      
-        
-        #list-blue {
-            color: $blue;
-            cursor: auto;
-        }
-        
-        #list-button {
-            text-align: center;
-            background: $light-grey1;
-            padding: $small-spacing;
-            border-bottom: solid $light-grey2 $small-border-size;
-            font-size: 12px;
-        }
-        #list-button:active {
-            border-top: solid $light-grey2 $small-border-size;;
-            border-bottom: none;
-        }        
-    }
-    @media only screen and (max-width: 1085px) {    
-        iframe {
+    section {
+      padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;
+      border-top: solid $small-border-size $grey;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      ul {
+          list-style-type: none;
+          min-width: 200px;
+          li {
+              font-weight: $small-font-weight;
+              cursor: pointer;
+              margin: $small-spacing;
+          }
+          .facebook-icon {
             display: none;
-        }                  
-    }     
-}
+          }
+          .information:hover {
+              text-decoration: underline;
+          }
+          .list-heading {
+              font-weight: $big-font-weight;
+              color: $blue;
+              cursor: auto;
+          }
 
- 
+          #list-blue {
+              color: $blue;
+              cursor: auto;
+          }
+
+          #list-button {
+              text-align: center;
+              background: $light-grey1;
+              padding: $small-spacing;
+              border-bottom: solid $light-grey2 $small-border-size;
+              font-size: 12px;
+          }
+          #list-button:active {
+              border-top: solid $light-grey2 $small-border-size;;
+              border-bottom: none;
+          }
+      }
+    }
+    @media only screen and (max-width: 1085px) {
+      section {
+        ul {
+          padding: $small-spacing 0 $small-spacing 0;
+            li {
+              iframe {
+                  display: none;
+              }
+            }
+            .facebook-icon {
+              display: block;
+            }
+        }
+      }
+    }
+}
