@@ -550,7 +550,8 @@ body {
         width: 20%;
         text-align: center; }
         body .beer-wrapper .beername_wrapper .beer img {
-          height: 200px; }
+          height: 400px;
+          cursor: pointer; }
         body .beer-wrapper .beername_wrapper .beer .beer-information {
           width: 500%;
           text-align: left;
@@ -559,7 +560,7 @@ body {
           margin-top: 25px;
           display: flex; }
           body .beer-wrapper .beername_wrapper .beer .beer-information .information-left {
-            width: 50%; }
+            width: 60%; }
             body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .name {
               padding: 35px; }
             body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .description {
@@ -582,7 +583,7 @@ body {
               padding: 10px 35px;
               cursor: pointer; }
           body .beer-wrapper .beername_wrapper .beer .beer-information .information-right {
-            width: 50%; }
+            width: 40%; }
             body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info:first-child {
               padding: 94px 35px 5px; }
             body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info {
