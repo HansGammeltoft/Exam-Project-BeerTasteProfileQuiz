@@ -17,6 +17,7 @@
             <!–– pulling all data from index_main.php ––>
             <?php include('includes/index_main.php'); ?>
         </main>
+            <?php include('includes/animation.php'); ?>
         <footer>
             <!–– pulling all data from footer.php ––>
             <?php include('includes/footer.php'); ?>

@@ -3,17 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="loader.css">
   </head>
   <body>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <div class="loader-popup">
+    <div class="box loader-popup">
       <div class="loader-wrapper">
         <div class="loader-logo">
           <img class="logouflasker" src="logouflasker.png" alt="">

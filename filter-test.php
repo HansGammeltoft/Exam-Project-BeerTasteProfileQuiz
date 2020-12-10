@@ -143,7 +143,8 @@
 
       <section class="productpage-wrapper">
         <div class="description-wrapper">
-          <div id="result"></div>
+          <div id="result">          
+                  </div>
         </div>
       </section>
 
