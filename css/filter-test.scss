@@ -1,10 +1,70 @@
-.productpage-wrapper {
+.beer-wrapper {
   margin: $x-big-spacing;
   .beername_wrapper{
     display: flex;
     justify-content: space-between;
-    h2{
-      display: none;
+    .beer{
+      width: 20%;
+      text-align: center;
+      img{
+        height: 200px;
+      }
+      .beer-information{
+        width: 500%;
+        text-align: left;
+        border: $medium-border-size solid $blue;
+        border-radius: $small-border-radius;
+        margin-top: $medium-spacing;
+        display: flex;
+        .information-left{
+          width: 50%;
+          .name{
+            padding: $big-spacing;
+          }
+          .description{
+            padding: 0 $big-spacing $big-spacing;
+          }
+          .price-n-btn{
+            display: flex;
+          }
+          .price{
+            color: $blue;
+            font-weight: $big-font-weight;
+            padding: 0 $big-spacing $x-small-spacing;
+          }
+          .in-stock{
+            color: $blue;
+            font-size: $small-font-size;
+            padding: 0 $big-spacing $big-spacing;
+          }
+          .buy-beer{
+            color:$white;
+            background-color: $blue;
+            margin: 0 $big-spacing $big-spacing;
+            border: none;
+            padding: $small-spacing $big-spacing;
+            cursor: pointer;
+          }
+        }
+        .information-right{
+          width: 50%;
+          .beer-info:first-child{
+            padding: 94px $big-spacing $x-small-spacing;
+          }
+          .beer-info{
+            padding: $x-small-spacing $big-spacing;
+          }
+          .beer-info:last-child{
+            padding: $x-small-spacing $big-spacing $big-spacing;
+          }
+          .beer-point{
+            color: $blue;
+          }
+        }
+      }
+      .default-hidden{
+        display: none;
+      }
     }
   }
 }
