@@ -12,14 +12,14 @@
     <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
     <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
     <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
-    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>                        
+    <p>forwardsforwardsforwardsforwardsforwardsforwards</p>
     <div class="loader-popup">
       <div class="loader-wrapper">
         <div class="loader-logo">
           <img class="logouflasker" src="logouflasker.png" alt="">
         </div>
         <div class="loader-animation">
-          <img class="animation_spritesheet" src="Animation1.png" alt="Beer filling up">
+          <img class="animation_spritesheet" src="Animation.png" alt="Beer filling up">
         </div>
         <div class="loader-text">
           <p>Lige et øjeblik...</p>
