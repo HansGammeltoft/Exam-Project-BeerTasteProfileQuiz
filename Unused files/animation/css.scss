@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    animation: fadeOut 4s forwards;
+    animation: fadeOut 5s forwards;
     @keyframes fadeOut {
       0% {opacity: 1; top: 0px;}
       70% {opacity: 1; top: 0px;}
@@ -42,7 +42,7 @@ body {
         overflow: hidden;
         .animation_spritesheet {
           width: 3429.75px;
-          animation: moveSpritesheet 4s steps(102) forwards;
+          animation: moveSpritesheet 5s steps(102) forwards;
           @keyframes moveSpritesheet {
             from {
               transform: translate3d(0px,0,0);
