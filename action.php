@@ -36,18 +36,48 @@
         //If $beername is EQUAL to empty, which it is, then SET it as the values in the "name" column in the database, and put it inside a list.
         if ($beername == '') {
           $beername = $row['name'];
-          echo '<div class="beername_wrapper"><div>';
-          echo '<img style="height:200px;" src="./images/oelkassenlogod.png"></br>';
-          echo '<h2>'; echo $row['name'] .' ';
+          echo '<div class="beername_wrapper"><div class="beer">';
+            echo '<img src="'; echo $row['img']; echo '"></br>';
+          echo '<div class="beer-information">';
+          echo '<div class="information-left">';
+            echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
+            echo '<p class="description">'; echo $row['description']; echo '</p>';
+          echo '<div class="price-n-btn">';
+          echo '<div class="price-n-stock">';
+            echo '<p class="price">'; echo $row['price'] .' '; echo 'DKK</br><p class="in-stock">På lager</p></p></div>';
+            echo '<button class="buy-beer">Læg i kurv</button>';
+          echo '</div></div><div class="information-right">';
+            echo '<p class="beer-info">Kategori: '; echo $row['categoryID']; echo '</p>';
+            echo '<p class="beer-info">Type: '; echo $row['type']; echo '</p>';
+            echo '<p class="beer-info">Alkohol: '; echo $row['alcohol']; echo '%</p>';
+            echo '<p class="beer-info">Størrelse: '; echo $row['size']; echo 'ml</p>';
+            echo '<p class="beer-info">Bryggeri: '; echo $row['brewery']; echo '</p>';
+            echo '<p class="beer-info">Land: '; echo 'some tekst</p>';
+            echo '<p class="beer-info">Rating: '; echo 'some tekst</p>';
         //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the list, and echo out the next $beername.
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
-          echo '</div><div>';
-          echo '<img style="height:200px;" src="./images/oelkassenlogod.png"></br>';
-          echo '<h2>'; echo $row['name'] .' ';
+          echo '</div></div></div><div class="beer">';
+            echo '<img src="'; echo $row['img']; echo '"></br>';
+          echo '<div class="beer-information default-hidden">';
+          echo '<div class="information-left">';
+            echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
+            echo '<p class="description">'; echo $row['description']; echo '</p>';
+          echo '<div class="price-n-btn">';
+          echo '<div class="price-n-stock">';
+            echo '<p class="price">'; echo $row['price'] .' '; echo 'DKK</br><p class="in-stock">På lager</p></p></div>';
+            echo '<button class="buy-beer">Læg i kurv</button>';
+          echo '</div></div><div class="information-right">';
+            echo '<p class="beer-info">Kategori: '; echo $row['categoryID']; echo '</p>';
+            echo '<p class="beer-info">Type: '; echo $row['type']; echo '</p>';
+            echo '<p class="beer-info">Alkohol: '; echo $row['alcohol']; echo '%</p>';
+            echo '<p class="beer-info">Størrelse: '; echo $row['size']; echo 'ml</p>';
+            echo '<p class="beer-info">Bryggeri: '; echo $row['brewery']; echo '</p>';
+            echo '<p class="beer-info">Land: '; echo 'some tekst</p>';
+            echo '<p class="beer-info">Rating: '; echo 'some tekst</p>';
         //Else only echo the values in the "answer" column.
         }else {
-          echo $row['taste'] .' ';
+          echo '';
         }
       }
     }
