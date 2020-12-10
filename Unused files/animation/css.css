@@ -1,24 +1,50 @@
-body {
+body .loader-popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
   background: url(beergrid.png);
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  animation: fadeOut 3s forwards;
 }
-body .loader-wrapper {
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  70% {
+    opacity: 1;
+    top: 0px;
+  }
+  90% {
+    opacity: 0;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -30000px;
+  }
+}
+body .loader-popup .loader-wrapper {
   background-color: white;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-body .loader-wrapper .loader-logo .logouflasker {
+body .loader-popup .loader-wrapper .loader-logo .logouflasker {
   padding-bottom: 170px;
   width: 250px;
 }
-body .loader-wrapper .loader-animation {
+body .loader-popup .loader-wrapper .loader-animation {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,9 +52,9 @@ body .loader-wrapper .loader-animation {
   width: 38px;
   overflow: hidden;
 }
-body .loader-wrapper .loader-animation .animation_spritesheet {
-  width: 988px;
-  animation: moveSpritesheet 0.7s steps(26) infinite;
+body .loader-popup .loader-wrapper .loader-animation .animation_spritesheet {
+  width: 1977px;
+  animation: moveSpritesheet 3s steps(52) forwards;
 }
 @keyframes moveSpritesheet {
   from {
