@@ -19,7 +19,7 @@
           <img class="logouflasker" src="logouflasker.png" alt="">
         </div>
         <div class="loader-animation">
-          <img class="animation_spritesheet" src="Animation.png" alt="Beer filling up">
+          <img class="animation_spritesheet" src="Animation2.png" alt="Beer filling up">
         </div>
         <div class="loader-text">
           <p>Lige et øjeblik...</p>

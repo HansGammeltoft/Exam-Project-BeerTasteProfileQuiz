@@ -38,11 +38,11 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 33.62745px;
+        width: 41px;
         overflow: hidden;
         .animation_spritesheet {
-          width: 3429.75px;
-          animation: moveSpritesheet 0.8s steps(102) infinite;
+          width: 3000px;
+          animation: moveSpritesheet 1.2s steps(72) infinite;
           @keyframes moveSpritesheet {
             from {
               transform: translate3d(0px,0,0);
