@@ -54,7 +54,7 @@ body .loader-popup .loader-wrapper .loader-animation {
 }
 body .loader-popup .loader-wrapper .loader-animation .animation_spritesheet {
   width: 3429.75px;
-  animation: moveSpritesheet 1.2s steps(102) infinite;
+  animation: moveSpritesheet 0.8s steps(102) infinite;
 }
 @keyframes moveSpritesheet {
   from {
