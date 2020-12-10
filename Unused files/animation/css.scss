@@ -42,7 +42,7 @@ body {
         overflow: hidden;
         .animation_spritesheet {
           width: 3429.75px;
-          animation: moveSpritesheet 5s steps(102) forwards;
+          animation: moveSpritesheet 1.2s steps(102) infinite;
           @keyframes moveSpritesheet {
             from {
               transform: translate3d(0px,0,0);
