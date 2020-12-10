@@ -141,7 +141,7 @@
         </div>
       </section>
 
-      <section class="productpage-wrapper">
+      <section class="beer-wrapper">
         <div id="result"></div>
       </section>
 
