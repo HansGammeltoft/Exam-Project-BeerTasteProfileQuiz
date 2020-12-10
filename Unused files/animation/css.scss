@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    animation: fadeOut 5s forwards;
+    animation: fadeOut 4s forwards;
     @keyframes fadeOut {
       0% {opacity: 1; top: 0px;}
       70% {opacity: 1; top: 0px;}
