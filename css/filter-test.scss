@@ -1,0 +1,10 @@
+.productpage-wrapper {
+  margin: $x-big-spacing;
+  .beername_wrapper{
+    display: flex;
+    justify-content: space-between;
+    h2{
+      display: none;
+    }
+  }
+}
