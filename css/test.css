@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$x-big-spacing".
-        on line 6 of C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\test.scss
+        on line 6 of C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\test.scss
 
 1: .test{
 2:   background-image: url('beergrid-opacity05.png');
@@ -8,14 +8,14 @@ Error: Undefined variable: "$x-big-spacing".
 4:   height: 100vh;
 5:   .test-wrapper {
 6:       margin: 0 $x-big-spacing;
-7:       .logo{
-8:         height: 50px;
-9:         padding: $x-big-spacing 0;
-10:         display: block;
-11:         margin: auto;
+7:       height: 100vh;
+8:       .logo{
+9:         height: 50px;
+10:         padding: $x-big-spacing 0;
+11:         display: block;
 
 Backtrace:
-C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\test.scss:6
+C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\test.scss:6
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -77,4 +77,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 6 of C:\xampp\htdocs\Exam-Project-BeerTasteProfileQuiz\css\test.scss\A \A 1: .test{\A 2:   background-image: url('beergrid-opacity05.png');\A 3:   width: 100vw;\A 4:   height: 100vh;\A 5:   .test-wrapper {\A 6:       margin: 0 $x-big-spacing;\A 7:       .logo{\A 8:         height: 50px;\A 9:         padding: $x-big-spacing 0;\A 10:         display: block;\A 11:         margin: auto;"; }
+  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 6 of C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\test.scss\A \A 1: .test{\A 2:   background-image: url('beergrid-opacity05.png');\A 3:   width: 100vw;\A 4:   height: 100vh;\A 5:   .test-wrapper {\A 6:       margin: 0 $x-big-spacing;\A 7:       height: 100vh;\A 8:       .logo{\A 9:         height: 50px;\A 10:         padding: $x-big-spacing 0;\A 11:         display: block;"; }

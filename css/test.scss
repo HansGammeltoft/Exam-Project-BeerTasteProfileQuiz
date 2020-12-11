@@ -4,6 +4,7 @@
   height: 100vh;
   .test-wrapper {
       margin: 0 $x-big-spacing;
+      height: 100vh;
       .logo{
         height: 50px;
         padding: $x-big-spacing 0;
@@ -202,6 +203,10 @@
               padding: 0 $small-spacing;
               width: 50px;
           }
+      }
+      .progress-bar{
+        position: absolute;
+        bottom: 0;
       }
   }
 }
