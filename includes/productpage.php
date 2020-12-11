@@ -1,3 +1,5 @@
+<link href="../css/stylesheet.css" rel="stylesheet">
+
 <section class="productpage-wrapper">
     <div id="bottles-wrapper">
         <div class="bottle-arrow">
@@ -32,7 +34,7 @@
         </div>
     </div>
     <div class="description-wrapper">
-        <?php include('includes/productdescription.php'); ?>
+        <?php include 'productdescription.php'; ?>
     </div>
     <div class="add-all">
         <div class="add-all-text">

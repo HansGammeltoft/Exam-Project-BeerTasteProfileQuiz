@@ -1,5 +1,4 @@
 footer {
-    section {
       padding: $x-big-spacing $x-big-spacing 0px $x-big-spacing;
       border-top: solid $small-border-size $grey;
       display: flex;
@@ -42,7 +41,6 @@ footer {
               border-bottom: none;
           }
       }
-    }
     @media only screen and (max-width: 1085px) {
       section {
         ul {

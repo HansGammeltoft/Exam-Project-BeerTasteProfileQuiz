@@ -408,150 +408,165 @@ body {
       body main #instagram-newproducts #newproducts-section {
         margin: 0px 0px 0px 0px;
         width: 432px; } }
-  body .test-wrapper {
-    margin: 50px 50px 0 50px; }
-    body .test-wrapper #question-header {
-      text-align: center;
-      margin: 25px; }
-    body .test-wrapper #button-form-wrapper {
-      display: flex;
-      justify-content: space-between; }
-      body .test-wrapper #button-form-wrapper .quiz-button {
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        height: 100%;
-        padding: 10px;
-        border: 1px solid #6786A1;
-        border-radius: 2px; }
-      body .test-wrapper #button-form-wrapper .quiz-buttonx4 {
-        margin-top: 105px; }
-      body .test-wrapper #button-form-wrapper .quiz-buttonx6 {
-        margin-top: 105px; }
-      body .test-wrapper #button-form-wrapper .quiz-button1 {
-        background-color: #fefefe;
-        color: #6786A1; }
-      body .test-wrapper #button-form-wrapper .quiz-button1:hover {
-        background-color: #6786A1;
-        color: #fefefe; }
-      body .test-wrapper #button-form-wrapper .quiz-button2 {
-        background-color: #6786A1;
-        color: #fefefe; }
-      body .test-wrapper #button-form-wrapper .quiz-button2:hover {
-        background-color: #fefefe;
-        color: #6786A1; }
-      body .test-wrapper #button-form-wrapper .question-answers {
+  body .test {
+    background-image: url("beergrid-opacity05.png");
+    width: 100vw;
+    height: 100vh; }
+    body .test .test-wrapper {
+      margin: 0 50px; }
+      body .test .test-wrapper .logo {
+        height: 50px;
+        padding: 50px 0;
+        display: block;
+        margin: auto; }
+      body .test .test-wrapper #question-header {
+        text-align: center;
+        font-size: 28px;
+        padding: 25px; }
+      body .test .test-wrapper #button-form-wrapper {
         display: flex;
         justify-content: space-between; }
-        body .test-wrapper #button-form-wrapper .question-answers .answers {
-          /* HIDE RADIO */
-          /* ANSWER-BORDER STYLES */
-          /* CHECKED ANSWER-BORDER STYLES */ }
-          body .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
-            cursor: pointer;
-            padding: 10px;
-            margin: 10px;
-            border: 2px solid #6786A1;
-            border-radius: 10px; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
-            border: 2px solid #6786A1;
-            background-color: #6786A1;
-            color: #fefefe; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
-            height: 100%;
-            width: 100%;
-            min-width: 150px;
-            max-width: 360px; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
-            text-align: center;
-            margin: 10px 0px;
-            font-weight: 600; }
-      @media only screen and (max-width: 1085px) {
-        body .test-wrapper #button-form-wrapper .quiz-button {
-          margin-top: 230px; }
-        body .test-wrapper #button-form-wrapper .question-answers {
-          flex-wrap: wrap;
-          justify-content: center; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
-            height: 100%;
-            width: 100%;
-            min-width: 75px;
-            max-width: 180px; } }
-      @media only screen and (max-width: 1395px) {
-        body .test-wrapper #button-form-wrapper .quiz-buttonx6 {
-          margin-top: 230px; }
-        body .test-wrapper #button-form-wrapper #questions-6-answers {
-          flex-wrap: wrap;
-          justify-content: center; }
-          body .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
-            height: 100%;
-            width: 100%;
-            min-width: 75px;
-            max-width: 180px; } }
-      @media only screen and (max-width: 578px) {
-        body .test-wrapper #button-form-wrapper .question-answers {
-          flex-wrap: wrap;
-          justify-content: center; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
-            padding: 5px; }
-          body .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
-            text-align: center;
-            width: 75px; }
-            body .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
+        body .test .test-wrapper #button-form-wrapper .quiz-button {
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          height: 100%;
+          padding: 10px;
+          border: 1px solid #6786A1;
+          border-radius: 2px; }
+        body .test .test-wrapper #button-form-wrapper .quiz-buttonx4 {
+          margin-top: 105px; }
+        body .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
+          margin-top: 105px; }
+        body .test .test-wrapper #button-form-wrapper .quiz-button1 {
+          background-color: #fefefe;
+          color: #6786A1; }
+        body .test .test-wrapper #button-form-wrapper .quiz-button1:hover {
+          background-color: #6786A1;
+          color: #fefefe; }
+        body .test .test-wrapper #button-form-wrapper .quiz-button2 {
+          background-color: #6786A1;
+          color: #fefefe; }
+        body .test .test-wrapper #button-form-wrapper .quiz-button2:hover {
+          background-color: #fefefe;
+          color: #6786A1; }
+        body .test .test-wrapper #button-form-wrapper .question-answers {
+          display: flex;
+          justify-content: space-between; }
+          body .test .test-wrapper #button-form-wrapper .question-answers .answers {
+            /* HIDE RADIO */
+            /* ANSWER-BORDER STYLES */
+            /* CHECKED ANSWER-BORDER STYLES */ }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] {
+              position: absolute;
+              opacity: 0;
+              width: 0;
+              height: 0; }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+              cursor: pointer;
+              padding: 10px;
+              margin: 10px;
+              border: 2px solid #6786A1;
+              border-radius: 10px; }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
+              border: 2px solid #6786A1;
+              background-color: #6786A1;
+              color: #fefefe; }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
+              background-color: #fefefe; }
+              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
+                height: 100%;
+                width: 100%;
+                min-width: 150px;
+                max-width: 360px; }
+              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
+                text-align: center;
+                margin: 10px 0px;
+                font-weight: 600; }
+        @media only screen and (max-width: 1085px) {
+          body .test .test-wrapper #button-form-wrapper .quiz-button {
+            margin-top: 230px; }
+          body .test .test-wrapper #button-form-wrapper .question-answers {
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
               height: 100%;
-              width: 70px; }
-            body .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
-              overflow: hidden; } }
-      @media only screen and (max-width: 920px) and (min-width: 579px) {
-        body .test-wrapper #button-form-wrapper .quiz-buttonx6 {
-          margin-top: 165px; }
-        body .test-wrapper #button-form-wrapper #questions-6-answers {
-          flex-wrap: wrap;
-          justify-content: center; }
-          body .test-wrapper #button-form-wrapper #questions-6-answers .answers [type=radio] + .answer-border {
-            padding: 5px; }
-          body .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border {
-            text-align: center; }
-            body .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
+              width: 100%;
+              min-width: 75px;
+              max-width: 180px; } }
+        @media only screen and (max-width: 1395px) {
+          body .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
+            margin-top: 230px; }
+          body .test .test-wrapper #button-form-wrapper #questions-6-answers {
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
               height: 100%;
-              width: 120px; }
-            body .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border p {
-              overflow: hidden; } }
-    @media only screen and (max-width: 727px) {
-      body .test-wrapper #button-form-wrapper {
-        flex-wrap: wrap; }
-        body .test-wrapper #button-form-wrapper .quiz-button {
-          margin-top: 25px; }
-        body .test-wrapper #button-form-wrapper .quiz-button1 {
-          order: 2; }
-        body .test-wrapper #button-form-wrapper .quiz-button2 {
-          order: 3; }
-        body .test-wrapper #button-form-wrapper .question-answers {
-          order: 1;
-          width: 100%; } }
-    body .test-wrapper #bottles-wrapper {
-      display: flex;
-      justify-content: center;
-      padding-top: 35px; }
-      body .test-wrapper #bottles-wrapper img {
-        padding: 0 10px;
-        width: 50px; }
-  body .beer-wrapper {
-    margin: 50px; }
-    body .beer-wrapper .beername_wrapper {
+              width: 100%;
+              min-width: 75px;
+              max-width: 180px; } }
+        @media only screen and (max-width: 578px) {
+          body .test .test-wrapper #button-form-wrapper .question-answers {
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+              padding: 5px; }
+            body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
+              text-align: center;
+              width: 75px; }
+              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
+                height: 100%;
+                width: 70px; }
+              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
+                overflow: hidden; } }
+        @media only screen and (max-width: 920px) and (min-width: 579px) {
+          body .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
+            margin-top: 165px; }
+          body .test .test-wrapper #button-form-wrapper #questions-6-answers {
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers [type=radio] + .answer-border {
+              padding: 5px; }
+            body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border {
+              text-align: center; }
+              body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
+                height: 100%;
+                width: 120px; }
+              body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border p {
+                overflow: hidden; } }
+      @media only screen and (max-width: 727px) {
+        body .test .test-wrapper #button-form-wrapper {
+          flex-wrap: wrap; }
+          body .test .test-wrapper #button-form-wrapper .quiz-button {
+            margin-top: 25px; }
+          body .test .test-wrapper #button-form-wrapper .quiz-button1 {
+            order: 2; }
+          body .test .test-wrapper #button-form-wrapper .quiz-button2 {
+            order: 3; }
+          body .test .test-wrapper #button-form-wrapper .question-answers {
+            order: 1;
+            width: 100%; } }
+      body .test .test-wrapper #bottles-wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: 35px; }
+        body .test .test-wrapper #bottles-wrapper img {
+          padding: 0 10px;
+          width: 50px; }
+  body #result-page h1 {
+    text-align: center;
+    margin-top: 50px; }
+  body #result-page .beer-wrapper {
+    margin: 0 50px 50px; }
+    body #result-page .beer-wrapper .beername_wrapper {
       display: flex;
       justify-content: space-between; }
-      body .beer-wrapper .beername_wrapper .beer {
+      body #result-page .beer-wrapper .beername_wrapper .beer {
         width: 20%;
         text-align: center; }
-        body .beer-wrapper .beername_wrapper .beer img {
+        body #result-page .beer-wrapper .beername_wrapper .beer img {
           cursor: pointer; }
-        body .beer-wrapper .beername_wrapper .beer .beer-information {
+        body #result-page .beer-wrapper .beername_wrapper .beer .beer-information {
           text-align: left;
           border: 2px solid #6786A1;
           border-radius: 2px;
@@ -559,7 +574,7 @@ body {
           position: absolute;
           left: 50px;
           width: calc(100% - 100px); }
-          body .beer-wrapper .beername_wrapper .beer .beer-information .arrow {
+          body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .arrow {
             height: 0;
             width: 0;
             border-left: 20px solid transparent;
@@ -567,81 +582,81 @@ body {
             border-bottom: 20px solid #6786A1;
             position: absolute;
             top: -20px; }
-          body .beer-wrapper .beername_wrapper .beer .beer-information .information-left {
+          body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left {
             width: 60%; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .name {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left .name {
               padding: 35px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .description {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left .description {
               padding: 0 35px 35px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .price-n-btn {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left .price-n-btn {
               display: flex; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .price {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left .price {
               color: #6786A1;
               font-weight: 600;
               padding: 0 35px 5px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .in-stock {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left .in-stock {
               color: #6786A1;
               font-size: 15px;
               padding: 0 35px 35px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .buy-beer {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-left .buy-beer {
               color: #fefefe;
               background-color: #6786A1;
               margin: 0 35px 35px;
               border: none;
               padding: 10px 35px;
               cursor: pointer; }
-          body .beer-wrapper .beername_wrapper .beer .beer-information .information-right {
+          body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-right {
             width: 40%; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info:first-child {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info:first-child {
               padding: 94px 35px 5px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info {
               padding: 5px 35px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info:last-child {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-info:last-child {
               padding: 5px 35px 35px; }
-            body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-point {
+            body #result-page .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-point {
               color: #6786A1; }
-        body .beer-wrapper .beername_wrapper .beer .tabcontent {
+        body #result-page .beer-wrapper .beername_wrapper .beer .tabcontent {
           display: none; }
-  body footer section {
+  body footer {
     padding: 50px 50px 0px 50px;
     border-top: solid 1px #e1e1e1;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
-    body footer section ul {
+    body footer ul {
       list-style-type: none;
       min-width: 200px; }
-      body footer section ul li {
+      body footer ul li {
         font-weight: 300;
         cursor: pointer;
         margin: 10px; }
-      body footer section ul .facebook-icon {
+      body footer ul .facebook-icon {
         display: none; }
-      body footer section ul .information:hover {
+      body footer ul .information:hover {
         text-decoration: underline; }
-      body footer section ul .list-heading {
+      body footer ul .list-heading {
         font-weight: 600;
         color: #6786A1;
         cursor: auto; }
-      body footer section ul #list-blue {
+      body footer ul #list-blue {
         color: #6786A1;
         cursor: auto; }
-      body footer section ul #list-button {
+      body footer ul #list-button {
         text-align: center;
         background: #fafafa;
         padding: 10px;
         border-bottom: solid #e8e8e8 1px;
         font-size: 12px; }
-      body footer section ul #list-button:active {
+      body footer ul #list-button:active {
         border-top: solid #e8e8e8 1px;
         border-bottom: none; }
-  @media only screen and (max-width: 1085px) {
-    body footer section ul {
-      padding: 10px 0 10px 0; }
-      body footer section ul li iframe {
-        display: none; }
-      body footer section ul .facebook-icon {
-        display: block; } }
+    @media only screen and (max-width: 1085px) {
+      body footer section ul {
+        padding: 10px 0 10px 0; }
+        body footer section ul li iframe {
+          display: none; }
+        body footer section ul .facebook-icon {
+          display: block; } }
   body .loader-popup {
     position: fixed;
     z-index: 1;
