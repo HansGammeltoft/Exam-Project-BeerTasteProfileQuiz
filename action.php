@@ -38,7 +38,7 @@
           $beername = $row['name'];
           echo '<div class="beername_wrapper"><div class="beer">';
             echo "<img id='defaultOpen' class='tablinks' src='" . $row['img'] . "' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
-          echo '<div id="'; echo $row['productID']; echo'"class="beer-information tabcontent">';
+          echo '<div id="'; echo $row['productID']; echo'"class="beer-information tabcontent"><div class="arrow"></div>';
           echo '<div class="information-left">';
             echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
             echo '<p class="description">'; echo $row['description']; echo '</p>';
@@ -59,7 +59,7 @@
           $beername = $row['name'];
           echo '</div></div></div><div class="beer">';
             echo "<img class='tablinks' src='" . $row['img'] . "' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
-        echo '<div id="'; echo $row['productID']; echo'"class="beer-information default-hidden tabcontent">';
+        echo '<div id="'; echo $row['productID']; echo'"class="beer-information default-hidden tabcontent"><div class="arrow"></div>';
           echo '<div class="information-left">';
             echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
             echo '<p class="description">'; echo $row['description']; echo '</p>';
@@ -106,7 +106,7 @@
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(beerName).style.display = "block";
+    document.getElementById(beerName).style.display = "flex";
     evt.currentTarget.className += " active";
   }
 

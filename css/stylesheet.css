@@ -552,12 +552,21 @@ body {
         body .beer-wrapper .beername_wrapper .beer img {
           cursor: pointer; }
         body .beer-wrapper .beername_wrapper .beer .beer-information {
-          width: 500%;
           text-align: left;
           border: 2px solid #6786A1;
           border-radius: 2px;
           margin-top: 25px;
-          display: flex; }
+          position: absolute;
+          left: 50px;
+          width: calc(100% - 100px); }
+          body .beer-wrapper .beername_wrapper .beer .beer-information .arrow {
+            height: 0;
+            width: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #6786A1;
+            position: absolute;
+            top: -20px; }
           body .beer-wrapper .beername_wrapper .beer .beer-information .information-left {
             width: 60%; }
             body .beer-wrapper .beername_wrapper .beer .beer-information .information-left .name {

@@ -10,12 +10,22 @@
         cursor: pointer;
       }
       .beer-information{
-        width: 500%;
         text-align: left;
         border: $medium-border-size solid $blue;
         border-radius: $small-border-radius;
         margin-top: $medium-spacing;
-        display: flex;
+        position: absolute;
+        left: $x-big-spacing;
+        width: calc(100% - 100px);
+        .arrow{
+          height: 0;
+          width: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-bottom: 20px solid $blue;
+          position: absolute;;
+          top: -20px; 
+        }
         .information-left{
           width: 60%;
           .name{
