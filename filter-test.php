@@ -31,7 +31,7 @@
             <a href="index.php" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</a>
             <div class="question-answers">
               <?php
-                $sql="SELECT answer FROM table_test
+                $sql="SELECT answer, img FROM table_test
                 WHERE questionID = 1";
                 $result=$conn->query($sql);
                 while($row=$result->fetch_assoc()){
@@ -39,7 +39,7 @@
               <label class="product_check answers">
                 <input type="radio" name="radio1" value="<?= $row['answer']; ?>" id="answer1">
                 <div class="answer-border">
-                  <img src="./images/5.png" alt="Et pink billede">
+                  <img src=" <?php echo $row['img']; ?> ">
                   <p><?= $row['answer'] ?></p>
                 </div>
               </label>
@@ -47,6 +47,14 @@
               <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4" onclick="showHide()">Næste</button>
             </div>
           </div>
+          <?php
+            $sql="SELECT img FROM table_questions
+            WHERE questionID = 1";
+            $result=$conn->query($sql);
+            while($row=$result->fetch_assoc()){
+              echo '<img class="progress-bar" src="' . $row['img'] . '"';
+            }
+          ?>
         </div>
 
         <div id="q2_hidden" style="display:none;" class="test-wrapper">
@@ -78,6 +86,14 @@
                 <button id="q3" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
               </div>
             </div>
+            <?php
+              $sql="SELECT img FROM table_questions
+              WHERE questionID = 2";
+              $result=$conn->query($sql);
+              while($row=$result->fetch_assoc()){
+                echo '<img class="progress-bar" src="' . $row['img'] . '"';
+              }
+            ?>
           </div>
 
           <div id="q3_hidden" style="display:none;" class="test-wrapper">
@@ -109,6 +125,14 @@
               <button id="q4" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
               </div>
             </div>
+            <?php
+              $sql="SELECT img FROM table_questions
+              WHERE questionID = 3";
+              $result=$conn->query($sql);
+              while($row=$result->fetch_assoc()){
+                echo '<img class="progress-bar" src="' . $row['img'] . '"';
+              }
+            ?>
           </div>
 
           <div id="q4_hidden" style="display:none;" class="test-wrapper">
@@ -140,6 +164,14 @@
               <button id="showResult" class="quiz-button quiz-button2 quiz-buttonx4">Afslut</button>
             </div>
           </div>
+          <?php
+            $sql="SELECT img FROM table_questions
+            WHERE questionID = 4";
+            $result=$conn->query($sql);
+            while($row=$result->fetch_assoc()){
+              echo '<img class="progress-bar" src="' . $row['img'] . '"';
+            }
+          ?>
         </div>
       </section>
 
@@ -148,6 +180,10 @@
         <h1>Her er dit perfekte match</h1>
         <div class="beer-wrapper">
           <div id="result"></div>
+        </div>
+        <div class="buy-all">
+          <p>Køb alle øl og spar 10%</p>
+          <button>Læg alle i kurv</button>
         </div>
         <footer>
           <?php include 'includes/footer.php' ?>
