@@ -1,5 +1,9 @@
+#result-page h1{
+  text-align: center;
+  margin-top: $x-big-spacing;
+}
 .beer-wrapper {
-  margin: $x-big-spacing;
+  margin: 0 $x-big-spacing $x-big-spacing;
   .beername_wrapper{
     display: flex;
     justify-content: space-between;
@@ -24,7 +28,7 @@
           border-right: 20px solid transparent;
           border-bottom: 20px solid $blue;
           position: absolute;;
-          top: -20px; 
+          top: -20px;
         }
         .information-left{
           width: 60%;

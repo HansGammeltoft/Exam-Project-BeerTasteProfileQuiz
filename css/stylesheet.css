@@ -541,8 +541,11 @@ body {
       body .test-wrapper #bottles-wrapper img {
         padding: 0 10px;
         width: 50px; }
+  body #result-page h1 {
+    text-align: center;
+    margin-top: 50px; }
   body .beer-wrapper {
-    margin: 50px; }
+    margin: 0 50px 50px; }
     body .beer-wrapper .beername_wrapper {
       display: flex;
       justify-content: space-between; }

@@ -139,14 +139,18 @@
         </div>
       </section>
 
-      <section class="beer-wrapper">
-        <div id="result"></div>
+      <section id="result-page">
+        <?php include 'includes/header.php' ?>
+        <h1>Her er dit perfekte match</h1>
+        <div class="beer-wrapper">
+          <div id="result"></div>
+        </div>
       </section>
 
       <script type="text/javascript">
           $(document).ready(function(){
+            $('section#result-page').hide();
             $(".product_check").click(function(){
-              //$('div#result').hide();
 
               var action = 'data';
               var answer1 = get_filter_text('answer1');
@@ -270,6 +274,7 @@
       //show final result (limit 5)
       $(function() {
          $('button#showResult').click(function() {
+            $('section#result-page').show();
             $('div#result').show();
             return false;
          });
