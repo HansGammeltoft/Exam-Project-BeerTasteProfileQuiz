@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <div class="description-right">        
+        <div class="description-right">
             <div class="description-list">
                 <ul>
                     <li><p class="description-list-bold">Kategorier:</p><p class="description-list-normal">IPA og Pale Ale, Nye produkter </p></li>
