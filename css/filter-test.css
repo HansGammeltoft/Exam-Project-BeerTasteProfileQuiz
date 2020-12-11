@@ -1,21 +1,33 @@
 /*
 Error: Undefined variable: "$x-big-spacing".
-        on line 3 of C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\filter-test.scss
+        on line 4 of C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\filter-test.scss
 
-1: #result-page h1{
-2:   text-align: center;
-3:   margin-top: $x-big-spacing;
-4: }
-5: .beer-wrapper {
-6:   margin: 0 $x-big-spacing $x-big-spacing;
-7:   .beername_wrapper{
-8:     display: flex;
+1:   #result-page{
+2:     h1{
+3:       text-align: center;
+4:       margin-top: $x-big-spacing;
+5:     }
+6:     .beer-wrapper {
+7:       margin: 0 $x-big-spacing $x-big-spacing;
+8:       .beername_wrapper{
+9:         display: flex;
 
 Backtrace:
-C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\filter-test.scss:3
+C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\filter-test.scss:4
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -59,4 +71,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 3 of C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\filter-test.scss\A \A 1: #result-page h1{\A 2:   text-align: center;\A 3:   margin-top: $x-big-spacing;\A 4: }\A 5: .beer-wrapper {\A 6:   margin: 0 $x-big-spacing $x-big-spacing;\A 7:   .beername_wrapper{\A 8:     display: flex;"; }
+  content: "Error: Undefined variable: \"$x-big-spacing\".\A         on line 4 of C:\Users\lindv\OneDrive\Desktop\Xampp\htdocs\Exam-Projekt-BeerTasteProfileQuiz\css\filter-test.scss\A \A 1:   #result-page{\A 2:     h1{\A 3:       text-align: center;\A 4:       margin-top: $x-big-spacing;\A 5:     }\A 6:     .beer-wrapper {\A 7:       margin: 0 $x-big-spacing $x-big-spacing;\A 8:       .beername_wrapper{\A 9:         display: flex;"; }
