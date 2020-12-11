@@ -1,4 +1,3 @@
-<section>
   <ul>
       <li class="list-heading">INFORMATION</li>
       <li class="information">Handelsbetingelser</li>
@@ -17,4 +16,3 @@
       <li id="list-blue">No images available at the moment</li>
       <li id="list-button">Følg Ølkassen.dk</li>
   </ul>
-</section>
