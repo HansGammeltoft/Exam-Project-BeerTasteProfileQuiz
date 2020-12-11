@@ -550,7 +550,6 @@ body {
         width: 20%;
         text-align: center; }
         body .beer-wrapper .beername_wrapper .beer img {
-          height: 400px;
           cursor: pointer; }
         body .beer-wrapper .beername_wrapper .beer .beer-information {
           width: 500%;
@@ -592,7 +591,7 @@ body {
               padding: 5px 35px 35px; }
             body .beer-wrapper .beername_wrapper .beer .beer-information .information-right .beer-point {
               color: #6786A1; }
-        body .beer-wrapper .beername_wrapper .beer .default-hidden {
+        body .beer-wrapper .beername_wrapper .beer .tabcontent {
           display: none; }
   body footer section {
     padding: 50px 50px 0px 50px;

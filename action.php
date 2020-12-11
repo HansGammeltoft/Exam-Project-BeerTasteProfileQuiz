@@ -37,8 +37,8 @@
         if ($beername == '') {
           $beername = $row['name'];
           echo '<div class="beername_wrapper"><div class="beer">';
-            echo '<img src="'; echo $row['img']; echo '"></br>';
-          echo '<div class="beer-information">';
+            echo "<img id='defaultOpen' class='tablinks' src='" . $row['img'] . "' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
+          echo '<div id="'; echo $row['productID']; echo'"class="beer-information tabcontent">';
           echo '<div class="information-left">';
             echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
             echo '<p class="description">'; echo $row['description']; echo '</p>';
@@ -58,8 +58,8 @@
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
           echo '</div></div></div><div class="beer">';
-            echo '<img src="'; echo $row['img']; echo '"></br>';
-          echo '<div class="beer-information default-hidden">';
+            echo "<img class='tablinks' src='" . $row['img'] . "' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
+        echo '<div id="'; echo $row['productID']; echo'"class="beer-information default-hidden tabcontent">';
           echo '<div class="information-left">';
             echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
             echo '<p class="description">'; echo $row['description']; echo '</p>';
@@ -93,5 +93,22 @@
            $beername_wrapper.children(':nth-of-type(n+6)').hide();
        }
    });
-
  </script>
+
+ <script>
+  function openBeer(evt, beerName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(beerName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("defaultOpen").click();
+  </script>
