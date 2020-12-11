@@ -17,8 +17,9 @@
 
   </head>
   <body>
-    <section>
+    <section class="test">
       <div id="q1_hidden" class="test-wrapper">
+        <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
         <?php
           $sql="SELECT question FROM table_questions
           WHERE questionID = 1";
@@ -49,6 +50,7 @@
         </div>
 
         <div id="q2_hidden" style="display:none;" class="test-wrapper">
+          <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
           <?php
             $sql="SELECT question FROM table_questions
             WHERE questionID = 2";
@@ -79,6 +81,7 @@
           </div>
 
           <div id="q3_hidden" style="display:none;" class="test-wrapper">
+            <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
             <?php
               $sql="SELECT question FROM table_questions
               WHERE questionID = 3";
@@ -109,6 +112,7 @@
           </div>
 
           <div id="q4_hidden" style="display:none;" class="test-wrapper">
+            <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
             <?php
               $sql="SELECT question FROM table_questions
               WHERE questionID = 4";
@@ -145,6 +149,9 @@
         <div class="beer-wrapper">
           <div id="result"></div>
         </div>
+        <footer>
+          <?php include 'includes/footer.php' ?>
+        </footer>
       </section>
 
       <script type="text/javascript">
