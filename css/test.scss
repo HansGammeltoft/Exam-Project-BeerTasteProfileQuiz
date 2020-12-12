@@ -28,6 +28,10 @@
               border: $small-border-size solid $blue;
               border-radius: $small-border-radius;
           }
+          a{
+            text-decoration: none;
+            text-align: center;
+          }
           .quiz-buttonx4 {
               margin-top: 105px;
           }
@@ -37,6 +41,7 @@
           .quiz-button1 {
               background-color: $white;
               color: $blue;
+              width: 120px;
           }
           .quiz-button1:hover {
               background-color: $blue;
@@ -45,6 +50,8 @@
           .quiz-button2 {
               background-color: $blue;
               color: $white;
+              height: 40px;
+              width: 120px;
           }
           .quiz-button2:hover {
               background-color: $white;
@@ -68,6 +75,7 @@
                       margin: $small-spacing;
                       border: $medium-border-size solid $blue;
                       border-radius: 10px;
+                      min-height: 210px;
                   }
 
                   /* CHECKED ANSWER-BORDER STYLES */
@@ -207,6 +215,7 @@
       .progress-bar{
         position: absolute;
         bottom: 0;
+        height: 100px;
         right: 50%;
         transform: translateX(50%);
       }
