@@ -168,9 +168,7 @@
             $sql="SELECT img FROM table_questions
             WHERE questionID = 4";
             $result=$conn->query($sql);
-            while($row=$result->fetch_assoc()){
-              echo '<img class="progress-bar" src="' . $row['img'] . '"';
-            }
+            echo '<img class="progress-bar" src="' . $row['img'] . '"';
           ?>
         </div>
       </section>
