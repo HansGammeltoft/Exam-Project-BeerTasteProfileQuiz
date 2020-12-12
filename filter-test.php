@@ -69,7 +69,7 @@
               <button id="backQ1" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
               <div class="question-answers">
                 <?php
-                  $sql="SELECT answer FROM table_test
+                  $sql="SELECT answer, img FROM table_test
                   WHERE questionID = 2";
                   $result=$conn->query($sql);
                   while($row=$result->fetch_assoc()){
@@ -77,7 +77,7 @@
                 <label class="product_check answers">
                   <input type="radio" name="radio2" value="<?= $row['answer']; ?>" id="answer2">
                   <div class="answer-border">
-                    <img src="./images/5.png" alt="Et pink billede">
+                    <img src=" <?php echo $row['img']; ?> ">
                     <p><?= $row['answer'] ?></p>
                   </div>
                 </label>
@@ -108,7 +108,7 @@
               <button id="backQ2" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
               <div class="question-answers">
                 <?php
-                  $sql="SELECT answer FROM table_test
+                  $sql="SELECT answer, img FROM table_test
                   WHERE questionID = 3";
                   $result=$conn->query($sql);
                   while($row=$result->fetch_assoc()){
@@ -116,7 +116,7 @@
                 <label class="product_check answers">
                   <input type="radio" name="radio3" value="<?= $row['answer']; ?>" id="answer3">
                   <div class="answer-border">
-                    <img src="./images/5.png" alt="Et pink billede">
+                    <img src=" <?php echo $row['img']; ?> ">
                     <p><?= $row['answer'] ?></p>
                   </div>
                 </label>
@@ -147,7 +147,7 @@
               <button id="backQ3" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
               <div class="question-answers">
                 <?php
-                  $sql="SELECT answer FROM table_test
+                  $sql="SELECT answer, img FROM table_test
                   WHERE questionID = 4";
                   $result=$conn->query($sql);
                   while($row=$result->fetch_assoc()){
@@ -155,7 +155,7 @@
                 <label class="product_check answers">
                   <input type="radio" name="radio4" value="<?= $row['answer']; ?>" id="answer4">
                   <div class="answer-border">
-                    <img src="./images/5.png" alt="Et pink billede">
+                    <img src=" <?php echo $row['img']; ?> ">
                     <p><?= $row['answer'] ?></p>
                   </div>
                 </label>
