@@ -14,7 +14,6 @@
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
   </head>
   <body>
     <section class="test">
@@ -44,7 +43,7 @@
                 </div>
               </label>
             <?php } } ?>
-              <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4" onclick="showHide()">Næste</button>
+              <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
             </div>
           </div>
           <?php
@@ -52,12 +51,12 @@
             WHERE questionID = 1";
             $result=$conn->query($sql);
             while($row=$result->fetch_assoc()){
-              echo '<img class="progress-bar" src="' . $row['img'] . '"';
+              echo '<img class="progress-bar" src="' . $row['img'] . '">';
             }
           ?>
         </div>
 
-        <div id="q2_hidden" style="display:none;" class="test-wrapper">
+        <div id="q2_hidden" class="test-wrapper">
           <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
           <?php
             $sql="SELECT question FROM table_questions
@@ -91,12 +90,12 @@
               WHERE questionID = 2";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
-                echo '<img class="progress-bar" src="' . $row['img'] . '"';
+                echo '<img class="progress-bar" src="' . $row['img'] . '">';
               }
             ?>
           </div>
 
-          <div id="q3_hidden" style="display:none;" class="test-wrapper">
+          <div id="q3_hidden" class="test-wrapper">
             <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
             <?php
               $sql="SELECT question FROM table_questions
@@ -130,12 +129,12 @@
               WHERE questionID = 3";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
-                echo '<img class="progress-bar" src="' . $row['img'] . '"';
+                echo '<img class="progress-bar" src="' . $row['img'] . '">';
               }
             ?>
           </div>
 
-          <div id="q4_hidden" style="display:none;" class="test-wrapper">
+          <div id="q4_hidden" class="test-wrapper">
             <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
             <?php
               $sql="SELECT question FROM table_questions
@@ -168,7 +167,9 @@
             $sql="SELECT img FROM table_questions
             WHERE questionID = 4";
             $result=$conn->query($sql);
-            echo '<img class="progress-bar" src="' . $row['img'] . '"';
+            while($row=$result->fetch_assoc()){
+              echo '<img class="progress-bar" src="' . $row['img'] . '">';
+            }
           ?>
         </div>
       </section>
@@ -218,101 +219,116 @@
             }
           });
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
     //frem
+    $(document).ready(function(){
       $(function() {
          $('button#q2').click(function() {
             $('div#q2_hidden').show();
             return false;
          });
       });
+    });
 
+    $(document).ready(function(){
       $(function() {
          $('button#q2').click(function() {
             $('div#q1_hidden').hide();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#q3').click(function() {
             $('div#q3_hidden').show();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#q3').click(function() {
             $('div#q2_hidden').hide();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#q4').click(function() {
             $('div#q4_hidden').show();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#q4').click(function() {
             $('div#q3_hidden').hide();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#showResult').click(function() {
             $('div#q4_hidden').hide();
             return false;
          });
       });
-
+    });
       //Tilbage
+    $(document).ready(function(){
       $(function() {
          $('button#backQ1').click(function() {
             $('div#q1_hidden').show();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#backQ1').click(function() {
             $('div#q2_hidden').hide();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#backQ2').click(function() {
             $('div#q2_hidden').show();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#backQ2').click(function() {
             $('div#q3_hidden').hide();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#backQ3').click(function() {
             $('div#q3_hidden').show();
             return false;
          });
       });
-
+    });
+    $(document).ready(function(){
       $(function() {
          $('button#backQ3').click(function() {
             $('div#q4_hidden').hide();
             return false;
          });
       });
-
+    });
       //show final result (limit 5)
+    $(document).ready(function(){
       $(function() {
          $('button#showResult').click(function() {
             $('section#result-page').show();
@@ -320,6 +336,7 @@
             return false;
          });
       });
+    });
    </script>
   </body>
 </html>
