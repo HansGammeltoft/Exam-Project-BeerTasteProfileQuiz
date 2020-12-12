@@ -56,7 +56,7 @@
           ?>
         </div>
 
-        <div id="q2_hidden" class="test-wrapper">
+        <div id="q2_hidden" class="test-wrapper-hidden test-wrapper">
           <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
           <?php
             $sql="SELECT question FROM table_questions
@@ -95,7 +95,7 @@
             ?>
           </div>
 
-          <div id="q3_hidden" class="test-wrapper">
+          <div id="q3_hidden" class="test-wrapper-hidden test-wrapper">
             <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
             <?php
               $sql="SELECT question FROM table_questions
@@ -134,7 +134,7 @@
             ?>
           </div>
 
-          <div id="q4_hidden" class="test-wrapper">
+          <div id="q4_hidden" class="test-wrapper-hidden test-wrapper">
             <img class="logo" src="images/logouflasker.png" alt="Ølkassens logo">
             <?php
               $sql="SELECT question FROM table_questions
@@ -332,6 +332,7 @@
       $(function() {
          $('button#showResult').click(function() {
             $('section#result-page').show();
+            $('section.test').hide();
             $('div#result').show();
             return false;
          });

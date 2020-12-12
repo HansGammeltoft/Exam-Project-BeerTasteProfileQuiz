@@ -2,6 +2,9 @@
   background-image: url('beergrid-opacity05.png');
   width: 100vw;
   height: 100vh;
+  .test-wrapper-hidden {
+    display: none;
+  }
   .test-wrapper {
       margin: 0 $x-big-spacing;
       height: 100vh;

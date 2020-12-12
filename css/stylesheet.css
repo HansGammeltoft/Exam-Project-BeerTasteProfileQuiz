@@ -412,6 +412,8 @@ body {
     background-image: url("beergrid-opacity05.png");
     width: 100vw;
     height: 100vh; }
+    body .test .test-wrapper-hidden {
+      display: none; }
     body .test .test-wrapper {
       margin: 0 50px;
       height: 100vh; }
