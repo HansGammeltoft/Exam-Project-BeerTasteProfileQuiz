@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Fonttype --- */
+/* --- Font size --- */
+/* --- Font weight --- */
+/* --- Font size --- */
+/* --- Colors --- */
+/* --- Border radius --- */
+/* --- Spacing --- */
+.test {
+  background-image: url("beergrid-opacity05.png");
+  width: 100vw;
+  height: 100vh;
+}
+.test .test-wrapper-hidden {
+  display: none;
+}
+.test .test-wrapper {
+  margin: 0 50px;
+  height: 100vh;
+}
+.test .test-wrapper .logo {
+  height: 50px;
+  padding: 50px 0;
+  display: block;
+  margin: auto;
+}
+.test .test-wrapper #question-header {
+  text-align: center;
+  font-size: 28px;
+  padding: 25px;
+}
+.test .test-wrapper #button-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.test .test-wrapper #button-form-wrapper .quiz-button {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #6786A1;
+  border-radius: 2px;
+}
+.test .test-wrapper #button-form-wrapper a {
+  text-decoration: none;
+  text-align: center;
+}
+.test .test-wrapper #button-form-wrapper .quiz-buttonx4 {
+  margin-top: 105px;
+}
+.test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
+  margin-top: 105px;
+}
+.test .test-wrapper #button-form-wrapper .quiz-button1 {
+  background-color: #fefefe;
+  color: #6786A1;
+  width: 120px;
+}
+.test .test-wrapper #button-form-wrapper .quiz-button1:hover {
+  background-color: #6786A1;
+  color: #fefefe;
+}
+.test .test-wrapper #button-form-wrapper .quiz-button2 {
+  background-color: #6786A1;
+  color: #fefefe;
+  height: 40px;
+  width: 120px;
+}
+.test .test-wrapper #button-form-wrapper .quiz-button2:hover {
+  background-color: #fefefe;
+  color: #6786A1;
+}
+.test .test-wrapper #button-form-wrapper .question-answers {
+  display: flex;
+  justify-content: space-between;
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers {
+  /* HIDE RADIO */
+  /* ANSWER-BORDER STYLES */
+  /* CHECKED ANSWER-BORDER STYLES */
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #6786A1;
+  border-radius: 10px;
+  min-height: 210px;
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
+  border: 2px solid #6786A1;
+  background-color: #6786A1;
+  color: #fefefe;
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
+  background-color: #fefefe;
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
+  height: 150px;
+  width: 100%;
+  min-width: 150px;
+  max-width: 360px;
+}
+.test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
+  text-align: center;
+  margin: 10px 0px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1085px) {
+  .test .test-wrapper #button-form-wrapper .quiz-button {
+    margin-top: 230px;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
+    height: 100%;
+    width: 100%;
+    min-width: 75px;
+    max-width: 180px;
+  }
+}
+@media only screen and (max-width: 1395px) {
+  .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
+    margin-top: 230px;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
+    height: 100%;
+    width: 100%;
+    min-width: 75px;
+    max-width: 180px;
+  }
+}
+@media only screen and (max-width: 578px) {
+  .test .test-wrapper #button-form-wrapper .question-answers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+    padding: 5px;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
+    text-align: center;
+    width: 75px;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
+    height: 100%;
+    width: 70px;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 920px) and (min-width: 579px) {
+  .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
+    margin-top: 165px;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers .answers [type=radio] + .answer-border {
+    padding: 5px;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border {
+    text-align: center;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
+    height: 100%;
+    width: 120px;
+  }
+  .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border p {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 727px) {
+  .test .test-wrapper #button-form-wrapper {
+    flex-wrap: wrap;
+  }
+  .test .test-wrapper #button-form-wrapper .quiz-button {
+    margin-top: 25px;
+  }
+  .test .test-wrapper #button-form-wrapper .quiz-button1 {
+    order: 2;
+  }
+  .test .test-wrapper #button-form-wrapper .quiz-button2 {
+    order: 3;
+  }
+  .test .test-wrapper #button-form-wrapper .question-answers {
+    order: 1;
+    width: 100%;
+  }
+}
+.test .test-wrapper #bottles-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+}
+.test .test-wrapper #bottles-wrapper img {
+  padding: 0 10px;
+  width: 50px;
+}
+.test .test-wrapper .progress-bar {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/*# sourceMappingURL=test.css.map */

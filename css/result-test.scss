@@ -1,89 +1,177 @@
-  #result-page{
+  #result-section {
     h1{
       text-align: center;
       margin-top: $x-big-spacing;
     }
-    .beer-wrapper {
-      margin: 0 $x-big-spacing $x-big-spacing;
-      .beername_wrapper{
-        display: flex;
-        justify-content: space-between;
-        .beer{
-          width: 20%;
-          text-align: center;
-          img{
-            cursor: pointer;
-          }
-          .beer-information{
-            text-align: left;
-            border: $medium-border-size solid $blue;
-            border-radius: $small-border-radius;
-            margin-top: $medium-spacing;
-            position: absolute;
-            left: $x-big-spacing;
-            width: calc(100% - 100px);
-            .arrow{
-              height: 0;
-              width: 0;
-              border-left: 20px solid transparent;
-              border-right: 20px solid transparent;
-              border-bottom: 20px solid $blue;
-              position: absolute;;
-              top: -20px;
+    #result-page{
+      height: 800px;
+      .beer-wrapper {
+        #result {
+          padding: 0 $x-big-spacing;
+          position: relative;
+          height: auto;
+          .beername_wrapper{
+            display: flex;
+            justify-content: space-around;
+            .beer{
+              width: 20%;
+              text-align: center;
+              .beer1 {
+                .beer-img-wrapper {
+                  label {
+                    /* HIDE RADIO */
+                    [type=radio]{
+                      position: absolute;
+                      opacity: 0;
+                      width: 0;
+                      height: 0;
+                    }
+                    /* CHECKED STYLES */
+                    [type=radio]:checked + .img-arrow{
+                      background-color: $light-grey2;
+                      border-radius: $big-border-radius $big-border-radius 0 0;
+                      .arrow {
+                        display: block;
+                        border-bottom: 20px solid $blue;
+                      }
+                    }
+                    .img-arrow {
+                      display: flex;
+                      justify-content: center;
+                      flex-wrap: wrap;
+                      cursor: pointer;
+                      padding: 0 20%;
+                      .arrow-wrapper {
+                        text-align: center;
+                        .arrow {
+                          width: 0;
+                          height: 0;
+                          border-left: 20px solid transparent;
+                          border-right: 20px solid transparent;
+                          border-bottom: 20px solid transparent;
+                        }
+                      }
+                      img {
+                        width: 100%;
+                        padding-bottom: 30px;
+                      }
+                    }
+                  }
+                }
+              }
+                .beer-information{
+                  text-align: left;
+                  border: $medium-border-size solid $blue;
+                  border-radius: $small-border-radius;
+                  position: absolute;
+                  left: $x-big-spacing;
+                  width: calc(100% - 100px);
+                  .information-left{
+                    width: 60%;
+                    .name{
+                      padding: $big-spacing;
+                    }
+                    .description{
+                      padding: 0 $big-spacing $big-spacing;
+                    }
+                    .price-n-btn{
+                      display: flex;
+                    }
+                    .price{
+                      color: $blue;
+                      font-weight: $big-font-weight;
+                      padding: 0 $big-spacing $x-small-spacing;
+                    }
+                    .in-stock{
+                      color: $blue;
+                      font-size: $small-font-size;
+                      padding: 0 $big-spacing $big-spacing;
+                    }
+                    .buy-beer{
+                      color:$white;
+                      background-color: $blue;
+                      margin: 0 $big-spacing $big-spacing;
+                      border: $small-border-size solid $blue;
+                      padding: $small-spacing $big-spacing;
+                      cursor: pointer;
+                    }
+                    .buy-beer:hover {
+                      color:$blue;
+                      background-color: $white;
+                    }
+                  }
+                  .information-right{
+                    width: 40%;
+                    .beer-info:first-child{
+                      padding: 94px $big-spacing $x-small-spacing;
+                    }
+                    .beer-info{
+                      padding: $x-small-spacing $big-spacing;
+                    }
+                    .beer-info:last-child{
+                      padding: $x-small-spacing $big-spacing $big-spacing;
+                    }
+                    .beer-point{
+                      color: $blue;
+                    }
+                  }
+                }
+                .tabcontent{
+                  display: none;
+                }
             }
-            .information-left{
-              width: 60%;
-              .name{
-                padding: $big-spacing;
-              }
-              .description{
-                padding: 0 $big-spacing $big-spacing;
-              }
-              .price-n-btn{
-                display: flex;
-              }
-              .price{
-                color: $blue;
-                font-weight: $big-font-weight;
-                padding: 0 $big-spacing $x-small-spacing;
-              }
-              .in-stock{
-                color: $blue;
-                font-size: $small-font-size;
-                padding: 0 $big-spacing $big-spacing;
-              }
-              .buy-beer{
-                color:$white;
-                background-color: $blue;
-                margin: 0 $big-spacing $big-spacing;
-                border: none;
-                padding: $small-spacing $big-spacing;
-                cursor: pointer;
-              }
-            }
-            .information-right{
-              width: 40%;
-              .beer-info:first-child{
-                padding: 94px $big-spacing $x-small-spacing;
-              }
-              .beer-info{
-                padding: $x-small-spacing $big-spacing;
-              }
-              .beer-info:last-child{
-                padding: $x-small-spacing $big-spacing $big-spacing;
-              }
-              .beer-point{
-                color: $blue;
-              }
-            }
-          }
-          .tabcontent{
-            display: none;
           }
         }
       }
     }
-    footer{
-      margin-top: 400px;
+    .add-all {
+        padding: 0 $big-spacing;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: $big-spacing 0;
+            .add-all-text {
+                padding-top: $small-spacing;
+                font-weight: $big-font-weight;
+            }
+            .input-button {
+                .input-calc {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    border: $small-border-size solid $grey;
+                    margin: 0 $big-spacing;
+                    button {
+                        padding: 0;
+                        margin: 0;
+                        font-size: $small-font-size;
+                        cursor: pointer;
+                        height: 100%;
+                        width: 35px;
+                        padding: $small-spacing;
+                        border: $small-border-size solid $grey;
+                        border-radius: $small-border-radius;
+                        background-color: $grey;
+                        color: $black;
+                    }
+                    input {
+                        padding: 0;
+                        margin: 0;
+                        width: 30px;
+                        border: none;
+                        text-align: center;
+                    }
+                }
+            }
+            .add-all-button {
+              color: $blue;
+              background-color: $white;
+              border: $small-border-size solid $blue;
+              padding: $small-spacing $big-spacing;
+              cursor: pointer;
+            }
+            .add-all-button:hover {
+                background-color: $blue;
+                color: $white;
+            }
     }
   }

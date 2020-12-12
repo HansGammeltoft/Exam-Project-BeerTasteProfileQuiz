@@ -11,9 +11,156 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('section.result-dd').hide();
+          $(".product_check").click(function(){
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            var action = 'data';
+            var answer1 = get_filter_text('answer1');
+            var answer2 = get_filter_text('answer2');
+            var answer3 = get_filter_text('answer3');
+            var answer4 = get_filter_text('answer4');
+
+            $.ajax({
+              url:'action.php',
+              method: 'POST',
+              data:{action:action,answer1:answer1,answer2:answer2,answer3:answer3,answer4:answer4},
+              success:function(response){
+                $("#result").html(response);
+              }
+            });
+          });
+
+          function get_filter_text(text_id){
+            var filterData = [];
+            $('#'+text_id+':checked').each(function(){
+              filterData.push($(this).val());
+            });
+            return filterData;
+          }
+        });
+  </script>
+    <script type="text/javascript">
+    //frem
+    $(document).ready(function(){
+      $(function() {
+         $('button#q2').click(function() {
+            $('div#q2_hidden').show();
+            return false;
+         });
+      });
+    });
+
+    $(document).ready(function(){
+      $(function() {
+         $('button#q2').click(function() {
+            $('div#q1_hidden').hide();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#q3').click(function() {
+            $('div#q3_hidden').show();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#q3').click(function() {
+            $('div#q2_hidden').hide();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#q4').click(function() {
+            $('div#q4_hidden').show();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#q4').click(function() {
+            $('div#q3_hidden').hide();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#showResult').click(function() {
+            $('div#q4_hidden').hide();
+            return false;
+         });
+      });
+    });
+      //Tilbage
+    $(document).ready(function(){
+      $(function() {
+         $('button#backQ1').click(function() {
+            $('div#q1_hidden').show();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#backQ1').click(function() {
+            $('div#q2_hidden').hide();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#backQ2').click(function() {
+            $('div#q2_hidden').show();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#backQ2').click(function() {
+            $('div#q3_hidden').hide();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#backQ3').click(function() {
+            $('div#q3_hidden').show();
+            return false;
+         });
+      });
+    });
+    $(document).ready(function(){
+      $(function() {
+         $('button#backQ3').click(function() {
+            $('div#q4_hidden').hide();
+            return false;
+         });
+      });
+    });
+      //show final result (limit 5)
+    $(document).ready(function(){
+      $(function() {
+         $('button#showResult').click(function() {
+            $('section.result-dd').show();
+            $('section.test').hide();
+            $('div#result').show();
+            return false;
+         });
+      });
+    });
+    </script>
   </head>
   <body>
     <section class="test">
@@ -173,171 +320,34 @@
           ?>
         </div>
       </section>
+      <section class="result-dd"id="result-section">
+        <div class="result-dd">
 
-      <section id="result-page">
+        </div>
+        <?php include 'includes/animation.php'; ?>
         <?php include 'includes/header.php' ?>
         <h1>Her er dit perfekte match</h1>
-        <div class="beer-wrapper">
-          <div id="result"></div>
+        <div id="result-page">
+          <div class="beer-wrapper">
+            <div id="result"></div>
+          </div>
         </div>
-        <div class="buy-all">
-          <p>Køb alle øl og spar 10%</p>
-          <button>Læg alle i kurv</button>
+        <div class="add-all">
+            <div class="add-all-text">
+                <p>Køb hele den personlige kasse og spar 10%</p>
+            </div>
+            <div class="input-button">
+                <div class="input-calc">
+                    <button>&#43;</button>
+                    <input placeholder="0">
+                    <button>&#8722;</button>
+                </div>
+            </div>
+            <button class="add-all-button">Læg alle i kurv</button>
         </div>
         <footer>
           <?php include 'includes/footer.php' ?>
         </footer>
       </section>
-
-      <script type="text/javascript">
-          $(document).ready(function(){
-            $('section#result-page').hide();
-            $(".product_check").click(function(){
-
-              var action = 'data';
-              var answer1 = get_filter_text('answer1');
-              var answer2 = get_filter_text('answer2');
-              var answer3 = get_filter_text('answer3');
-              var answer4 = get_filter_text('answer4');
-
-              $.ajax({
-                url:'action.php',
-                method: 'POST',
-                data:{action:action,answer1:answer1,answer2:answer2,answer3:answer3,answer4:answer4},
-                success:function(response){
-                  $("#result").html(response);
-                }
-              });
-            });
-
-            function get_filter_text(text_id){
-              var filterData = [];
-              $('#'+text_id+':checked').each(function(){
-                filterData.push($(this).val());
-              });
-              return filterData;
-            }
-          });
-    </script>
-    <script type="text/javascript" defer>
-    //frem
-    $(document).ready(function(){
-      $(function() {
-         $('button#q2').click(function() {
-            $('div#q2_hidden').show();
-            return false;
-         });
-      });
-    });
-
-    $(document).ready(function(){
-      $(function() {
-         $('button#q2').click(function() {
-            $('div#q1_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q3').click(function() {
-            $('div#q3_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q3').click(function() {
-            $('div#q2_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q4').click(function() {
-            $('div#q4_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q4').click(function() {
-            $('div#q3_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#showResult').click(function() {
-            $('div#q4_hidden').hide();
-            return false;
-         });
-      });
-    });
-      //Tilbage
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ1').click(function() {
-            $('div#q1_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ1').click(function() {
-            $('div#q2_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ2').click(function() {
-            $('div#q2_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ2').click(function() {
-            $('div#q3_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ3').click(function() {
-            $('div#q3_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ3').click(function() {
-            $('div#q4_hidden').hide();
-            return false;
-         });
-      });
-    });
-      //show final result (limit 5)
-    $(document).ready(function(){
-      $(function() {
-         $('button#showResult').click(function() {
-            $('section#result-page').show();
-            $('section.test').hide();
-            $('div#result').show();
-            return false;
-         });
-      });
-    });
-   </script>
   </body>
 </html>

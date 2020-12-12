@@ -1,16 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body>
     <section class="test-wrapper">
         <h1 id="question-header">Spørgsmål 1</h1>
         <div id="button-form-wrapper">
             <button class="quiz-button quiz-button1 quiz-buttonx6">Tilbage</button>
             <form class="question-answers" id="questions-6-answers">
-              <label class="product_check answers">
-                <input type="radio" name="radio1" value="1" id="answer1">
-                <div class="answer-border">
-                  <img src="./images/1.png">
-                  <p>test</p>
-                </div>
-              </label>
+                <label for="answer-option1" class="answers">
+                    <input type="radio" id="answer-option1" name="answer-options">
+                    <div class="answer-border">
+                        <img src="./images/5.png" alt="Pink">
+                        <p>Lime</p>
+                    </div>
+                </label>
                  <label for="answer-option2" class="answers">
                     <input type="radio" id="answer-option2" name="answer-options">
                     <div class="answer-border">
@@ -57,3 +64,5 @@
             <img src="./images/oelkassenlogo.png" alt="Et billede af ølkassens logo">
         </div>
     </section>
+  </body>
+</html>

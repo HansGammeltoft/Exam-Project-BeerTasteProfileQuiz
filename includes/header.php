@@ -2,7 +2,7 @@
     <div id="upper-nav">
         <div id="upper-nav-wrapper">
             <div id="img-text">
-                <img src="./images/oelkassen-logo.png" alt="Et billede af ølkassens logo">
+                <a href="index.php"><img src="./images/oelkassen-logo.png" alt="Et billede af ølkassens logo"></a>
                 <div class="logo-text">
                     <p>Fri fragt ved køb for 600 kr.</p>
                     <p>Pickup i KBH, Kgs. Lyngby, Lejre</p>

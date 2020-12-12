@@ -37,8 +37,12 @@
         if ($beername == '') {
           $beername = $row['name'];
           echo '<div class="beername_wrapper"><div class="beer">';
-            echo "<img id='defaultOpen' class='tablinks' src='" . $row['img'] . "' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
-          echo '<div id="'; echo $row['productID']; echo'"class="beer-information tabcontent"><div class="arrow"></div>';
+          echo '<div class="beer1"><div class="beer-img-wrapper">';
+              echo "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
+                echo '<input type="radio" name="img" checked><div class="img-arrow">';
+                  echo '<img src="' . $row['img'] . '">';
+                  echo '<div class="arrow-wrapper"><div class="arrow"></div></div></div></label></div></div>';
+          echo '<div id="'; echo $row['productID']; echo'"class="beer-information tabcontent">';
           echo '<div class="information-left">';
             echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
             echo '<p class="description">'; echo $row['description']; echo '</p>';
@@ -58,8 +62,12 @@
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
           echo '</div></div></div><div class="beer">';
-            echo "<img class='tablinks' src='" . $row['img'] . "' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
-        echo '<div id="'; echo $row['productID']; echo'"class="beer-information default-hidden tabcontent"><div class="arrow"></div>';
+          echo '<div class="beer1"><div class="beer-img-wrapper">';
+              echo "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
+                echo '<input type="radio" name="img" checked><div class="img-arrow">';
+                  echo '<img src="' . $row['img'] . '">';
+                  echo '<div class="arrow-wrapper"><div class="arrow"></div></div></div></label></div></div>';
+        echo '<div id="'; echo $row['productID']; echo'"class="beer-information default-hidden tabcontent">';
           echo '<div class="information-left">';
             echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
             echo '<p class="description">'; echo $row['description']; echo '</p>';
