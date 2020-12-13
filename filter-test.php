@@ -8,159 +8,8 @@
     <meta charset="utf-8">
     <title></title>
     <link href="./css/stylesheet.css" rel="stylesheet">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('section.result-dd').hide();
-          $(".product_check").click(function(){
-
-            var action = 'data';
-            var answer1 = get_filter_text('answer1');
-            var answer2 = get_filter_text('answer2');
-            var answer3 = get_filter_text('answer3');
-            var answer4 = get_filter_text('answer4');
-
-            $.ajax({
-              url:'action.php',
-              method: 'POST',
-              data:{action:action,answer1:answer1,answer2:answer2,answer3:answer3,answer4:answer4},
-              success:function(response){
-                $("#result").html(response);
-              }
-            });
-          });
-
-          function get_filter_text(text_id){
-            var filterData = [];
-            $('#'+text_id+':checked').each(function(){
-              filterData.push($(this).val());
-            });
-            return filterData;
-          }
-        });
-  </script>
-    <script type="text/javascript">
-    //frem
-    $(document).ready(function(){
-      $(function() {
-         $('button#q2').click(function() {
-            $('div#q2_hidden').show();
-            return false;
-         });
-      });
-    });
-
-    $(document).ready(function(){
-      $(function() {
-         $('button#q2').click(function() {
-            $('div#q1_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q3').click(function() {
-            $('div#q3_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q3').click(function() {
-            $('div#q2_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q4').click(function() {
-            $('div#q4_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#q4').click(function() {
-            $('div#q3_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#showResult').click(function() {
-            $('div#q4_hidden').hide();
-            return false;
-         });
-      });
-    });
-      //Tilbage
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ1').click(function() {
-            $('div#q1_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ1').click(function() {
-            $('div#q2_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ2').click(function() {
-            $('div#q2_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ2').click(function() {
-            $('div#q3_hidden').hide();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ3').click(function() {
-            $('div#q3_hidden').show();
-            return false;
-         });
-      });
-    });
-    $(document).ready(function(){
-      $(function() {
-         $('button#backQ3').click(function() {
-            $('div#q4_hidden').hide();
-            return false;
-         });
-      });
-    });
-      //show final result (limit 5)
-    $(document).ready(function(){
-      $(function() {
-         $('button#showResult').click(function() {
-            $('section.result-dd').show();
-            $('section.test').hide();
-            $('div#result').show();
-            return false;
-         });
-      });
-    });
-    </script>
   </head>
   <body>
     <section class="test">
@@ -349,5 +198,7 @@
           <?php include 'includes/footer.php' ?>
         </footer>
       </section>
+      <script src="./script/filter.js"></script>
+      <script src="./script/showhide.js"></script>
   </body>
 </html>

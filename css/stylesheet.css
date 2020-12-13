@@ -584,37 +584,40 @@ body {
         body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer {
           width: 20%;
           text-align: center; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label {
-            /* HIDE RADIO */
-            /* CHECKED STYLES */ }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio] {
-              position: absolute;
-              opacity: 0;
-              width: 0;
-              height: 0; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow {
-              background-color: #e8e8e8;
-              border-radius: 5px 5px 0 0; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
-                display: block;
-                border-bottom: 20px solid #6786A1; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              cursor: pointer;
-              padding: 0 20%; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper {
-                text-align: center; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
-                  width: 0;
-                  height: 0;
-                  border-left: 20px solid transparent;
-                  border-right: 20px solid transparent;
-                  border-bottom: 20px solid transparent; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow img {
-                width: 100%;
-                padding-bottom: 30px; }
+          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper {
+            display: flex;
+            justify-content: space-around; }
+            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label {
+              /* HIDE RADIO */
+              /* CHECKED STYLES */ }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio] {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow {
+                background-color: #e8e8e8;
+                border-radius: 5px 5px 0 0; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
+                  display: block;
+                  border-bottom: 20px solid #6786A1; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                cursor: pointer;
+                padding: 0 20%; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper {
+                  text-align: center; }
+                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
+                    width: 0;
+                    height: 0;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    border-bottom: 20px solid transparent; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow img {
+                  width: 100%;
+                  padding-bottom: 30px; }
           body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
             text-align: left;
             border: 2px solid #6786A1;
@@ -794,37 +797,5 @@ body {
     transform: translate3d(0px, 0, 0); }
   to {
     transform: translate3d(-100%, 0, 0); } }
-  body .beer1 {
-    display: flex;
-    justify-content: space-around; }
-    body .beer1 .beer-img-wrapper label {
-      /* HIDE RADIO */
-      /* CHECKED STYLES */ }
-      body .beer1 .beer-img-wrapper label [type=radio] {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0; }
-      body .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow {
-        background-color: #e8e8e8;
-        border-radius: 5px 5px 0 0; }
-        body .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
-          display: block;
-          border-bottom: 20px solid #6786A1; }
-      body .beer1 .beer-img-wrapper label .img-arrow {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        cursor: pointer; }
-        body .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper {
-          text-align: center; }
-          body .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 20px solid transparent; }
-        body .beer1 .beer-img-wrapper label .img-arrow img {
-          width: 100%; }
 
 /*# sourceMappingURL=stylesheet.css.map */

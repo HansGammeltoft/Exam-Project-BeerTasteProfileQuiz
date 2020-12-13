@@ -91,32 +91,7 @@
     }
   }
  ?>
-
- <script>
-    //limit to 5
-    $beername_wrapper = $('.beername_wrapper');
-    $beername_wrapper.each(function() {
-       var $bn_wrapper = $(this).children();
-       if ($bn_wrapper.length > 5) {
-           $beername_wrapper.children(':nth-of-type(n+6)').hide();
-       }
-   });
- </script>
-
- <script>
-  function openBeer(evt, beerName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(beerName).style.display = "flex";
-    evt.currentTarget.className += " active";
-  }
-
-  document.getElementById("defaultOpen").click();
-  </script>
+ <!--Set limit of showcased beers to the first five-->
+ <script src="./script/5limit.js"></script>
+ <!--Use tabbed content to show/hide to show and hide related/unrelated content-->
+ <script src="./script/beertabs.js"></script>

@@ -18,6 +18,8 @@
               text-align: center;
               .beer1 {
                 .beer-img-wrapper {
+                  display: flex;
+                  justify-content: space-around;
                   label {
                     /* HIDE RADIO */
                     [type=radio]{
