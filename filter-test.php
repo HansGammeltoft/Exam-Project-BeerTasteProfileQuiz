@@ -21,8 +21,8 @@
           $result=$conn->query($sql);
           while($row=$result->fetch_assoc()){
         ?>
-        <h1 id="question-header"><?php echo $row['question'] ?></h1>
-          <div id="button-form-wrapper">
+        <h1 class="question-header"><?php echo $row['question'] ?></h1>
+          <div class="button-form-wrapper">
             <a href="index.php" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</a>
             <div class="question-answers">
               <?php
@@ -39,8 +39,8 @@
                 </div>
               </label>
             <?php } } ?>
-              <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
             </div>
+            <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
           </div>
           <?php
             $sql="SELECT img FROM table_questions
@@ -60,8 +60,8 @@
             $result=$conn->query($sql);
             while($row=$result->fetch_assoc()){
           ?>
-          <h1 id="question-header"><?php echo $row['question'] ?></h1>
-            <div id="button-form-wrapper">
+          <h1 class="question-header"><?php echo $row['question'] ?></h1>
+            <div class="button-form-wrapper">
               <button id="backQ1" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
               <div class="question-answers">
                 <?php
@@ -78,8 +78,8 @@
                   </div>
                 </label>
               <?php } } ?>
-                <button id="q3" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
               </div>
+              <button id="q3" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
             </div>
             <?php
               $sql="SELECT img FROM table_questions
@@ -99,8 +99,8 @@
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
             ?>
-            <h1 id="question-header"><?php echo $row['question'] ?></h1>
-            <div id="button-form-wrapper">
+            <h1 class="question-header"><?php echo $row['question'] ?></h1>
+            <div class="button-form-wrapper">
               <button id="backQ2" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
               <div class="question-answers">
                 <?php
@@ -117,8 +117,8 @@
                   </div>
                 </label>
               <?php } } ?>
-              <button id="q4" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
               </div>
+              <button id="q4" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
             </div>
             <?php
               $sql="SELECT img FROM table_questions
@@ -138,8 +138,8 @@
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
             ?>
-            <h1 id="question-header"><?php echo $row['question'] ?></h1>
-            <div id="button-form-wrapper">
+            <h1 class="question-header"><?php echo $row['question'] ?></h1>
+            <div class="button-form-wrapper">
               <button id="backQ3" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
               <div class="question-answers">
                 <?php
@@ -156,8 +156,8 @@
                   </div>
                 </label>
               <?php } } ?>
-              <button id="showResult" class="quiz-button quiz-button2 quiz-buttonx4">Afslut</button>
             </div>
+            <button id="showResult" class="quiz-button quiz-button2 quiz-buttonx4">Afslut</button>
           </div>
           <?php
             $sql="SELECT img FROM table_questions

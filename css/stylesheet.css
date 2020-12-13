@@ -411,7 +411,8 @@ body {
   body .test {
     background-image: url("beergrid-opacity05.png");
     width: 100vw;
-    height: 100vh; }
+    height: 100vh;
+    overflow: scroll; }
     body .test .test-wrapper-hidden {
       display: none; }
     body .test .test-wrapper {
@@ -422,14 +423,14 @@ body {
         padding: 50px 0;
         display: block;
         margin: auto; }
-      body .test .test-wrapper #question-header {
+      body .test .test-wrapper .question-header {
         text-align: center;
         font-size: 28px;
         padding: 25px; }
-      body .test .test-wrapper #button-form-wrapper {
+      body .test .test-wrapper .button-form-wrapper {
         display: flex;
         justify-content: space-between; }
-        body .test .test-wrapper #button-form-wrapper .quiz-button {
+        body .test .test-wrapper .button-form-wrapper .quiz-button {
           font-size: 15px;
           font-weight: 600;
           cursor: pointer;
@@ -437,138 +438,114 @@ body {
           padding: 10px;
           border: 1px solid #6786A1;
           border-radius: 2px; }
-        body .test .test-wrapper #button-form-wrapper a {
+        body .test .test-wrapper .button-form-wrapper a {
           text-decoration: none;
           text-align: center; }
-        body .test .test-wrapper #button-form-wrapper .quiz-buttonx4 {
-          margin-top: 105px; }
-        body .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
-          margin-top: 105px; }
-        body .test .test-wrapper #button-form-wrapper .quiz-button1 {
+        body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
+          margin-top: 100px; }
+        body .test .test-wrapper .button-form-wrapper .quiz-buttonx6 {
+          margin-top: 100px; }
+        @media only screen and (max-width: 1267px) {
+          body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
+            margin-top: 205px; }
+          body .test .test-wrapper .button-form-wrapper .quiz-buttonx6 {
+            margin-top: 205px; } }
+        @media only screen and (max-width: 723px) {
+          body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
+            margin-top: 315px; }
+          body .test .test-wrapper .button-form-wrapper .quiz-buttonx6 {
+            margin-top: 315px; } }
+        body .test .test-wrapper .button-form-wrapper .quiz-button1 {
           background-color: #fefefe;
           color: #6786A1;
           width: 120px; }
-        body .test .test-wrapper #button-form-wrapper .quiz-button1:hover {
+        body .test .test-wrapper .button-form-wrapper .quiz-button1:hover {
           background-color: #6786A1;
           color: #fefefe; }
-        body .test .test-wrapper #button-form-wrapper .quiz-button2 {
+        body .test .test-wrapper .button-form-wrapper .quiz-button2 {
           background-color: #6786A1;
           color: #fefefe;
           height: 40px;
           width: 120px; }
-        body .test .test-wrapper #button-form-wrapper .quiz-button2:hover {
+        body .test .test-wrapper .button-form-wrapper .quiz-button2:hover {
           background-color: #fefefe;
           color: #6786A1; }
-        body .test .test-wrapper #button-form-wrapper .question-answers {
+        body .test .test-wrapper .button-form-wrapper .question-answers {
           display: flex;
           justify-content: space-between; }
-          body .test .test-wrapper #button-form-wrapper .question-answers .answers {
+          body .test .test-wrapper .button-form-wrapper .question-answers .answers {
             /* HIDE RADIO */
             /* ANSWER-BORDER STYLES */
             /* CHECKED ANSWER-BORDER STYLES */ }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] {
+            body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] {
               position: absolute;
               opacity: 0;
               width: 0;
               height: 0; }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+            body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
               cursor: pointer;
               padding: 10px;
               margin: 10px;
               border: 2px solid #6786A1;
               border-radius: 10px;
-              min-height: 210px; }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
+              min-height: 180px; }
+            body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
               border: 2px solid #6786A1;
               background-color: #6786A1;
               color: #fefefe; }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
+            body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
               background-color: #fefefe; }
-              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
-                height: 150px;
+              body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border img {
                 width: 100%;
                 min-width: 150px;
                 max-width: 360px; }
-              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
+              body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border p {
                 text-align: center;
-                margin: 10px 0px;
                 font-weight: 600; }
-        @media only screen and (max-width: 1085px) {
-          body .test .test-wrapper #button-form-wrapper .quiz-button {
-            margin-top: 230px; }
-          body .test .test-wrapper #button-form-wrapper .question-answers {
-            flex-wrap: wrap;
-            justify-content: center; }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
-              height: 100%;
-              width: 100%;
-              min-width: 75px;
-              max-width: 180px; } }
-        @media only screen and (max-width: 1395px) {
-          body .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
-            margin-top: 230px; }
-          body .test .test-wrapper #button-form-wrapper #questions-6-answers {
-            flex-wrap: wrap;
-            justify-content: center; }
-            body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
-              height: 100%;
-              width: 100%;
-              min-width: 75px;
-              max-width: 180px; } }
-        @media only screen and (max-width: 578px) {
-          body .test .test-wrapper #button-form-wrapper .question-answers {
-            flex-wrap: wrap;
-            justify-content: center; }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
-              padding: 5px; }
-            body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border {
-              text-align: center;
-              width: 75px; }
-              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border img {
-                height: 100%;
-                width: 70px; }
-              body .test .test-wrapper #button-form-wrapper .question-answers .answers .answer-border p {
-                overflow: hidden; } }
-        @media only screen and (max-width: 920px) and (min-width: 579px) {
-          body .test .test-wrapper #button-form-wrapper .quiz-buttonx6 {
-            margin-top: 165px; }
-          body .test .test-wrapper #button-form-wrapper #questions-6-answers {
-            flex-wrap: wrap;
-            justify-content: center; }
-            body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers [type=radio] + .answer-border {
-              padding: 5px; }
-            body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border {
-              text-align: center; }
-              body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border img {
-                height: 100%;
-                width: 120px; }
-              body .test .test-wrapper #button-form-wrapper #questions-6-answers .answers .answer-border p {
-                overflow: hidden; } }
-      @media only screen and (max-width: 727px) {
-        body .test .test-wrapper #button-form-wrapper {
-          flex-wrap: wrap; }
-          body .test .test-wrapper #button-form-wrapper .quiz-button {
-            margin-top: 25px; }
-          body .test .test-wrapper #button-form-wrapper .quiz-button1 {
-            order: 2; }
-          body .test .test-wrapper #button-form-wrapper .quiz-button2 {
-            order: 3; }
-          body .test .test-wrapper #button-form-wrapper .question-answers {
-            order: 1;
-            width: 100%; } }
-      body .test .test-wrapper #bottles-wrapper {
-        display: flex;
-        justify-content: center;
-        padding-top: 35px; }
-        body .test .test-wrapper #bottles-wrapper img {
-          padding: 0 10px;
-          width: 50px; }
+        @media only screen and (max-width: 1267px) {
+          body .test .test-wrapper .button-form-wrapper .question-answers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; }
+            body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
+              background-color: #fefefe;
+              width: 140px; } }
+        @media only screen and (max-width: 844px) {
+          body .test .test-wrapper .button-form-wrapper .question-answers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; }
+            body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
+              background-color: #fefefe;
+              width: 100px; }
+              body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border img {
+                width: 100%;
+                min-width: 70px;
+                max-width: 360px; } }
       body .test .test-wrapper .progress-bar {
         position: absolute;
         bottom: 0;
         height: 100px;
         right: 50%;
         transform: translateX(50%); }
+      @media only screen and (max-width: 1267px) {
+        body .test .test-wrapper .progress-bar {
+          height: 80px; } }
+      @media only screen and (max-width: 844px) {
+        body .test .test-wrapper .progress-bar {
+          height: 60px; } }
+    @media only screen and (max-width: 549px) {
+      body .test .test-wrapper {
+        margin: 0 10px; }
+        body .test .test-wrapper .logo {
+          height: 50px;
+          padding: 5px 0;
+          display: block;
+          margin: auto; }
+        body .test .test-wrapper .question-header {
+          text-align: center;
+          font-size: 20px;
+          padding: 10px; } }
   body #result-section h1 {
     text-align: center;
     margin-top: 50px; }
@@ -620,49 +597,144 @@ body {
                   padding-bottom: 30px; }
           body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
             text-align: left;
+            display: flex;
+            flex-direction: column;
             border: 2px solid #6786A1;
             border-radius: 2px;
             position: absolute;
             left: 50px;
             width: calc(100% - 100px); }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left {
-              width: 60%; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .name {
-                padding: 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .description {
+            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .name {
+              padding: 35px; }
+            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper {
+              display: grid;
+              grid-template-columns: 6fr 4fr; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .description {
                 padding: 0 35px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .price-n-btn {
-                display: flex; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .price {
-                color: #6786A1;
-                font-weight: 600;
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn {
+                display: flex;
+                flex-wrap: wrap; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .price {
+                  color: #6786A1;
+                  font-weight: 600;
+                  padding: 0 35px 5px; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .in-stock {
+                  color: #6786A1;
+                  font-size: 15px;
+                  padding: 0 35px 35px; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer {
+                  color: #fefefe;
+                  background-color: #6786A1;
+                  margin: 0 35px 35px;
+                  border: 1px solid #6786A1;
+                  padding: 10px 35px;
+                  cursor: pointer; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer:hover {
+                  color: #6786A1;
+                  background-color: #fefefe; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:first-child {
                 padding: 0 35px 5px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .in-stock {
-                color: #6786A1;
-                font-size: 15px;
-                padding: 0 35px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .buy-beer {
-                color: #fefefe;
-                background-color: #6786A1;
-                margin: 0 35px 35px;
-                border: 1px solid #6786A1;
-                padding: 10px 35px;
-                cursor: pointer; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-left .buy-beer:hover {
-                color: #6786A1;
-                background-color: #fefefe; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-right {
-              width: 40%; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-right .beer-info:first-child {
-                padding: 94px 35px 5px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-right .beer-info {
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
                 padding: 5px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-right .beer-info:last-child {
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
                 padding: 5px 35px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-right .beer-point {
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-point {
                 color: #6786A1; }
           body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .tabcontent {
             display: none; }
+    @media only screen and (max-width: 716px) {
+      body #result-section #result-page .beer-wrapper #result .beername_wrapper {
+        display: flex;
+        flex-wrap: wrap; }
+        body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer {
+          width: 130px;
+          text-align: center; }
+          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper {
+            display: flex;
+            justify-content: space-around; }
+            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label {
+              /* HIDE RADIO */
+              /* CHECKED STYLES */ }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio] {
+                position: static;
+                opacity: 0;
+                width: 0;
+                height: 0; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow {
+                background-color: #fefefe;
+                border-radius: 5px 5px 0 0; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
+                  display: block;
+                  border-bottom: 10px solid #6786A1; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                cursor: pointer; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper {
+                  text-align: center; }
+                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid transparent; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow img {
+                  width: 130px;
+                  padding-bottom: 0px; }
+          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
+            display: block;
+            position: static;
+            width: 100%; }
+            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .name {
+              padding: 10px 10px 0 10px;
+              font-size: 15px; }
+            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper {
+              display: flex;
+              flex-wrap: wrap; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left {
+                padding: 0 10px 10px 10px;
+                order: 2;
+                width: 100%; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .description {
+                  display: none; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn {
+                  padding: 0;
+                  margin: 0; }
+                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock {
+                    padding: 0;
+                    margin: 0; }
+                    body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .price {
+                      padding: 0;
+                      margin: 0;
+                      font-size: 15px; }
+                    body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .in-stock {
+                      padding: 0 0 10px 0;
+                      margin: 0;
+                      font-size: 13px; }
+                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer {
+                    width: 100%;
+                    padding: 10px;
+                    margin: 0; }
+              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right {
+                order: 1;
+                width: 0;
+                width: 100%;
+                padding: 10px; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:first-child {
+                  padding: 0; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
+                  font-size: 15px;
+                  padding: 10px 0 0 0; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
+                  padding: 10px 0 0 0; }
+                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info-hide {
+                  display: none; }
+          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .tabcontent {
+            display: block; } }
+  @media only screen and (max-width: 716px) {
+    body #result-section #result-page {
+      height: auto; } }
   body #result-section .add-all {
     padding: 0 35px;
     display: flex;
