@@ -7,6 +7,7 @@
     <!–– awesome fonts ––>
     <script src="https://kit.fontawesome.com/9068d98231.js" crossorigin="anonymous"></script>
     <link href="./css/stylesheet.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/oelkassen-logo.png" />
 </head>
     <body>
         <header>

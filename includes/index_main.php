@@ -41,9 +41,9 @@
             <p>oelkassen.dk</p>
         </div>
         <div id="instagram-content">
-            <img src="./images/instagram-oel.png" alt="Billede af ølkassens øl fra instagram">
-            <img src="./images/instagram-oel2.png" alt="Billede af ølkassens øl fra instagram">
-            <img src="./images/instagram-oel3.png" alt="Billede af ølkassens øl fra instagram">
+            <img src="./images/instagram-oel.PNG" alt="Billede af ølkassens øl fra instagram">
+            <img src="./images/instagram-oel2.PNG" alt="Billede af ølkassens øl fra instagram">
+            <img src="./images/instagram-oel3.PNG" alt="Billede af ølkassens øl fra instagram">
         </div>
         <div id="instagram-button-section">
             <div id="instagram-grey-button">

@@ -1,13 +1,13 @@
 <?php
   require 'php-db-projekt7.php';
 ?>
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="da" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="./css/stylesheet.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/oelkassen-logo.png" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>

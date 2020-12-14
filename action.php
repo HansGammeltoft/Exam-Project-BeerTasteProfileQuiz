@@ -1,4 +1,5 @@
 <?php
+  header('Content-Type: text/html; charset=utf-8');
   require 'php-db-projekt7.php';
 
   if (isset($_POST['action'])) {
