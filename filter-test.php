@@ -40,7 +40,7 @@
               </label>
             <?php } } ?>
             </div>
-            <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
+            <button id="q2" class="quiz-button quiz-button2 quiz-buttonx4" onclick="plusSpg(1)">Næste</button>
           </div>
           <?php
             $sql="SELECT img FROM table_questions
@@ -62,7 +62,7 @@
           ?>
           <h1 class="question-header"><?php echo $row['question'] ?></h1>
             <div class="button-form-wrapper">
-              <button id="backQ1" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
+              <button id="backQ1" class="quiz-button quiz-button1 quiz-buttonx4" onclick="plusSpg(-1)">Tilbage</button>
               <div class="question-answers">
                 <?php
                   $sql="SELECT answer, img FROM table_test
@@ -79,7 +79,7 @@
                 </label>
               <?php } } ?>
               </div>
-              <button id="q3" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
+              <button id="q3" class="quiz-button quiz-button2 quiz-buttonx4" onclick="plusSpg(1)">Næste</button>
             </div>
             <?php
               $sql="SELECT img FROM table_questions
@@ -101,7 +101,7 @@
             ?>
             <h1 class="question-header"><?php echo $row['question'] ?></h1>
             <div class="button-form-wrapper">
-              <button id="backQ2" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
+              <button id="backQ2" class="quiz-button quiz-button1 quiz-buttonx4" onclick="plusSpg(-1)">Tilbage</button>
               <div class="question-answers">
                 <?php
                   $sql="SELECT answer, img FROM table_test
@@ -118,7 +118,7 @@
                 </label>
               <?php } } ?>
               </div>
-              <button id="q4" class="quiz-button quiz-button2 quiz-buttonx4">Næste</button>
+              <button id="q4" class="quiz-button quiz-button2 quiz-buttonx4" onclick="plusSpg(1)">Næste</button>
             </div>
             <?php
               $sql="SELECT img FROM table_questions
@@ -140,7 +140,7 @@
             ?>
             <h1 class="question-header"><?php echo $row['question'] ?></h1>
             <div class="button-form-wrapper">
-              <button id="backQ3" class="quiz-button quiz-button1 quiz-buttonx4">Tilbage</button>
+              <button id="backQ3" class="quiz-button quiz-button1 quiz-buttonx4" onclick="plusSpg(-1)">Tilbage</button>
               <div class="question-answers">
                 <?php
                   $sql="SELECT answer, img FROM table_test
