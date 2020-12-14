@@ -1,7 +1,8 @@
 @charset "UTF-8";
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /* --- Fonttype --- */
 /* --- Font size --- */
@@ -14,860 +15,1093 @@
 body {
   font: 100% “open sans”, HelveticaNeue, “Helvetica Neue”, Helvetica- Neue, Helvetica, Arial, sans-serif;
   color: #222222;
-  background-color: #fefefe; }
-  body nav {
-    font-size: 13px;
-    color: #8d8d8d;
-    background: #fefefe;
+  background-color: #fefefe;
+}
+body nav {
+  font-size: 13px;
+  color: #8d8d8d;
+  background: #fefefe;
+  width: 100%;
+  /* --- logo, logotext, searchbar, links and cart --- */
+  /* --- beerstyles --- */
+}
+body nav #upper-nav {
+  padding: 0px 50px 0px 50px;
+  border-bottom: solid 1px #e1e1e1;
+}
+body nav #upper-nav #upper-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* div for logo, logotext and searchbar */
+  /* div for menulinks and cart */
+}
+body nav #upper-nav #upper-nav-wrapper #img-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+body nav #upper-nav #upper-nav-wrapper #img-text img {
+  height: 90px;
+  width: 120px;
+}
+@media only screen and (max-width: 616px) {
+  body nav #upper-nav #upper-nav-wrapper #img-text img {
+    height: auto;
+    width: 30%;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #img-text .logo-text {
+  margin-top: 35px;
+  padding-left: 25px;
+  width: 210px;
+}
+@media only screen and (max-width: 640px) {
+  body nav #upper-nav #upper-nav-wrapper #img-text .logo-text {
+    display: none;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #img-text input {
+  margin-top: 35px;
+  height: 30px;
+  min-width: 100px;
+  width: 350px;
+  color: #8d8d8d;
+  background-color: #fafafa;
+  border: solid #e8e8e8 1px;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 1010px) {
+  body nav #upper-nav #upper-nav-wrapper #img-text input {
+    display: none;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart {
+  display: flex;
+  /* nav-menu1 is on display when window is full, and hidden when it isnt */
+  /* nav-menu2 is on displsy when nav-menu1 is hidden */
+  /* adds a border line in the bottom when the screen gets smaller */
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
+  margin-top: 35px;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li:hover {
+  color: #666666;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 .start {
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #6786A1;
+  border-radius: 2px;
+  background-color: #6786A1;
+  color: #fefefe;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 .start:hover {
+  background-color: #fefefe;
+  color: #6786A1;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
+  display: none;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li img {
+  margin-top: 35px;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .fa-shopping-cart {
+  margin-top: 35px;
+  cursor: pointer;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .fa-shopping-cart:hover {
+  color: #666666;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li:hover {
+  color: #666666;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .nav-menu-text {
+  font-size: 28px;
+  margin-top: 25px;
+}
+@media only screen and (max-width: 1428px) {
+  body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
+    display: none;
+  }
+  body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
+    display: block;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
+  border-left: solid 1px #e1e1e1;
+  border-right: solid 1px #e1e1e1;
+  border-top: solid 1px #e1e1e1;
+  text-align: center;
+  cursor: pointer;
+  height: auto;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart {
+  margin-top: 35px;
+  width: 90px;
+}
+body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart:hover {
+  color: #666666;
+}
+@media only screen and (max-width: 1428px) {
+  body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
+    display: none;
+  }
+}
+body nav #upper-nav #phone-input {
+  display: none;
+}
+@media only screen and (max-width: 1010px) {
+  body nav #upper-nav #phone-input {
+    display: block;
+    margin: 25px 0 25px 0;
+    height: 30px;
     width: 100%;
-    /* --- logo, logotext, searchbar, links and cart --- */
-    /* --- beerstyles --- */ }
-    body nav #upper-nav {
-      padding: 0px 50px 0px 50px;
-      border-bottom: solid 1px #e1e1e1; }
-      body nav #upper-nav #upper-nav-wrapper {
-        display: flex;
-        justify-content: space-between;
-        /* div for logo, logotext and searchbar */
-        /* div for menulinks and cart */ }
-        body nav #upper-nav #upper-nav-wrapper #img-text {
-          display: flex;
-          flex-wrap: wrap; }
-          body nav #upper-nav #upper-nav-wrapper #img-text img {
-            height: 90px;
-            width: 120px; }
-          @media only screen and (max-width: 616px) {
-            body nav #upper-nav #upper-nav-wrapper #img-text img {
-              height: auto;
-              width: 30%; } }
-          body nav #upper-nav #upper-nav-wrapper #img-text .logo-text {
-            margin-top: 35px;
-            padding-left: 25px;
-            width: 210px; }
-          @media only screen and (max-width: 640px) {
-            body nav #upper-nav #upper-nav-wrapper #img-text .logo-text {
-              display: none; } }
-          body nav #upper-nav #upper-nav-wrapper #img-text input {
-            margin-top: 35px;
-            height: 30px;
-            min-width: 100px;
-            width: 350px;
-            color: #8d8d8d;
-            background-color: #fafafa;
-            border: solid #e8e8e8 1px;
-            padding-left: 10px; }
-          @media only screen and (max-width: 1010px) {
-            body nav #upper-nav #upper-nav-wrapper #img-text input {
-              display: none; } }
-        body nav #upper-nav #upper-nav-wrapper #list-cart {
-          display: flex;
-          /* nav-menu1 is on display when window is full, and hidden when it isnt */
-          /* nav-menu2 is on displsy when nav-menu1 is hidden */
-          /* adds a border line in the bottom when the screen gets smaller */ }
-          body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
-            margin-top: 35px; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li {
-              display: inline;
-              padding: 0;
-              margin: 0;
-              margin-right: 25px;
-              cursor: pointer;
-              font-weight: 600; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 li:hover {
-              color: #666666; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 .start {
-              text-decoration: none;
-              font-weight: 600;
-              cursor: pointer;
-              padding: 10px;
-              border: 1px solid #6786A1;
-              border-radius: 2px;
-              background-color: #6786A1;
-              color: #fefefe; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 .start:hover {
-              background-color: #fefefe;
-              color: #6786A1; }
-          body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
-            display: none; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li {
-              display: inline;
-              padding: 0;
-              margin: 0;
-              margin-right: 25px;
-              cursor: pointer;
-              font-weight: 600; }
-              body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li img {
-                margin-top: 35px; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .fa-shopping-cart {
-              margin-top: 35px;
-              cursor: pointer; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .fa-shopping-cart:hover {
-              color: #666666; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 li:hover {
-              color: #666666; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 .nav-menu-text {
-              font-size: 28px;
-              margin-top: 25px; }
-          @media only screen and (max-width: 1428px) {
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu1 {
-              display: none; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #nav-menu2 {
-              display: block;
-              display: flex;
-              flex-wrap: nowrap; } }
-          body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
-            border-left: solid 1px #e1e1e1;
-            border-right: solid 1px #e1e1e1;
-            border-top: solid 1px #e1e1e1;
-            text-align: center;
-            cursor: pointer;
-            height: auto; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart {
-              margin-top: 35px;
-              width: 90px; }
-            body nav #upper-nav #upper-nav-wrapper #list-cart #cart .fa-shopping-cart:hover {
-              color: #666666; }
-          @media only screen and (max-width: 1428px) {
-            body nav #upper-nav #upper-nav-wrapper #list-cart #cart {
-              display: none; } }
-      body nav #upper-nav #phone-input {
-        display: none; }
-      @media only screen and (max-width: 1010px) {
-        body nav #upper-nav #phone-input {
-          display: block;
-          margin: 25px 0 25px 0;
-          height: 30px;
-          width: 100%;
-          color: #8d8d8d;
-          background-color: #fafafa;
-          border: solid #e8e8e8 1px;
-          padding-left: 10px; } }
-    body nav #lower-nav ul {
-      padding: 0px 50px 0px 50px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      border-bottom: solid 1px #e1e1e1;
-      /* removes the last border in the last li */ }
-      body nav #lower-nav ul li {
-        display: inline;
-        margin: 25px 0 25px 10px;
-        padding-right: 10px;
-        font-weight: 600;
-        cursor: pointer;
-        border-right: solid 1px #e1e1e1;
-        white-space: nowrap; }
-      body nav #lower-nav ul li:nth-child(11) {
-        border-right: none; }
-      body nav #lower-nav ul li:hover {
-        color: #666666; }
-    @media only screen and (max-width: 751px) {
-      body nav #lower-nav {
-        display: none; } }
-  body main #banner {
-    padding: 0 50px 0 50px;
-    display: flex;
-    justify-content: center;
-    background: url("beergrid.png"); }
-    body main #banner .tiltedbottles {
-      padding: 0 100px 0 100px;
-      display: flex;
-      justify-content: center;
-      position: relative; }
-      body main #banner .tiltedbottles img {
-        position: absolute;
-        bottom: 0; }
-    body main #banner .text-button-section {
-      height: 254px;
-      width: 100%;
-      position: relative;
-      text-align: center; }
-      body main #banner .text-button-section .centered-text {
-        min-width: 350px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-weight: 600; }
-        body main #banner .text-button-section .centered-text .banner-header {
-          font-size: 34px; }
-        body main #banner .text-button-section .centered-text .banner-text {
-          font-size: 20px;
-          padding: 10px 0 35px 0; }
-        body main #banner .text-button-section .centered-text .start {
-          text-decoration: none;
-          font-size: 20px;
-          font-weight: 600;
-          cursor: pointer;
-          padding: 10px;
-          border: 1px solid #6786A1;
-          border-radius: 2px;
-          background-color: #6786A1;
-          color: #fefefe; }
-        body main #banner .text-button-section .centered-text .start:hover {
-          background-color: #fefefe;
-          color: #6786A1; }
-  @media only screen and (max-width: 878px) {
-    body main #banner .tiltedbottles {
-      padding: 0; }
-      body main #banner .tiltedbottles img {
-        width: 150px; }
-    body main #banner .text-button-section {
-      height: 200px; } }
-  @media only screen and (max-width: 616px) {
-    body main #banner .tiltedbottles {
-      padding: 0 35px 0 35px; }
-      body main #banner .tiltedbottles img {
-        width: 70px; } }
+    color: #8d8d8d;
+    background-color: #fafafa;
+    border: solid #e8e8e8 1px;
+    padding-left: 10px;
+  }
+}
+body nav #lower-nav ul {
+  padding: 0px 50px 0px 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #e1e1e1;
+  /* removes the last border in the last li */
+}
+body nav #lower-nav ul li {
+  display: inline;
+  margin: 25px 0 25px 10px;
+  padding-right: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border-right: solid 1px #e1e1e1;
+  white-space: nowrap;
+}
+body nav #lower-nav ul li:nth-child(11) {
+  border-right: none;
+}
+body nav #lower-nav ul li:hover {
+  color: #666666;
+}
+@media only screen and (max-width: 751px) {
+  body nav #lower-nav {
+    display: none;
+  }
+}
+body main #banner {
+  padding: 0 50px 0 50px;
+  display: flex;
+  justify-content: center;
+  background: url("beergrid.png");
+}
+body main #banner .tiltedbottles {
+  padding: 0 100px 0 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+body main #banner .tiltedbottles img {
+  position: absolute;
+  bottom: 0;
+}
+body main #banner .text-button-section {
+  height: 254px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+body main #banner .text-button-section .centered-text {
+  min-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+}
+body main #banner .text-button-section .centered-text .banner-header {
+  font-size: 34px;
+}
+body main #banner .text-button-section .centered-text .banner-text {
+  font-size: 20px;
+  padding: 10px 0 35px 0;
+}
+body main #banner .text-button-section .centered-text .start {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #6786A1;
+  border-radius: 2px;
+  background-color: #6786A1;
+  color: #fefefe;
+}
+body main #banner .text-button-section .centered-text .start:hover {
+  background-color: #fefefe;
+  color: #6786A1;
+}
+@media only screen and (max-width: 878px) {
+  body main #banner .tiltedbottles {
+    padding: 0;
+  }
+  body main #banner .tiltedbottles img {
+    width: 150px;
+  }
+  body main #banner .text-button-section {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 616px) {
+  body main #banner .tiltedbottles {
+    padding: 0 35px 0 35px;
+  }
+  body main #banner .tiltedbottles img {
+    width: 70px;
+  }
+}
+body main #content {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+body main #content .transition-layer {
+  filter: brightness(85%);
+  transition: all 0.5s ease;
+}
+body main #content .transition-layer:hover {
+  filter: brightness(110%);
+}
+body main #content .wide-img-section img {
+  border-radius: 5px;
+}
+body main #content .img-section {
+  position: relative;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+body main #content .img-section img {
+  height: 100%;
+  width: 100%;
+  min-width: 240px;
+  max-width: 533px;
+}
+body main #content .img-section .centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  font-weight: 400;
+}
+body main #content #img-section2 {
+  margin: 0px 80px 0px 80px;
+}
+body main #content #img-section3 {
+  display: flex;
+}
+body main #content #img-section3 .innner-img-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+body main #content #img-section3 .innner-img-section img {
+  height: 100%;
+  width: 100%;
+  min-width: 118.5px;
+  max-width: 265px;
+  border-radius: 2px;
+}
+body main #content .innner-img-section:nth-child(1) {
+  margin-right: 5px;
+}
+body main #instagram-newproducts {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+}
+body main #instagram-newproducts #instagram-section {
+  width: 50%;
+  margin-right: 25px;
+}
+body main #instagram-newproducts #instagram-section h3 {
+  text-align: center;
+  padding: 0 0 25px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+body main #instagram-newproducts #instagram-section #instagram-oelkassen {
+  display: flex;
+  cursor: pointer;
+  padding: 0 0 25px 0;
+}
+body main #instagram-newproducts #instagram-section #instagram-oelkassen img {
+  width: 50px;
+}
+body main #instagram-newproducts #instagram-section #instagram-oelkassen p {
+  padding: 15px;
+  font-weight: 600;
+}
+body main #instagram-newproducts #instagram-section #instagram-content {
+  display: flex;
+  cursor: pointer;
+}
+body main #instagram-newproducts #instagram-section #instagram-content img {
+  height: 100%;
+  width: 100%;
+  min-width: 98px;
+  max-width: 272px;
+  transition: all 0.5s ease;
+}
+body main #instagram-newproducts #instagram-section #instagram-content img:hover {
+  filter: brightness(105%);
+}
+body main #instagram-newproducts #instagram-section #instagram-content img:nth-child(2) {
+  padding: 0px 5px 0px 5px;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section {
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-grey-button {
+  background-color: #333333;
+  padding: 7px 13px 7px 13px;
+  border-radius: 3px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-grey-button:hover {
+  background-color: #666666;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button {
+  display: flex;
+  background-color: #408bd1;
+  padding: 7px 13px 7px 13px;
+  border-radius: 3px;
+  margin: 10px 0px 0 0;
+  cursor: pointer;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button p {
+  padding-left: 10px;
+}
+body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button:hover {
+  background-color: #359dff;
+}
+body main #instagram-newproducts #newproducts-section {
+  padding: 50px 50px 0px 50px;
+  width: 50%;
+  margin-left: 25px;
+}
+body main #instagram-newproducts #newproducts-section h3 {
+  text-align: center;
+  padding: 0 0 25px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections {
+  display: flex;
+  justify-content: space-between;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper {
+  width: 100%;
+  min-width: 79px;
+  max-width: 205px;
+  margin-left: 5px;
+  border: solid #e1e1e1 1px;
+  cursor: pointer;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper img {
+  width: 100%;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-price-description p {
+  padding: 10px;
+  font-size: 15px;
+  color: #222222;
+  font-weight: 400;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-price-description .newproduct-price {
+  color: #6786A1;
+  font-weight: 600;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons {
+  display: flex;
+  padding: 10px;
+  font-size: 11px;
+  border-top: solid #e1e1e1 1px;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+  background-color: #fafafa;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons .buttons {
+  display: flex;
+  width: 50%;
+  cursor: pointer;
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons .buttons:nth-child(2) {
+  padding-left: 10px;
+  border-left: solid #e1e1e1 1px;
+}
+@media only screen and (max-width: 548px) {
+  body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper:last-child {
+    display: none;
+  }
+}
+body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper:hover .newproduct-buttons {
+  opacity: 1;
+}
+body main #pickup {
+  padding: 50px 50px 0px 50px;
+}
+body main #pickup #pickup-header {
+  display: flex;
+  justify-content: space-between;
+}
+body main #pickup #pickup-header h4 {
+  width: 390px;
+  padding: 0 0 25px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+body main #pickup #pickup-header div {
+  background-color: #e1e1e1;
+  height: 1px;
+  width: 100%;
+  margin: 13px 0 0 0;
+}
+body main #pickup #pickup-text {
+  padding: 0 0 50px 0;
+}
+body main #pickup #pickup-text p {
+  padding: 0 0 10px 0;
+  color: #666666;
+  font-size: 15px;
+}
+@media only screen and (max-width: 1007px) {
   body main #content {
-    padding: 50px 50px 0px 50px;
     display: flex;
-    justify-content: space-between; }
-    body main #content .transition-layer {
-      filter: brightness(85%);
-      transition: all 0.5s ease; }
-    body main #content .transition-layer:hover {
-      filter: brightness(110%); }
-    body main #content .wide-img-section img {
-      border-radius: 5px; }
-    body main #content .img-section {
-      position: relative;
-      text-align: center;
-      color: white;
-      cursor: pointer; }
-      body main #content .img-section img {
-        height: 100%;
-        width: 100%;
-        min-width: 240px;
-        max-width: 533px; }
-      body main #content .img-section .centered-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 34px;
-        font-weight: 400; }
-    body main #content #img-section2 {
-      margin: 0px 80px 0px 80px; }
-    body main #content #img-section3 {
-      display: flex; }
-      body main #content #img-section3 .innner-img-section {
-        position: relative;
-        text-align: center;
-        color: white; }
-        body main #content #img-section3 .innner-img-section img {
-          height: 100%;
-          width: 100%;
-          min-width: 118.5px;
-          max-width: 265px;
-          border-radius: 2px; }
-    body main #content .innner-img-section:nth-child(1) {
-      margin-right: 5px; }
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main #content .img-section {
+    padding-bottom: 25px;
+  }
+  body main #content #img-section2 {
+    margin: 0px 0px 0px 0px;
+  }
   body main #instagram-newproducts {
-    padding: 50px 50px 0px 50px;
-    display: flex; }
-    body main #instagram-newproducts #instagram-section {
-      width: 50%;
-      margin-right: 25px; }
-      body main #instagram-newproducts #instagram-section h3 {
-        text-align: center;
-        padding: 0 0 25px 0;
-        font-weight: 300;
-        font-size: 28px; }
-      body main #instagram-newproducts #instagram-section #instagram-oelkassen {
-        display: flex;
-        cursor: pointer;
-        padding: 0 0 25px 0; }
-        body main #instagram-newproducts #instagram-section #instagram-oelkassen img {
-          width: 50px; }
-        body main #instagram-newproducts #instagram-section #instagram-oelkassen p {
-          padding: 15px;
-          font-weight: 600; }
-      body main #instagram-newproducts #instagram-section #instagram-content {
-        display: flex;
-        cursor: pointer; }
-        body main #instagram-newproducts #instagram-section #instagram-content img {
-          height: 100%;
-          width: 100%;
-          min-width: 98px;
-          max-width: 272px;
-          transition: all 0.5s ease; }
-        body main #instagram-newproducts #instagram-section #instagram-content img:hover {
-          filter: brightness(105%); }
-        body main #instagram-newproducts #instagram-section #instagram-content img:nth-child(2) {
-          padding: 0px 5px 0px 5px; }
-      body main #instagram-newproducts #instagram-section #instagram-button-section {
-        display: flex;
-        color: white;
-        justify-content: center; }
-        body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-grey-button {
-          background-color: #333333;
-          padding: 7px 13px 7px 13px;
-          border-radius: 3px;
-          margin: 10px 10px 0 0;
-          cursor: pointer; }
-        body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-grey-button:hover {
-          background-color: #666666; }
-        body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button {
-          display: flex;
-          background-color: #408bd1;
-          padding: 7px 13px 7px 13px;
-          border-radius: 3px;
-          margin: 10px 0px 0 0;
-          cursor: pointer; }
-          body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button p {
-            padding-left: 10px; }
-        body main #instagram-newproducts #instagram-section #instagram-button-section #instagram-blue-button:hover {
-          background-color: #359dff; }
-    body main #instagram-newproducts #newproducts-section {
-      padding: 50px 50px 0px 50px;
-      width: 50%;
-      margin-left: 25px; }
-      body main #instagram-newproducts #newproducts-section h3 {
-        text-align: center;
-        padding: 0 0 25px 0;
-        font-weight: 300;
-        font-size: 28px; }
-      body main #instagram-newproducts #newproducts-section #newproducts-sections {
-        display: flex;
-        justify-content: space-between; }
-        body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper {
-          width: 100%;
-          min-width: 79px;
-          max-width: 205px;
-          margin-left: 5px;
-          border: solid #e1e1e1 1px;
-          cursor: pointer; }
-          body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper img {
-            width: 100%; }
-          body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-price-description p {
-            padding: 10px;
-            font-size: 15px;
-            color: #222222;
-            font-weight: 400; }
-          body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-price-description .newproduct-price {
-            color: #6786A1;
-            font-weight: 600; }
-          body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons {
-            display: flex;
-            padding: 10px;
-            font-size: 11px;
-            border-top: solid #e1e1e1 1px;
-            opacity: 0.3;
-            transition: all 0.5s ease;
-            background-color: #fafafa; }
-            body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons .buttons {
-              display: flex;
-              width: 50%;
-              cursor: pointer; }
-            body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper .newproduct-buttons .buttons:nth-child(2) {
-              padding-left: 10px;
-              border-left: solid #e1e1e1 1px; }
-        @media only screen and (max-width: 548px) {
-          body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper:last-child {
-            display: none; } }
-        body main #instagram-newproducts #newproducts-section #newproducts-sections .newproducts-wrapper:hover .newproduct-buttons {
-          opacity: 1; }
-  body main #pickup {
-    padding: 50px 50px 0px 50px; }
-    body main #pickup #pickup-header {
-      display: flex;
-      justify-content: space-between; }
-      body main #pickup #pickup-header h4 {
-        width: 390px;
-        padding: 0 0 25px 0;
-        font-size: 20px;
-        font-weight: 600; }
-      body main #pickup #pickup-header div {
-        background-color: #e1e1e1;
-        height: 1px;
-        width: 100%;
-        margin: 13px 0 0 0; }
-    body main #pickup #pickup-text {
-      padding: 0 0 50px 0; }
-      body main #pickup #pickup-text p {
-        padding: 0 0 10px 0;
-        color: #666666;
-        font-size: 15px; }
-  @media only screen and (max-width: 1007px) {
-    body main #content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
-      body main #content .img-section {
-        padding-bottom: 25px; }
-      body main #content #img-section2 {
-        margin: 0px 0px 0px 0px; }
-    body main #instagram-newproducts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
-      body main #instagram-newproducts #instagram-section {
-        margin: 0px 0px 35px 0px;
-        width: 432px; }
-      body main #instagram-newproducts #newproducts-section {
-        margin: 0px 0px 0px 0px;
-        width: 432px; } }
-  body .test {
-    background-image: url("beergrid-opacity05.png");
-    width: 100vw;
-    height: 100vh;
-    overflow: scroll; }
-    body .test .test-wrapper-hidden {
-      display: none; }
-    body .test .test-wrapper {
-      margin: 0 50px;
-      height: 100vh; }
-      body .test .test-wrapper .logo {
-        height: 50px;
-        padding: 50px 0;
-        display: block;
-        margin: auto; }
-      body .test .test-wrapper .question-header {
-        text-align: center;
-        font-size: 28px;
-        padding: 25px; }
-      body .test .test-wrapper .button-form-wrapper {
-        display: flex;
-        justify-content: space-between; }
-        body .test .test-wrapper .button-form-wrapper .quiz-button {
-          font-size: 15px;
-          font-weight: 600;
-          cursor: pointer;
-          height: 100%;
-          padding: 10px;
-          border: 1px solid #6786A1;
-          border-radius: 2px; }
-        body .test .test-wrapper .button-form-wrapper a {
-          text-decoration: none;
-          text-align: center; }
-        body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
-          margin-top: 100px; }
-        body .test .test-wrapper .button-form-wrapper .quiz-buttonx6 {
-          margin-top: 100px; }
-        @media only screen and (max-width: 1267px) {
-          body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
-            margin-top: 205px; }
-          body .test .test-wrapper .button-form-wrapper .quiz-buttonx6 {
-            margin-top: 205px; } }
-        @media only screen and (max-width: 723px) {
-          body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
-            margin-top: 315px; }
-          body .test .test-wrapper .button-form-wrapper .quiz-buttonx6 {
-            margin-top: 315px; } }
-        body .test .test-wrapper .button-form-wrapper .quiz-button1 {
-          background-color: #fefefe;
-          color: #6786A1;
-          width: 120px; }
-        body .test .test-wrapper .button-form-wrapper .quiz-button1:hover {
-          background-color: #6786A1;
-          color: #fefefe; }
-        body .test .test-wrapper .button-form-wrapper .quiz-button2 {
-          background-color: #6786A1;
-          color: #fefefe;
-          height: 40px;
-          width: 120px; }
-        body .test .test-wrapper .button-form-wrapper .quiz-button2:hover {
-          background-color: #fefefe;
-          color: #6786A1; }
-        body .test .test-wrapper .button-form-wrapper .question-answers {
-          display: flex;
-          justify-content: space-between; }
-          body .test .test-wrapper .button-form-wrapper .question-answers .answers {
-            /* HIDE RADIO */
-            /* ANSWER-BORDER STYLES */
-            /* CHECKED ANSWER-BORDER STYLES */ }
-            body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] {
-              position: absolute;
-              opacity: 0;
-              width: 0;
-              height: 0; }
-            body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
-              cursor: pointer;
-              padding: 10px;
-              margin: 10px;
-              border: 2px solid #6786A1;
-              border-radius: 10px;
-              min-height: 180px; }
-            body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
-              border: 2px solid #6786A1;
-              background-color: #6786A1;
-              color: #fefefe; }
-            body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
-              background-color: #fefefe; }
-              body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border img {
-                width: 100%;
-                min-width: 150px;
-                max-width: 360px; }
-              body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border p {
-                text-align: center;
-                font-weight: 600; }
-        @media only screen and (max-width: 1267px) {
-          body .test .test-wrapper .button-form-wrapper .question-answers {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; }
-            body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
-              background-color: #fefefe;
-              width: 140px; } }
-        @media only screen and (max-width: 844px) {
-          body .test .test-wrapper .button-form-wrapper .question-answers {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; }
-            body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
-              background-color: #fefefe;
-              width: 100px; }
-              body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border img {
-                width: 100%;
-                min-width: 70px;
-                max-width: 360px; } }
-      body .test .test-wrapper .progress-bar {
-        position: absolute;
-        bottom: 0;
-        height: 100px;
-        right: 50%;
-        transform: translateX(50%); }
-      @media only screen and (max-width: 1267px) {
-        body .test .test-wrapper .progress-bar {
-          height: 80px; } }
-      @media only screen and (max-width: 844px) {
-        body .test .test-wrapper .progress-bar {
-          height: 60px; } }
-    @media only screen and (max-width: 549px) {
-      body .test .test-wrapper {
-        margin: 0 10px; }
-        body .test .test-wrapper .logo {
-          height: 50px;
-          padding: 5px 0;
-          display: block;
-          margin: auto; }
-        body .test .test-wrapper .question-header {
-          text-align: center;
-          font-size: 20px;
-          padding: 10px; } }
-  body #result-section h1 {
-    text-align: center;
-    margin-top: 50px; }
-  body #result-section #result-page {
-    height: 800px; }
-    body #result-section #result-page .beer-wrapper #result {
-      padding: 0 50px;
-      position: relative;
-      height: auto; }
-      body #result-section #result-page .beer-wrapper #result .beername_wrapper {
-        display: flex;
-        justify-content: space-around; }
-        body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer {
-          width: 20%;
-          text-align: center; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper {
-            display: flex;
-            justify-content: space-around; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label {
-              /* HIDE RADIO */
-              /* CHECKED STYLES */ }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio] {
-                position: absolute;
-                opacity: 0;
-                width: 0;
-                height: 0; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow {
-                background-color: #e8e8e8;
-                border-radius: 5px 5px 0 0; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
-                  display: block;
-                  border-bottom: 20px solid #6786A1; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                cursor: pointer;
-                padding: 0 20%; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper {
-                  text-align: center; }
-                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
-                    width: 0;
-                    height: 0;
-                    border-left: 20px solid transparent;
-                    border-right: 20px solid transparent;
-                    border-bottom: 20px solid transparent; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow img {
-                  width: 100%;
-                  padding-bottom: 30px; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            border: 2px solid #6786A1;
-            border-radius: 2px;
-            position: absolute;
-            left: 50px;
-            width: calc(100% - 100px); }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .name {
-              padding: 35px; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper {
-              display: grid;
-              grid-template-columns: 6fr 4fr; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .description {
-                padding: 0 35px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn {
-                display: flex;
-                flex-wrap: wrap; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .price {
-                  color: #6786A1;
-                  font-weight: 600;
-                  padding: 0 35px 5px; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .in-stock {
-                  color: #6786A1;
-                  font-size: 15px;
-                  padding: 0 35px 35px; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer {
-                  color: #fefefe;
-                  background-color: #6786A1;
-                  margin: 0 35px 35px;
-                  border: 1px solid #6786A1;
-                  padding: 10px 35px;
-                  cursor: pointer; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer:hover {
-                  color: #6786A1;
-                  background-color: #fefefe; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:first-child {
-                padding: 0 35px 5px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
-                padding: 5px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
-                padding: 5px 35px 35px; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-point {
-                color: #6786A1; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .tabcontent {
-            display: none; }
-    @media only screen and (max-width: 716px) {
-      body #result-section #result-page .beer-wrapper #result .beername_wrapper {
-        display: flex;
-        flex-wrap: wrap; }
-        body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer {
-          width: 130px;
-          text-align: center; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper {
-            display: flex;
-            justify-content: space-around; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label {
-              /* HIDE RADIO */
-              /* CHECKED STYLES */ }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio] {
-                position: static;
-                opacity: 0;
-                width: 0;
-                height: 0; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow {
-                background-color: #fefefe;
-                border-radius: 5px 5px 0 0; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
-                  display: block;
-                  border-bottom: 10px solid #6786A1; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                cursor: pointer; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper {
-                  text-align: center; }
-                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-bottom: 10px solid transparent; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer1 .beer-img-wrapper label .img-arrow img {
-                  width: 130px;
-                  padding-bottom: 0px; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
-            display: block;
-            position: static;
-            width: 100%; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .name {
-              padding: 10px 10px 0 10px;
-              font-size: 15px; }
-            body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper {
-              display: flex;
-              flex-wrap: wrap; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left {
-                padding: 0 10px 10px 10px;
-                order: 2;
-                width: 100%; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .description {
-                  display: none; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn {
-                  padding: 0;
-                  margin: 0; }
-                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock {
-                    padding: 0;
-                    margin: 0; }
-                    body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .price {
-                      padding: 0;
-                      margin: 0;
-                      font-size: 15px; }
-                    body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .in-stock {
-                      padding: 0 0 10px 0;
-                      margin: 0;
-                      font-size: 13px; }
-                  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 0; }
-              body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right {
-                order: 1;
-                width: 0;
-                width: 100%;
-                padding: 10px; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:first-child {
-                  padding: 0; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
-                  font-size: 15px;
-                  padding: 10px 0 0 0; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
-                  padding: 10px 0 0 0; }
-                body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info-hide {
-                  display: none; }
-          body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .tabcontent {
-            display: block; } }
-  @media only screen and (max-width: 716px) {
-    body #result-section #result-page {
-      height: auto; } }
-  body #result-section .add-all {
-    padding: 0 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main #instagram-newproducts #instagram-section {
+    margin: 0px 0px 35px 0px;
+    width: 432px;
+  }
+  body main #instagram-newproducts #newproducts-section {
+    margin: 0px 0px 0px 0px;
+    width: 432px;
+  }
+}
+body .test {
+  background-image: url("beergrid-opacity05.png");
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+body .test .test-wrapper-hidden {
+  display: none;
+}
+body .test .test-wrapper {
+  margin: 0 50px;
+  height: 100vh;
+}
+body .test .test-wrapper .logo {
+  height: 50px;
+  padding: 50px 0;
+  display: block;
+  margin: auto;
+}
+body .test .test-wrapper .question-header {
+  text-align: center;
+  font-size: 28px;
+  padding: 25px;
+}
+body .test .test-wrapper .button-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+body .test .test-wrapper .button-form-wrapper .quiz-button {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #6786A1;
+  border-radius: 2px;
+}
+body .test .test-wrapper .button-form-wrapper a {
+  text-decoration: none;
+  text-align: center;
+}
+body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 874px) {
+  body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
+    margin-top: 345px;
+  }
+}
+body .test .test-wrapper .button-form-wrapper .quiz-button1 {
+  background-color: #fefefe;
+  color: #6786A1;
+  width: 120px;
+}
+body .test .test-wrapper .button-form-wrapper .quiz-button1:hover {
+  background-color: #6786A1;
+  color: #fefefe;
+}
+body .test .test-wrapper .button-form-wrapper .quiz-button2 {
+  background-color: #6786A1;
+  color: #fefefe;
+  height: 40px;
+  width: 120px;
+}
+body .test .test-wrapper .button-form-wrapper .quiz-button2:hover {
+  background-color: #fefefe;
+  color: #6786A1;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers {
+  display: flex;
+  justify-content: space-between;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers {
+  /* HIDE RADIO */
+  /* ANSWER-BORDER STYLES */
+  /* CHECKED ANSWER-BORDER STYLES */
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #6786A1;
+  border-radius: 10px;
+  height: 200px;
+  width: 150px;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio]:checked + .answer-border {
+  border: 2px solid #6786A1;
+  background-color: #6786A1;
+  color: #fefefe;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border {
+  background-color: #fefefe;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border img {
+  width: 100%;
+  min-width: 150px;
+  max-width: 150px;
+}
+body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border p {
+  text-align: center;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1267px) {
+  body .test .test-wrapper .button-form-wrapper .question-answers {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 35px 0; }
-    body #result-section .add-all .add-all-text {
-      padding-top: 10px;
-      font-weight: 600; }
-    body #result-section .add-all .input-button .input-calc {
-      display: flex;
-      flex-wrap: nowrap;
-      border: 1px solid #e1e1e1;
-      margin: 0 35px; }
-      body #result-section .add-all .input-button .input-calc button {
-        padding: 0;
-        margin: 0;
-        font-size: 15px;
-        cursor: pointer;
-        height: 100%;
-        width: 35px;
-        padding: 10px;
-        border: 1px solid #e1e1e1;
-        border-radius: 2px;
-        background-color: #e1e1e1;
-        color: #222222; }
-      body #result-section .add-all .input-button .input-calc input {
-        padding: 0;
-        margin: 0;
-        width: 30px;
-        border: none;
-        text-align: center; }
-    body #result-section .add-all .add-all-button {
-      color: #6786A1;
-      background-color: #fefefe;
-      border: 1px solid #6786A1;
-      padding: 10px 35px;
-      cursor: pointer; }
-    body #result-section .add-all .add-all-button:hover {
-      background-color: #6786A1;
-      color: #fefefe; }
-  body footer {
-    padding: 50px 50px 0px 50px;
-    border-top: solid 1px #e1e1e1;
+  }
+  body .test .test-wrapper .button-form-wrapper .quiz-buttonx4 {
+    margin-top: 205px;
+  }
+}
+body .test .test-wrapper .progress-bar {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  right: 50%;
+  transform: translateX(50%);
+}
+@media only screen and (max-width: 1267px) {
+  body .test .test-wrapper .progress-bar {
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 874px) {
+  body .test .test-wrapper .progress-bar {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 648px) {
+  body .test .test-wrapper {
+    margin: 0 10px;
+  }
+  body .test .test-wrapper .logo {
+    height: 50px;
+    padding: 5px 0;
+    display: block;
+    margin: auto;
+  }
+  body .test .test-wrapper .question-header {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+  }
+  body .test .test-wrapper .button-form-wrapper {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    body footer ul {
-      list-style-type: none;
-      min-width: 200px; }
-      body footer ul li {
-        font-weight: 300;
-        cursor: pointer;
-        margin: 10px; }
-      body footer ul .facebook-icon {
-        display: none; }
-      body footer ul .information:hover {
-        text-decoration: underline; }
-      body footer ul .list-heading {
-        font-weight: 600;
-        color: #6786A1;
-        cursor: auto; }
-      body footer ul #list-blue {
-        color: #6786A1;
-        cursor: auto; }
-      body footer ul #list-button {
-        text-align: center;
-        background: #fafafa;
-        padding: 10px;
-        border-bottom: solid #e8e8e8 1px;
-        font-size: 12px; }
-      body footer ul #list-button:active {
-        border-top: solid #e8e8e8 1px;
-        border-bottom: none; }
-    @media only screen and (max-width: 1085px) {
-      body footer section ul {
-        padding: 10px 0 10px 0; }
-        body footer section ul li iframe {
-          display: none; }
-        body footer section ul .facebook-icon {
-          display: block; } }
-  body .loader-popup {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    flex-wrap: wrap;
+  }
+  body .test .test-wrapper .button-form-wrapper .quiz-button1 {
+    order: 2;
+    margin: 0;
+  }
+  body .test .test-wrapper .button-form-wrapper .quiz-button2 {
+    order: 3;
+    margin: 0;
+  }
+  body .test .test-wrapper .button-form-wrapper .question-answers {
+    order: 1;
+  }
+  body .test .test-wrapper .button-form-wrapper .question-answers .answers {
+    /* ANSWER-BORDER STYLES */
+  }
+  body .test .test-wrapper .button-form-wrapper .question-answers .answers [type=radio] + .answer-border {
+    height: 175px;
+    width: 125px;
+  }
+  body .test .test-wrapper .button-form-wrapper .question-answers .answers .answer-border img {
+    width: 100%;
+    min-width: 125px;
+    max-width: 125px;
+  }
+}
+body #result-section h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+body #result-section #result-page {
+  height: 800px;
+}
+body #result-section #result-page .beer-wrapper #result {
+  padding: 0 50px;
+  position: relative;
+  height: auto;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer {
+  width: 20%;
+  text-align: center;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label {
+  /* HIDE RADIO */
+  /* CHECKED STYLES */
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio]:checked + .img-arrow {
+  background-color: #e8e8e8;
+  border-radius: 5px 5px 0 0;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
+  display: block;
+  border-bottom: 20px solid #6786A1;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label .img-arrow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 0 20%;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label .img-arrow .arrow-wrapper {
+  text-align: center;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label .img-arrow img {
+  width: 100%;
+  padding-bottom: 30px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #6786A1;
+  border-radius: 2px;
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .name {
+  padding: 35px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .description {
+  padding: 0 35px 35px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn {
+  display: flex;
+  flex-wrap: wrap;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .price {
+  color: #6786A1;
+  font-weight: 600;
+  padding: 0 35px 5px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .in-stock {
+  color: #6786A1;
+  font-size: 15px;
+  padding: 0 35px 35px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer {
+  color: #fefefe;
+  background-color: #6786A1;
+  margin: 0 35px 35px;
+  border: 1px solid #6786A1;
+  padding: 10px 35px;
+  cursor: pointer;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer:hover {
+  color: #6786A1;
+  background-color: #fefefe;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:first-child {
+  padding: 0 35px 5px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
+  padding: 5px 35px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
+  padding: 5px 35px 35px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-point {
+  color: #6786A1;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .tabcontent {
+  display: none;
+}
+body #result-section .add-all {
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 35px 0;
+}
+body #result-section .add-all .add-all-text {
+  padding: 10px;
+  font-weight: 600;
+}
+body #result-section .add-all .input-button .input-calc {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid #e1e1e1;
+  margin: 0 35px;
+}
+body #result-section .add-all .input-button .input-calc button {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  cursor: pointer;
+  height: 100%;
+  width: 35px;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  background-color: #e1e1e1;
+  color: #222222;
+}
+body #result-section .add-all .input-button .input-calc input {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  border: none;
+  text-align: center;
+}
+body #result-section .add-all .add-all-button {
+  color: #6786A1;
+  background-color: #fefefe;
+  border: 1px solid #6786A1;
+  padding: 10px 35px;
+  cursor: pointer;
+}
+body #result-section .add-all .add-all-button:hover {
+  background-color: #6786A1;
+  color: #fefefe;
+}
+@media only screen and (max-width: 716px) {
+  body #result-section #result-page {
+    height: auto;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer {
+    width: 130px;
+    text-align: center;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label {
+    /* CHECKED STYLES */
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio]:checked + .img-arrow {
+    background-color: transparent;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
+    display: block;
+    border-bottom: 10px solid #6786A1;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label .img-arrow .arrow-wrapper .arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #6786A1;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label .img-arrow img {
+    width: 130px;
+    padding-bottom: 0px;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .name {
+    padding: 10px 10px 0 10px;
+    font-size: 15px;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left {
+    padding: 0 10px 10px 10px;
+    order: 2;
+    width: 100%;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .description {
+    display: none;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn {
     padding: 0;
     margin: 0;
-    background: url(beergrid.png);
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock {
+    padding: 0;
+    margin: 0;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .price {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .price-n-stock .in-stock {
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 13px;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-left .price-n-btn .buy-beer {
     width: 100%;
-    height: 100vh;
-    display: flex;
+    padding: 10px;
+    margin: 0;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right {
+    order: 1;
+    width: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:first-child {
+    padding: 0;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
+    font-size: 15px;
+    padding: 10px 0 0 0;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
+    padding: 10px 0 0 0;
+  }
+  body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info-hide {
+    display: none;
+  }
+  body #result-section .add-all {
+    flex-wrap: wrap;
     justify-content: center;
-    animation: fadeOut 4s forwards; }
+  }
+  body #result-section .add-all .add-all-text {
+    padding: 25px;
+    font-weight: 600;
+  }
+  body #result-section .add-all .add-all-text .input-calc {
+    margin: 0;
+  }
+}
+body footer {
+  padding: 50px 50px 0px 50px;
+  border-top: solid 1px #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body footer ul {
+  list-style-type: none;
+  min-width: 200px;
+}
+body footer ul li {
+  font-weight: 300;
+  cursor: pointer;
+  margin: 10px;
+}
+body footer ul .facebook-icon {
+  display: none;
+}
+body footer ul .information:hover {
+  text-decoration: underline;
+}
+body footer ul .list-heading {
+  font-weight: 600;
+  color: #6786A1;
+  cursor: auto;
+}
+body footer ul #list-blue {
+  color: #6786A1;
+  cursor: auto;
+}
+body footer ul #list-button {
+  text-align: center;
+  background: #fafafa;
+  padding: 10px;
+  border-bottom: solid #e8e8e8 1px;
+  font-size: 12px;
+}
+body footer ul #list-button:active {
+  border-top: solid #e8e8e8 1px;
+  border-bottom: none;
+}
+@media only screen and (max-width: 1085px) {
+  body footer section ul {
+    padding: 10px 0 10px 0;
+  }
+  body footer section ul li iframe {
+    display: none;
+  }
+  body footer section ul .facebook-icon {
+    display: block;
+  }
+}
+body .loader-popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  background: url(beergrid.png);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  animation: fadeOut 4s forwards;
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    top: 0px; }
+    top: 0px;
+  }
   80% {
     opacity: 1;
-    top: 0px; }
+    top: 0px;
+  }
   90% {
     opacity: 0;
-    top: 0px; }
+    top: 0px;
+  }
   100% {
     opacity: 0;
-    top: -30000px; } }
-    body .loader-popup .loader-wrapper {
-      background-color: white;
-      padding: 30px;
-      border-radius: 5px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center; }
-      body .loader-popup .loader-wrapper .loader-logo .logouflasker {
-        padding-bottom: 300px;
-        width: 250px; }
-      body .loader-popup .loader-wrapper .loader-animation {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 41px;
-        overflow: hidden; }
-        body .loader-popup .loader-wrapper .loader-animation .animation_spritesheet {
-          width: 3000px;
-          animation: moveSpritesheet 1.2s steps(72) infinite; }
+    top: -30000px;
+  }
+}
+body .loader-popup .loader-wrapper {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body .loader-popup .loader-wrapper .loader-logo .logouflasker {
+  padding-bottom: 300px;
+  width: 250px;
+}
+body .loader-popup .loader-wrapper .loader-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 41px;
+  overflow: hidden;
+}
+body .loader-popup .loader-wrapper .loader-animation .animation_spritesheet {
+  width: 3000px;
+  animation: moveSpritesheet 1.2s steps(72) infinite;
+}
 @keyframes moveSpritesheet {
   from {
-    transform: translate3d(0px, 0, 0); }
+    transform: translate3d(0px, 0, 0);
+  }
   to {
-    transform: translate3d(-100%, 0, 0); } }
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -24,7 +24,7 @@ function showSpg(n) {
 $(document).ready(function(){
 $(function() {
    $('button#showResult').click(function() {
-      $('section.result-dd').show();
+      $('section.result-wrapper').show();
       $('section.test').hide();
       $('div#result').show();
       return false;

@@ -169,11 +169,8 @@
           ?>
         </div>
       </section>
-      <section class="result-dd"id="result-section">
-        <div class="result-dd">
-
-        </div>
-        <?php include 'includes/animation.php'; ?>
+      <section class="result-wrapper"id="result-section">
+        <?php include 'includes/animation.php' ?>
         <?php include 'includes/header.php' ?>
         <h1>Her er dit perfekte match</h1>
         <div id="result-page">

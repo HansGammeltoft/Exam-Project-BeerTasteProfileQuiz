@@ -4,6 +4,7 @@
   if (isset($_POST['action'])) {
     $sql = "SELECT * FROM table_beers
             INNER JOIN table_brewery ON table_beers.breweryID = table_brewery.breweryID
+            INNER JOIN table_country ON table_brewery.countryID = table_country.CountryID
             INNER JOIN table_type ON table_beers.typeID = table_type.typeID
             INNER JOIN table_category ON table_type.categoryID = table_category.CategoryID
             INNER JOIN table_alcohol ON table_beers.alcoholID = table_alcohol.alcoholID
@@ -38,7 +39,7 @@
         if ($beername == '') {
           $beername = $row['name'];
           echo '<div class="beername_wrapper"><div class="beer">';
-          echo '<div class="beer1"><div class="beer-img-wrapper">';
+          echo '<div class="beer-image"><div class="beer-img-wrapper">';
               echo "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
                 echo '<input type="radio" name="img" checked><div class="img-arrow">';
                   echo '<img src="' . $row['img'] . '">';
@@ -58,13 +59,13 @@
               echo '<p class="beer-info">Alkohol: '; echo $row['alcohol']; echo '%</p>';
               echo '<p class="beer-info-hide beer-info">Størrelse: '; echo $row['size']; echo 'ml</p>';
               echo '<p class="beer-info-hide beer-info">Bryggeri: '; echo $row['brewery']; echo '</p>';
-              echo '<p class="beer-info-hide beer-info">Land: '; echo 'some tekst</p>';
-              echo '<p class="beer-info-hide beer-info">Rating: '; echo 'some tekst</p>';
+              echo '<p class="beer-info-hide beer-info">Land: '; echo $row['country']; echo '</p>';
+              //echo '<p class="beer-info-hide beer-info">Rating: '; echo $row['ratingID']; echo '</p>';
         //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the list, and echo out the next $beername.
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
           echo '</div></div></div></div><div class="beer">';
-          echo '<div class="beer1"><div class="beer-img-wrapper">';
+          echo '<div class="beer-image"><div class="beer-img-wrapper">';
               echo "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
                 echo '<input type="radio" name="img" checked><div class="img-arrow">';
                   echo '<img src="' . $row['img'] . '">';

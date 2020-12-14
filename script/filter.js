@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('section.result-dd').hide();
+  $('section.result-wrapper').hide();
   $(".product_check").click(function(){
 
     var action = 'data';
