@@ -30,7 +30,7 @@
                   }
                   /* CHECKED STYLES */
                   [type=radio]:checked + .img-arrow{
-                    background-color: $light-grey2;
+                    background-color: $grey;
                     border-radius: $big-border-radius $big-border-radius 0 0;
                     .arrow {
                       display: block;
@@ -115,6 +115,16 @@
                     }
                     .beer-info{
                       padding: $x-small-spacing $big-spacing;
+                      display: flex;
+                      .beer-info-bold {
+                        font-weight: $big-font-weight;
+                        padding-right: 5px;
+                      }
+                      .rating-link {
+                        text-decoration: none;
+                        color: $blue;
+                        font-weight: $big-font-weight;
+                      }
                     }
                     .beer-info:last-child{
                       padding: $x-small-spacing $big-spacing $big-spacing;

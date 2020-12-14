@@ -5,6 +5,7 @@
     $sql = "SELECT * FROM table_beers
             INNER JOIN table_brewery ON table_beers.breweryID = table_brewery.breweryID
             INNER JOIN table_country ON table_brewery.countryID = table_country.CountryID
+            INNER JOIN table_rating ON table_beers.ratingID = table_rating.ratingID
             INNER JOIN table_type ON table_beers.typeID = table_type.typeID
             INNER JOIN table_category ON table_type.categoryID = table_category.CategoryID
             INNER JOIN table_alcohol ON table_beers.alcoholID = table_alcohol.alcoholID
@@ -54,13 +55,13 @@
               echo '<p class="price">'; echo $row['price'] .' '; echo 'DKK</br><p class="in-stock">På lager</p></p></div>';
               echo '<button class="buy-beer">Læg i kurv</button>';
             echo '</div></div><div class="information-right">';
-              echo '<p class="beer-info-hide beer-info">Kategori: '; echo $row['category']; echo '</p>';
-              echo '<p class="beer-info">Type: '; echo $row['type']; echo '</p>';
-              echo '<p class="beer-info">Alkohol: '; echo $row['alcohol']; echo '%</p>';
-              echo '<p class="beer-info-hide beer-info">Størrelse: '; echo $row['size']; echo 'ml</p>';
-              echo '<p class="beer-info-hide beer-info">Bryggeri: '; echo $row['brewery']; echo '</p>';
-              echo '<p class="beer-info-hide beer-info">Land: '; echo $row['country']; echo '</p>';
-              //echo '<p class="beer-info-hide beer-info">Rating: '; echo $row['ratingID']; echo '</p>';
+              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Kategori: </p><p>'; echo $row['category']; echo '</p></div>';
+              echo '<div class="beer-info"><p class="beer-info-bold">Type:</p><p>'; echo $row['type']; echo '</div>';
+              echo '<div class="beer-info"><p class="beer-info-bold">Alkohol:</p><p>'; echo $row['alcohol']; echo '%</div>';
+              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Størrelse:</p><p>'; echo $row['size']; echo 'ml</p></div>';
+              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Bryggeri:</p><p>'; echo $row['brewery']; echo '</p></div>';
+              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Land:</p><p>'; echo $row['country']; echo '</p></div>';
+              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Rating:</p><p>'; echo '<a class="rating-link" target="_blank" href="';echo $row['url']; echo'">'; echo $row['rating']; echo'</a></p></div>';
         //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the list, and echo out the next $beername.
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
@@ -85,8 +86,8 @@
               echo '<p class="beer-info">Alkohol: '; echo $row['alcohol']; echo '%</p>';
               echo '<p class="beer-info-hide beer-info">Størrelse: '; echo $row['size']; echo 'ml</p>';
               echo '<p class="beer-info-hide beer-info">Bryggeri: '; echo $row['brewery']; echo '</p>';
-              echo '<p class="beer-info-hide beer-info">Land: '; echo 'some tekst</p>';
-              echo '<p class="beer-info-hide beer-info">Rating: '; echo 'some tekst</p>';
+              echo '<p class="beer-info-hide beer-info">Land: '; echo $row['country']; echo '</p>';
+              echo '<p class="beer-info-hide beer-info">Rating: '; echo '<a class="rating-link" target="_blank" href="';echo $row['url']; echo'">'; echo $row['rating']; echo'</a></p>';
         //Else only echo the values in the "answer" column.
         }else {
           echo '';

@@ -738,7 +738,7 @@ body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer 
   height: 0;
 }
 body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio]:checked + .img-arrow {
-  background-color: #e8e8e8;
+  background-color: #e1e1e1;
   border-radius: 5px 5px 0 0;
 }
 body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-image .beer-img-wrapper label [type=radio]:checked + .img-arrow .arrow {
@@ -817,6 +817,16 @@ body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer 
 }
 body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info {
   padding: 5px 35px;
+  display: flex;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info .beer-info-bold {
+  font-weight: 600;
+  padding-right: 5px;
+}
+body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info .rating-link {
+  text-decoration: none;
+  color: #6786A1;
+  font-weight: 600;
 }
 body #result-section #result-page .beer-wrapper #result .beername_wrapper .beer .beer-information .information-wrapper .information-right .beer-info:last-child {
   padding: 5px 35px 35px;
