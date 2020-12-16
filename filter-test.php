@@ -6,7 +6,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Ølkassen.dk</title>
     <link href="./css/stylesheet.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./images/oelkassen-logo.png" />
     <!-- jQuery library -->
@@ -35,7 +35,7 @@
               <label class="product_check answers">
                 <input type="radio" name="radio1" value="<?= $row['answer']; ?>" id="answer1">
                 <div class="answer-border">
-                  <img src=" <?php echo $row['img']; ?> ">
+                  <img alt="Svarmulighed billede" src=" <?php echo $row['img']; ?> ">
                   <p><?= $row['answer'] ?></p>
                 </div>
               </label>
@@ -48,7 +48,7 @@
             WHERE questionID = 1";
             $result=$conn->query($sql);
             while($row=$result->fetch_assoc()){
-              echo '<img class="progress-bar" src="' . $row['img'] . '">';
+              echo '<img alt="Progress flasker" class="progress-bar" src="' . $row['img'] . '">';
             }
           ?>
         </div>
@@ -74,7 +74,7 @@
                 <label class="product_check answers">
                   <input type="radio" name="radio2" value="<?= $row['answer']; ?>" id="answer2">
                   <div class="answer-border">
-                    <img src=" <?php echo $row['img']; ?> ">
+                    <img alt="Svarmulighed billede" src=" <?php echo $row['img']; ?> ">
                     <p><?= $row['answer'] ?></p>
                   </div>
                 </label>
@@ -87,7 +87,7 @@
               WHERE questionID = 2";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
-                echo '<img class="progress-bar" src="' . $row['img'] . '">';
+                echo '<img alt="Progress flasker" class="progress-bar" src="' . $row['img'] . '">';
               }
             ?>
           </div>
@@ -113,7 +113,7 @@
                 <label class="product_check answers">
                   <input type="radio" name="radio3" value="<?= $row['answer']; ?>" id="answer3">
                   <div class="answer-border">
-                    <img src=" <?php echo $row['img']; ?> ">
+                    <img alt="Svarmulighed billede" src=" <?php echo $row['img']; ?> ">
                     <p><?= $row['answer'] ?></p>
                   </div>
                 </label>
@@ -126,7 +126,7 @@
               WHERE questionID = 3";
               $result=$conn->query($sql);
               while($row=$result->fetch_assoc()){
-                echo '<img class="progress-bar" src="' . $row['img'] . '">';
+                echo '<img alt="Progress flasker" class="progress-bar" src="' . $row['img'] . '">';
               }
             ?>
           </div>
@@ -152,7 +152,7 @@
                 <label class="product_check answers">
                   <input type="radio" name="radio4" value="<?= $row['answer']; ?>" id="answer4">
                   <div class="answer-border">
-                    <img src=" <?php echo $row['img']; ?> ">
+                    <img alt="Svarmulighed billede" src=" <?php echo $row['img']; ?> ">
                     <p><?= $row['answer'] ?></p>
                   </div>
                 </label>
@@ -165,7 +165,7 @@
             WHERE questionID = 4";
             $result=$conn->query($sql);
             while($row=$result->fetch_assoc()){
-              echo '<img class="progress-bar" src="' . $row['img'] . '">';
+              echo '<img alt="Progress flasker" class="progress-bar" src="' . $row['img'] . '">';
             }
           ?>
         </div>
@@ -185,9 +185,9 @@
             </div>
             <div class="input-button">
                 <div class="input-calc">
-                    <button>&#43;</button>
-                    <input placeholder="0">
                     <button>&#8722;</button>
+                    <input placeholder="0">                    
+                    <button>&#43;</button>
                 </div>
             </div>
             <button class="add-all-button">Læg alle i kurv</button>

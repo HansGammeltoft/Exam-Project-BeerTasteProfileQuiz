@@ -95,6 +95,34 @@
                           padding: 0 $big-spacing $big-spacing;
                         }
                       }
+                      .input-button {
+                        .input-calc {
+                          display: flex;
+                          flex-wrap: nowrap;
+                          border: $small-border-size solid $grey;
+                          margin: 0 $big-spacing;
+                          button {
+                            padding: 0;
+                            margin: 0;
+                            font-size: $small-font-size;
+                            cursor: pointer;
+                            height: 100%;
+                            width: 35px;
+                            padding: $small-spacing;
+                            border: $small-border-size solid $grey;
+                            border-radius: $small-border-radius;
+                            background-color: $grey;
+                            color: $black;
+                          }
+                          input {
+                            padding: 0;
+                            margin: 0;
+                            width: 30px;
+                            border: none;
+                            text-align: center;
+                          }
+                        }
+                      }
                       .buy-beer{
                         color:$white;
                         background-color: $blue;

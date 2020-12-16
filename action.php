@@ -40,55 +40,136 @@
         //If $beername is EQUAL to empty, which it is, then SET it as the values in the "name" column in the database, and put it inside a list.
         if ($beername == '') {
           $beername = $row['name'];
-          echo '<div class="beername_wrapper"><div class="beer">';
-          echo '<div class="beer-image"><div class="beer-img-wrapper">';
-              echo "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
-                echo '<input type="radio" name="img" checked><div class="img-arrow">';
-                  echo '<img src="' . $row['img'] . '">';
-                  echo '<div class="arrow-wrapper"><div class="arrow"></div></div></div></label></div></div>';
-          echo '<div id="'; echo $row['productID']; echo'"class="beer-information tabcontent">';
-          echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
-          echo '<div class="information-wrapper">';
-            echo '<div class="information-left">';
-              echo '<p class="description">'; echo $row['description']; echo '</p>';
-            echo '<div class="price-n-btn">';
-            echo '<div class="price-n-stock">';
-              echo '<p class="price">'; echo $row['price'] .' '; echo 'DKK</br><p class="in-stock">På lager</p></p></div>';
-              echo '<button class="buy-beer">Læg i kurv</button>';
-            echo '</div></div><div class="information-right">';
-              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Kategori: </p><p>'; echo $row['category']; echo '</p></div>';
-              echo '<div class="beer-info"><p class="beer-info-bold">Type:</p><p>'; echo $row['type']; echo '</div>';
-              echo '<div class="beer-info"><p class="beer-info-bold">Alkohol:</p><p>'; echo $row['alcohol']; echo '%</div>';
-              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Størrelse:</p><p>'; echo $row['size']; echo 'ml</p></div>';
-              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Bryggeri:</p><p>'; echo $row['brewery']; echo '</p></div>';
-              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Land:</p><p>'; echo $row['country']; echo '</p></div>';
-              echo '<div class="beer-info-hide beer-info"><p class="beer-info-bold">Rating:</p><p>'; echo '<a class="rating-link" target="_blank" href="';echo $row['url']; echo'">'; echo $row['rating']; echo'</a></p></div>';
+          echo '<div class="beername_wrapper">
+                  <div class="beer">
+                    <div class="beer-image">
+                      <div class="beer-img-wrapper">'
+                      . "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\">
+                        </br>"
+                        . '<input type="radio" name="img" checked>
+                          <div class="img-arrow">
+                            <img src="' . $row['img'] . '">
+                              <div class="arrow-wrapper">
+                                <div class="arrow">
+                                </div>
+                              </div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div id="' . $row['productID'] .'"class="beer-information tabcontent">
+                    <h2 class="name">' . $row['name'] . '</h2>
+                    <div class="information-wrapper">
+                      <div class="information-left">
+                        <p class="description">' . $row['description'] . '</p>
+                          <div class="price-n-btn">
+                            <div class="price-n-stock">
+                              <p class="price">' . $row['price'] .' ' . 'DKK
+                                </br>
+                                <p class="in-stock">På lager</p>
+                              </p>
+                            </div>
+                            <button class="buy-beer">Læg i kurv</button>
+                          </div>
+                        </div>
+                        <div class="information-right">
+                          <div class="beer-info-hide beer-info">
+                            <p class="beer-info-bold">Kategori: </p>
+                            <p>' . $row['category'] . '</p>
+                          </div>
+                          <div class="beer-info">
+                            <p class="beer-info-bold">Type:</p>
+                            <p>' . $row['type'] . '</div>
+                            <div class="beer-info">
+                              <p class="beer-info-bold">Alkohol:</p>
+                              <p>' . $row['alcohol'] . '%
+                            </div>
+                              <div class="beer-info-hide beer-info">
+                            <p class="beer-info-bold">Størrelse:</p>
+                            <p>' . $row['size'] . 'ml</p>
+                          </div>
+                          <div class="beer-info-hide beer-info">
+                            <p class="beer-info-bold">Bryggeri:</p>
+                            <p>' . $row['brewery'] . '</p>
+                          </div>
+                          <div class="beer-info-hide beer-info">
+                            <p class="beer-info-bold">Land:</p>
+                            <p>' . $row['country'] . '</p>
+                          </div>
+                          <div class="beer-info-hide beer-info">
+                            <p class="beer-info-bold">Rating:</p>
+                            <p>' . '
+                              <a class="rating-link" target="_blank" href="' . $row['url'] .'">' . $row['rating'] .'</a>
+                            </p>
+                          </div>';
         //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the list, and echo out the next $beername.
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
-          echo '</div></div></div></div><div class="beer">';
-          echo '<div class="beer-image"><div class="beer-img-wrapper">';
-              echo "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\"></br>";
-                echo '<input type="radio" name="img" checked><div class="img-arrow">';
-                  echo '<img src="' . $row['img'] . '">';
-                  echo '<div class="arrow-wrapper"><div class="arrow"></div></div></div></label></div></div>';
-        echo '<div id="'; echo $row['productID']; echo'"class="beer-information default-hidden tabcontent">';
-          echo '<h2 class="name">'; echo $row['name']; echo '</h2>';
-          echo '<div class="information-wrapper">';
-            echo '<div class="information-left">';
-              echo '<p class="description">'; echo $row['description']; echo '</p>';
-            echo '<div class="price-n-btn">';
-            echo '<div class="price-n-stock">';
-              echo '<p class="price">'; echo $row['price'] .' '; echo 'DKK</br><p class="in-stock">På lager</p></p></div>';
-              echo '<button class="buy-beer">Læg i kurv</button>';
-            echo '</div></div><div class="information-right">';
-              echo '<p class="beer-info-hide beer-info">Kategori: '; echo $row['category']; echo '</p>';
-              echo '<p class="beer-info">Type: '; echo $row['type']; echo '</p>';
-              echo '<p class="beer-info">Alkohol: '; echo $row['alcohol']; echo '%</p>';
-              echo '<p class="beer-info-hide beer-info">Størrelse: '; echo $row['size']; echo 'ml</p>';
-              echo '<p class="beer-info-hide beer-info">Bryggeri: '; echo $row['brewery']; echo '</p>';
-              echo '<p class="beer-info-hide beer-info">Land: '; echo $row['country']; echo '</p>';
-              echo '<p class="beer-info-hide beer-info">Rating: '; echo '<a class="rating-link" target="_blank" href="';echo $row['url']; echo'">'; echo $row['rating']; echo'</a></p>';
+          echo '        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="beer">
+                    <div class="beer-image"><div class="beer-img-wrapper">'
+                  . "<label id='defaultOpen' class='tablinks' onclick=\"openBeer(event,'". $row['productID'] ."')\">
+                    </br>"
+                  . '<input type="radio" name="img" checked>
+                    <div class="img-arrow">
+                      <img src="' . $row['img'] . '">
+                        <div class="arrow-wrapper">
+                          <div class="arrow">
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div id="' . $row['productID'] .'"class="beer-information default-hidden tabcontent">
+                <h2 class="name">' . $row['name'] . '</h2>
+                <div class="information-wrapper">
+                  <div class="information-left">
+                    <p class="description">' . $row['description'] . '</p>
+                    <div class="price-n-btn">
+                      <div class="price-n-stock">
+                        <p class="price">' . $row['price'] .' ' . 'DKK
+                          </br>
+                          <p class="in-stock">På lager</p>
+                        </p>
+                      </div>
+                      <button class="buy-beer">Læg i kurv</button>
+                    </div>
+                  </div>
+                  <div class="information-right">
+                    <div class="beer-info-hide beer-info">
+                      <p class="beer-info-bold">Kategori: </p>
+                      <p>' . $row['category'] . '</p>
+                    </div>
+                    <div class="beer-info">
+                      <p class="beer-info-bold">Type:</p>
+                      <p>' . $row['type'] . '
+                    </div>
+                    <div class="beer-info">
+                      <p class="beer-info-bold">Alkohol:</p>
+                      <p>' . $row['alcohol'] . '%
+                    </div>
+                    <div class="beer-info-hide beer-info">
+                      <p class="beer-info-bold">Størrelse:</p>
+                      <p>' . $row['size'] . 'ml</p>
+                    </div>
+                    <div class="beer-info-hide beer-info">
+                      <p class="beer-info-bold">Bryggeri:</p>
+                      <p>' . $row['brewery'] . '</p>
+                    </div>
+                    <div class="beer-info-hide beer-info">
+                      <p class="beer-info-bold">Land:</p>
+                      <p>' . $row['country'] . '</p>
+                    </div>
+                    <div class="beer-info-hide beer-info">
+                      <p class="beer-info-bold">Rating:</p>
+                      <p>' . '
+                        <a class="rating-link" target="_blank" href="' . $row['url'] .'">' . $row['rating'] .'</a>
+                      </p>
+                    </div>';
         //Else only echo the values in the "answer" column.
         }else {
           echo '';
