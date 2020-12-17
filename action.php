@@ -37,7 +37,7 @@
     if($result->num_rows>0){
       $beername = '';
       while ($row=$result->fetch_assoc()) {
-        //If $beername is EQUAL to empty, which it is, then SET it as the values in the "name" column in the database, and put it inside a list.
+        //If $beername is EQUAL to empty, which it is, then SET it as the values in the "name" column in the database and show the beer.
         if ($beername == '') {
           $beername = $row['name'];
           echo '<div class="beername_wrapper">
@@ -102,7 +102,7 @@
                               <a class="rating-link" target="_blank" href="' . $row['url'] .'">' . $row['rating'] .'</a>
                             </p>
                           </div>';
-        //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the list, and echo out the next $beername.
+        //If the "name" from the database ISN'T EQUAL to the previous $beername, then close the div, and echo out the next $beername.
         }elseif ($row['name'] != $beername) {
           $beername = $row['name'];
           echo '        </div>
@@ -170,7 +170,7 @@
                         <a class="rating-link" target="_blank" href="' . $row['url'] .'">' . $row['rating'] .'</a>
                       </p>
                     </div>';
-        //Else only echo the values in the "answer" column.
+        //Else echo nothing.
         }else {
           echo '';
         }
