@@ -5,7 +5,7 @@
   <div class="text-button-section">
     <div class="centered-text">
       <p class="banner-header">Find din smagsprofil</p>
-      <p class="banner-text">Svært ved at vælge øl? Tag vores øltest og find din personlige smag</p>
+      <p class="banner-text">Svært ved at vælge øl? Tag vores øltest og få dit eget personlige udvalg</p>
       <a href="filter-test.php" class="start">Tag testen</a>
     </div>
   </div>
